@@ -1,6 +1,6 @@
 <h1>Introduction to Artificial Intelligence</h1>
 
-<h2>CS 123 Syllabus for Fall 2025</h2>
+<h2>CS 112 Syllabus for Fall 2026</h2>
 
 
 
@@ -8,10 +8,10 @@
 
 | <u>Class</u>      |                                                              |      | <u>Instructor</u> |                                                              |
 | ----------------- | ------------------------------------------------------------ | ---- | ----------------- | ------------------------------------------------------------ |
-| **Course Number** | CS 123                                                       |      | **Name**          | Brian Bird                                                   |
-| **CRN**           | Hybrid (on campus) 21403<br />Online 21028                   |      | **E-mail**        | [birdb@lanecc.edu](mailto:birdb@lanecc.edu)                  |
+| **Course Number** | CS 112                                                       |      | **Name**          | Brian Bird                                                   |
+| **CRN**           | Hybrid (on campus) 22141<br />Online 22142                   |      | **E-mail**        | [birdb@lanecc.edu](mailto:birdb@lanecc.edu)                  |
 | **Day & Time**    | Tu, Th 2:00&ndash;3:50                                       |      | **Office Hours**  | M and W 2:00&ndash;2:50<br />Tu and Th 4:00&ndash;4:50       |
-| **Room**          | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/92444108339) |      | **Room**          | Building 19, Room 152<br />[Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
+| **Room**          | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/96720230993) |      | **Room**          | Building 19, Room 152<br />[Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
 
 <h2>Table of Contents</h2>
 
@@ -183,16 +183,16 @@ For upcoming closures, please visit the [Center for Accessible Resources webpage
 
 ## Schedules
 
-### Academic Calendar for Fall Term 2025
+### Academic Calendar for Fall Term 2026
 
 | Event                                  | Date              |                  |
 | -------------------------------------- | ----------------- | ---------------- |
-| Fall term classes begin                | 9/29              | Monday           |
-| Last day to receive refund             | 10/6              | Monday           |
+| Fall term classes begin                | 9/28              | Monday           |
+| Last day to receive refund             | 10/5              | Monday           |
 | Veteran’s Day&mdash;college closed     | 11/11             | Tuesday          |
-| Last day for schedule changes          | 11/21             | Friday           |
-| Thanksgiving Vacation – college closed | 11/27&ndash;11/30 | Thursday, Friday |
-| Final exam                             | 12/9              | Tuesday          |
+| Last day for schedule changes          | 11/20             | Friday           |
+| Thanksgiving Vacation – college closed | 11/26&ndash;11/29 | Thursday, Friday |
+| Final exam                             | 12/8              | Tuesday          |
 
 View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.  
 
