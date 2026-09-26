@@ -1,0 +1,7 @@
+title: "CS 112 - Introduction to Artificial Intelligence"
+description: "Course materials, lecture notes, and assignments for CS 112: Introduction to Artificial Intelligence."
+theme: jekyll-theme-primer
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
