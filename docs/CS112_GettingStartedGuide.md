@@ -1,4 +1,4 @@
-<h1>CS 123: Introduction to Artificial Intelligence</h1>
+<h1>CS 112: Introduction to Artificial Intelligence</h1>
 
 <h2>Getting Started Guide</h2>
 
@@ -24,24 +24,26 @@ Here are the things you should do to get ready for this course:
 
 1. Finish reading this guide.
 
-2. Read the [Syllabus](https://lcc-cit.github.io/CS123-CourseMaterials/CS123_Syllabus.html).
+2. Read the [Syllabus](https://lcc-cit.github.io/CS112-CourseMaterials/CS112_Syllabus.html).
 
    - Take note of class time and location (for online students, the Zoom link).
    - Sign up for the free online course that will be your "textbook".
 
-3. Look at the [Software You Will Need](# Software You Will Need) section below and install any software you don't already have on your computer.
-4. Look at the **week 1** section on Moodle:
+3. Look at the [Software You Will Need](#software-you-will-need) section below and install any software you don't already have on your computer.
+4. Look at the **Week 1** module on Canvas (accessible from the course **Home** page):
 
    - Read the **objectives**.
    - Under the **reading** heading, take note of the assigned reading and <u>schedule time</u> to do the reading and exercises this week.
    - Under **Activities**:
-     - Fill out the  "Introduce Yourself" questionnaire.
-     - Take note of the due dates for the rest of the activities and <u>schedule time</u> complete them.
+     - Fill out the "Introduce Yourself" survey.
+     - Take note of the due dates for the rest of the activities and <u>schedule time</u> to complete them.
 
 
-### Introduction to Moodle
+### Introduction to Canvas
 
-Moodle is the learning management system used by Lane Community College. To learn how to use Moodle, go to the Moodle home page. Near the bottom of the page, click on "Training", then "Moodle for Students".
+Canvas is the learning management system (LMS) used by Lane Community College. LCC's Canvas site is at [canvas.lanecc.edu](https://canvas.lanecc.edu). Once logged in with your LCC credentials, you can access our course from your Dashboard or Courses menu. The course **Home** page provides access to course modules, announcements, and assignments.
+
+To learn how to use Canvas, click on the **Help** icon in the global navigation menu on the left side of Canvas. There you will find Canvas Guides and tutorials for students.
 
 
 
@@ -51,15 +53,11 @@ Moodle is the learning management system used by Lane Community College. To lear
 ### Software You Will Need
 
 - A web browser.
-- [Adobe Reader](http://get.adobe.com/reader/) for reading PDF files.
-- [QuickTime](https://support.apple.com/downloads/quicktime),  [VLC Media Player](https://www.videolan.org/vlc/) or some other means of viewing videos.
-- Office software such as [MS Office](https://inside.lanecc.edu/atc/software/t/13385), [OpenOffice.org](http://download.openoffice.org/) or [GoogleDocs](https://www.google.com/accounts/ServiceLogin?service=writely&passive=1209600&continue=http://docs.google.com/&followup=http://docs.google.com/&ltmpl=homepage).
+- [Adobe Reader](https://get.adobe.com/reader/) for reading PDF files.
+- [VLC Media Player](https://www.videolan.org/vlc/) or another media player for viewing videos.
+- Office software such as [Microsoft Office 365](https://help.lanecc.edu/TDClient/389/Portal/KB/ArticleDet?ID=5328) (free for LCC students), [Google Docs](https://docs.google.com/), or [LibreOffice](https://www.libreoffice.org/).
 - [Zoom](https://zoom.us/) for participating in class or office hours remotely.
-- [Discord](https://discord.com/) for class communication and collaboration with your team.
-  - Sign up for a free account, if you don't already have one. 
-  - Accept my invitation to the class Discord server. The invitation link is on the main Moodle page.
-  - If you haven't used Discord before, [here's a 15 minute beginner's tutorial](https://youtu.be/rnYGrq95ezA?si=f2Bfrwu7WMJivcC6).
-- [Azure for Students](https://azure.microsoft.com/en-us/free/students/) account. This is a free online subscription. You won't need to download or install any software. You will use Azure AI Studio to build custom GPT chatbots.
+- A Google account to access [Google Gemini](https://gemini.google.com/). You can use your LCC student Google account or a personal account. This is a free web-based tool; you won't need to download or install any software. You will use Google Gemini to build custom chatbots called **Gemini Gems**.
 
 
 ## Skills You Will Need
@@ -82,31 +80,31 @@ Each week includes a set of objectives that are helpful to read before starting 
 
 ### Reading
 
-Links to the reading required for the week will be listed here
+Links to the reading required for the week will be listed here.
 
 ### Activities
 
-Activities include quizzes and lab assignments both of which have due dates.
+Activities include exercises, quizzes, and project assignments, all of which have due dates.
 
 
 
 ## Online Course Communication
 
-All course communication (via e-mail, Moodle Messages, discussion forums, video, chat, etc.) should be clear, concise, and respectful. Written communication should use complete sentences with standard spelling and grammar, including proper capitalization and punctuation.
+All course communication (via e-mail, Canvas Inbox, discussion forums, video, chat, etc.) should be clear, concise, and respectful. Written communication should use complete sentences with standard spelling and grammar, including proper capitalization and punctuation.
 
-[The Core Rules of Netiquette](http://www.albion.com/netiquette/corerules.html) is a guide to the proper protocol for participating in online classes and writing emails.
+[The Core Rules of Netiquette](https://www.albion.com/netiquette/corerules.html) is a guide to the proper protocol for participating in online classes and writing emails.
 
-Questions about the course should be posted to the *discussion* channel on Discord. Questions of a more personal nature, such as grades or due date extensions, should be sent to your instructor via e-mail or direct messages. E-mails to your instructor or e-mails to another department regarding support issues should include your course number and section.
+Questions about the course should be posted to the discussion forums on Canvas. Questions of a more personal nature, such as grades or due date extensions, should be sent to your instructor via e-mail or Canvas Inbox. E-mails to your instructor or e-mails to another department regarding support issues should include your course number and section.
 
-All course announcements will be posted by the instructor to Discord *announcements* channel. Enable notifications for that channel and watch for them on a daily basis. 
+All course announcements will be posted by the instructor on Canvas Announcements. Make sure your Canvas notification preferences are enabled so you receive announcement alerts promptly, and check Canvas on a regular basis. 
 
 
 
-## Moodle Support
+## Canvas Support
 
-Help links can be found by clicking on the ?HELP link in the top navigation bar on Moodle.
+Help links can be found by clicking on the **Help** icon in the global navigation menu on the left side of Canvas. Canvas support is available 24/7 via live chat or phone, along with self-help Canvas Guides.
 
-Support information is also available at https://library.lanecc.edu/shed.
+Support information and technical assistance from LCC's Student Help Desk (SHeD) is also available at [support.lanecc.edu](https://support.lanecc.edu) or [library.lanecc.edu/shed](https://library.lanecc.edu/shed).
 
 
 

@@ -89,10 +89,10 @@ The table below summarizes the possible points for each assessment task as well 
 
 | **Assessment Tasks**      | Number | **Each**                 | **Total** |
 | ------------------------- | ------ | ------------------------ | --------- |
-| Exercises                 | 6      | 30                       | 180       |
+| Exercises                 | 8      | 30                       | 240       |
 | Quizzes                   | 8      | 20                       | 160       |
 | Participation             | 10     | 10                       | 100       |
-| Projects                  | 4      | Variable                 | 260       |
+| Projects                  | 4      | Variable                 | 200       |
 | Midterm and Final Quizzes | 2      | Midterm: 100, Final: 200 | 300       |
 | **Course Total**          |        |                          | **1000**  |
 
@@ -208,9 +208,9 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 | **4**<br />10/20 | Machine Learning                        | Elements of AI Ch. 4 exercises<br />Quiz                     |
 | **5**<br />10/27 | History of AI and Midterm               | Midterm quiz:<br />- In the classroom on 10/29<br />- In the testing center 10/29&ndash;10/31 |
 | **6**<br />11/3  | Neural Networks and Deep Learning       | Elements of AI Ch. 5 exercises<br />Quiz                     |
-| **7**<br />11/10 | Generative AI                           | Project: Using generative AI<br />Quiz                       |
+| **7**<br />11/10 | Generative AI                           | Gen AI Exercises<br>Project: Using generative AI<br />Quiz   |
 | **8**<br />11/17 | Prompt engineering                      | Project: prompt engineering<br />Quiz                        |
-| **9**<br />11/24 | Custom GPT chatbots                     | Project: Custom chat-bot<br />Quiz                           |
+| **9**<br />11/24 | Custom GPT chatbots                     | RAG Exercises<br/>Project: Custom chat-bot<br />Quiz         |
 | **10**<br />12/1 | Social and ethical issues of AI         | Elements of AI Ch. 6 exercises<br />Quiz                     |
 | **11**<br />12/8 | Final                                   | Final quiz:<br />- In the classroom on 12/8<br />- In the testing center 12/5&ndash;12/8 |
 
