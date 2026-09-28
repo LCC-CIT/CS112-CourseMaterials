@@ -117,7 +117,7 @@ Weekly (except midterm and final quiz weeks) quizzes are given that cover learni
 Participation is assessed differently depending on whether you are taking the class online, on Zoom or in person.
 
 - In person and on Zoom (synchronous): Your grade is based on class attendance and participation in class discussions.
-- Online (asynchronous): Your grade is based on participation in the Canvas forums and on Discord.
+- Online (asynchronous): Your grade is based on participation in the Canvas forums.
 
 ### Team Projects
 
@@ -206,7 +206,7 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 | **2**<br />10/6  | AI Problem Solving                      | Elements of AI Ch. 2 exercises<br />Project: Applications of AI<br />Quiz |
 | **3**<br />10/13 | Real-World AI                           | Elements of AI Ch. 3 exercises<br />Quiz                     |
 | **4**<br />10/20 | Machine Learning                        | Elements of AI Ch. 4 exercises<br />Quiz                     |
-| **5**<br />10/27 | History of AI and Midterm               | Midterm quiz:<br />- In the classroom on 10/29<br />- In the testing center 10/29&ndash;10/31 |
+| **5**<br />10/27 | History of AI and Midterm               | Midterm quiz:<br />- In the classroom Thursday, 10/29<br />- In the testing center 10/29&ndash;10/31 |
 | **6**<br />11/3  | Neural Networks and Deep Learning       | Elements of AI Ch. 5 exercises<br />Quiz                     |
 | **7**<br />11/10 | Generative AI                           | Gen AI Exercises<br>Project: Using generative AI<br />Quiz   |
 | **8**<br />11/17 | Prompt engineering                      | Project: prompt engineering<br />Quiz                        |
