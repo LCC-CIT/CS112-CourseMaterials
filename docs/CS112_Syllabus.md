@@ -127,7 +127,7 @@ You will work together with your team to either make a presentation or create an
 
 The midterm and final quizzes are given in weeks 5 and 11. See Canvas for exact dates and times. Quizzes are "closed book", but students may prepare an 8 1/2 x 11 sheet of notes to refer to during the quiz. How you take these quizzes depends on your course modality:
 
-- **On-campus students (hybrid modality):** You will take the quiz in the classroom during the normal class time. In-class (hybrid) students may also take the quiz in Instructional Testing Servicies but may not take the remote version.
+- **On-campus students (hybrid modality):** You will take the quiz in the classroom during the normal class time. In-class (hybrid) students may also take the quiz in Instructional Testing Services but may not take the remote version.
 - **Online students:**  May take the quiz in [Instructional Testing Services](https://www.lanecc.edu/get-support/academic-support/instructional-testing-services)  in the Center Building, room 311. If you are not able to come to campus to take the quiz, you can take the remote version.
 
 ### Academic Honesty
