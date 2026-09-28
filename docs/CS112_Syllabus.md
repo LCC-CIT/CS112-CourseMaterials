@@ -89,10 +89,10 @@ The table below summarizes the possible points for each assessment task as well 
 
 | **Assessment Tasks**      | Number | **Each**                 | **Total** |
 | ------------------------- | ------ | ------------------------ | --------- |
-| Exercises                 | 8      | 30                       | 240       |
+| Exercises                 | 8      | 20                       | 160       |
 | Quizzes                   | 8      | 20                       | 160       |
 | Participation             | 10     | 10                       | 100       |
-| Projects                  | 4      | Variable                 | 200       |
+| Projects                  | 4      | Variable                 | 280       |
 | Midterm and Final Quizzes | 2      | Midterm: 100, Final: 200 | 300       |
 | **Course Total**          |        |                          | **1000**  |
 
