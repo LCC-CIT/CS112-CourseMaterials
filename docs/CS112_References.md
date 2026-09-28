@@ -33,7 +33,7 @@
 
 [Image Creator by Microsoft](https://designer.microsoft.com/image-creator)—Image generator                    
 
-[Gemeini by Google](https://gemini.google.com)—Chatbot and image generator
+[Google Gemini for Students](https://gemini.google/students/)—Chatbot and image generator (free 1-year Pro plan)
 
 [Meta AI by Facebook's parent](https://meta.ai)—Chatbot and image generator
 

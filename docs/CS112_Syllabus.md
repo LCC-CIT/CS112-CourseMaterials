@@ -10,8 +10,8 @@
 | ----------------- | ------------------------------------------------------------ | ---- | ----------------- | ------------------------------------------------------------ |
 | **Course Number** | CS 112                                                       |      | **Name**          | Brian Bird                                                   |
 | **CRN**           | Hybrid (on campus) 22141<br />Online 22142                   |      | **E-mail**        | [birdb@lanecc.edu](mailto:birdb@lanecc.edu)                  |
-| **Day & Time**    | Tu, Th 2:00&ndash;3:50                                       |      | **Office Hours**  | M and W 2:00&ndash;2:50<br />Tu and Th 4:00&ndash;4:50       |
-| **Room**          | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/96720230993) |      | **Room**          | Building 19, Room 152<br />[Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
+| **Day & Time**    | Tu, Th 2:00&ndash;3:50                                       |      | **Office Hours**  | M, W 2:00&ndash;2:50 (In person & Zoom)<br />Tu, Th 4:00&ndash;4:50 (In person) |
+| **Room**          | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/96720230993) |      | **Room**          | M, W: Bldg 19, Rm 152 & [Zoom](https://lanecc.zoom.us/j/8982554800)<br />Tu, Th: CIT Lab (Bldg 19, Rm 135) |
 
 <h2>Table of Contents</h2>
 
@@ -63,6 +63,7 @@ already been installed on the computers in the classroom and in the CIT computer
 
 None of the software provided in these offers is required for this class, but you may want to take advantage of the free and discounted software offers.
 
+- [**Google Gemini for Students**](https://gemini.google/students/) College students can sign up for a free one-year subscription to Google One AI Premium (Gemini Pro plan).
 - [**Azure Dev Tools for Teaching**](https://signup.azure.com/studentverification?offerType=3) (previously known as Microsoft Imagine Premium, Dream Spark, and MSDNAA) is a subscription-based offering, paid for by the LCC CIT department, providing access to professional development and design tools, software, and services from Microsoft. 
 - [**Microsoft Office 365**](https://help.lanecc.edu/TDClient/389/Portal/KB/ArticleDet?ID=5328) LCC students and staff can get a free subscription to Office 365, which includes Microsoft Word, Excel, PowerPoint, Access, and more.
 - **[On The Hub](https://lanecc.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?cmi_mnuMain=f189368a-f0a6-e811-8109-000d3af41938)** has partnered with Microsoft, Adobe, IBM, Symantec, VMware and other software publishers to offer discounted and free software for students and faculty.

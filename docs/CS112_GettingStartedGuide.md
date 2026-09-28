@@ -58,7 +58,7 @@ To learn how to use Canvas, click on the **Help** icon in the global navigation 
 - [VLC Media Player](https://www.videolan.org/vlc/) or another media player for viewing videos.
 - Office software such as [Microsoft Office 365](https://help.lanecc.edu/TDClient/389/Portal/KB/ArticleDet?ID=5328) (free for LCC students), [Google Docs](https://docs.google.com/), or [LibreOffice](https://www.libreoffice.org/).
 - [Zoom](https://zoom.us/) for participating in class or office hours remotely.
-- A Google account to access [Google Gemini](https://gemini.google.com/). You can use your LCC student Google account or a personal account. This is a free web-based tool; you won't need to download or install any software. You will use Google Gemini to build custom chatbots called **Gemini Gems**.
+- A Google account to access [Google Gemini for Students](https://gemini.google/students/). You can use your LCC student Google account or a personal account. Students can sign up for a **free one-year Pro plan** (Google One AI Premium)! This is a free web-based tool; you won't need to download or install any software. You will use Google Gemini to build custom chatbots called **Gemini Gems**.
 
 
 ## Skills You Will Need
