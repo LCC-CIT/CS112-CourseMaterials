@@ -85,7 +85,7 @@ Links to the reading required for the week will be listed here.
 
 ### Activities
 
-Activities include exercises, quizzes, and project assignments, all of which have due dates.
+Activities include exercises, quizzes, and project assignments, all of which have due dates. Weekly quizzes are open-book and completed online. The midterm and final quizzes are closed-book: on-campus (hybrid) students take them in the classroom during normal class time, while online students take them in the testing center or at home if they aren't able to come to campus.
 
 
 

@@ -125,12 +125,10 @@ You will work together with your team to either make a presentation or create an
 
 ### Midterm and Final Quizzes
 
-The midterm and final quizzes are given in weeks 5 and 11. See Canvas for exact dates and times. Quizzes are "closed book", but students may prepare an 8 1/2 x 11 sheet of notes to refer to during the quiz. These quizzes may be taken either:
+The midterm and final quizzes are given in weeks 5 and 11. See Canvas for exact dates and times. Quizzes are "closed book", but students may prepare an 8 1/2 x 11 sheet of notes to refer to during the quiz. How you take these quizzes depends on your course modality:
 
-- On-campus students (hybrid modality) will take the quiz in the classroom during the normal class time.
-- Online students will take the quiz in the Instructional Testing Center in the Center Building, room 311. See the [Instructional Testing Services](https://www.lanecc.edu/get-support/academic-support/instructional-testing-services) web site for testing times and procedures.  
-
-Students who live outside the Eugene/Springfield area can send an email to [online@lanecc.edu](mailto:online@lanecc.edu) well in advance of the test dates to arrange for your midterm and final to be proctored at a location near you.
+- **On-campus students (hybrid modality):** You will take the quiz in the classroom during the normal class time. In-class (hybrid) students may also take the quiz in Instructional Testing Servicies but may not take the remote version.
+- **Online students:**  May take the quiz in [Instructional Testing Services](https://www.lanecc.edu/get-support/academic-support/instructional-testing-services)  in the Center Building, room 311. If you are not able to come to campus to take the quiz, you can take the remote version.
 
 ### Academic Honesty
 
@@ -206,13 +204,13 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 | **2**<br />10/6  | AI Problem Solving                      | Elements of AI Ch. 2 exercises<br />Project: Applications of AI<br />Quiz |
 | **3**<br />10/13 | Real-World AI                           | Elements of AI Ch. 3 exercises<br />Quiz                     |
 | **4**<br />10/20 | Machine Learning                        | Elements of AI Ch. 4 exercises<br />Quiz                     |
-| **5**<br />10/27 | History of AI and Midterm               | Midterm quiz:<br />- In the classroom Thursday, 10/29<br />- In the testing center 10/29&ndash;10/31 |
+| **5**<br />10/27 | History of AI and Midterm               | Midterm quiz:<br />- In the classroom Thursday, 10/29 (hybrid)<br />- Remote version at home or optional in testing center 10/29&ndash;10/31 (online) |
 | **6**<br />11/3  | Neural Networks and Deep Learning       | Elements of AI Ch. 5 exercises<br />Quiz                     |
 | **7**<br />11/10 | Generative AI                           | Gen AI Exercises<br>Project: Using generative AI<br />Quiz   |
 | **8**<br />11/17 | Prompt engineering                      | Project: prompt engineering<br />Quiz                        |
 | **9**<br />11/24 | Custom chatbots (Gemini Gems)           | RAG Exercises<br/>Project: Custom chat-bot<br />Quiz         |
 | **10**<br />12/1 | Social and ethical issues of AI         | Elements of AI Ch. 6 exercises<br />Quiz                     |
-| **11**<br />12/8 | Final                                   | Final quiz:<br />- In the classroom on 12/8<br />- In the testing center 12/5&ndash;12/8 |
+| **11**<br />12/8 | Final                                   | Final quiz:<br />- In the classroom on 12/8 (hybrid)<br />- Remote version at home or optional in testing center 12/5&ndash;12/8 (online) |
 
 <a href="#top">Go back to the top</a>
 
