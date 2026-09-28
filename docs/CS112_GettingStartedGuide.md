@@ -36,6 +36,7 @@ Here are the things you should do to get ready for this course:
    - Under the **reading** heading, take note of the assigned reading and <u>schedule time</u> to do the reading and exercises this week.
    - Under **Activities**:
      - Fill out the "Introduce Yourself" survey.
+     - Join a team for collaborative projects.
      - Take note of the due dates for the rest of the activities and <u>schedule time</u> to complete them.
 
 

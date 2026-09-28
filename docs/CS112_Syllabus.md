@@ -210,7 +210,7 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 | **6**<br />11/3  | Neural Networks and Deep Learning       | Elements of AI Ch. 5 exercises<br />Quiz                     |
 | **7**<br />11/10 | Generative AI                           | Gen AI Exercises<br>Project: Using generative AI<br />Quiz   |
 | **8**<br />11/17 | Prompt engineering                      | Project: prompt engineering<br />Quiz                        |
-| **9**<br />11/24 | Custom GPT chatbots                     | RAG Exercises<br/>Project: Custom chat-bot<br />Quiz         |
+| **9**<br />11/24 | Custom chatbots (Gemini Gems)           | RAG Exercises<br/>Project: Custom chat-bot<br />Quiz         |
 | **10**<br />12/1 | Social and ethical issues of AI         | Elements of AI Ch. 6 exercises<br />Quiz                     |
 | **11**<br />12/8 | Final                                   | Final quiz:<br />- In the classroom on 12/8<br />- In the testing center 12/5&ndash;12/8 |
 
