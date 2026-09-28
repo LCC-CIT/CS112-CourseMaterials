@@ -92,7 +92,7 @@ The table below summarizes the possible points for each assessment task as well 
 | Exercises                 | 8      | 20                       | 160       |
 | Quizzes                   | 8      | 20                       | 160       |
 | Participation             | 10     | 10                       | 100       |
-| Projects                  | 4      | Variable                 | 280       |
+| Projects                  | 4      | 50, 60, 70, 100          | 280       |
 | Midterm and Final Quizzes | 2      | Midterm: 100, Final: 200 | 300       |
 | **Course Total**          |        |                          | **1000**  |
 
@@ -200,7 +200,7 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 
 | Week             | Topics                                  | Activities                                                   |
 | ---------------- | --------------------------------------- | ------------------------------------------------------------ |
-| **1**<br />9/29  | Intro to the course<br />Overview of AI | Introduce Yourself Survey<br /><br />Join a Team<br />Elements of AI Ch. 1 exercises<br />Quiz |
+| **1**<br />9/29  | Intro to the course<br />Overview of AI | Personal Survey<br /><br />Join a Team<br />Elements of AI Ch. 1 exercises<br />Quiz |
 | **2**<br />10/6  | AI Problem Solving                      | Elements of AI Ch. 2 exercises<br />Project: Applications of AI<br />Quiz |
 | **3**<br />10/13 | Real-World AI                           | Elements of AI Ch. 3 exercises<br />Quiz                     |
 | **4**<br />10/20 | Machine Learning                        | Elements of AI Ch. 4 exercises<br />Quiz                     |
