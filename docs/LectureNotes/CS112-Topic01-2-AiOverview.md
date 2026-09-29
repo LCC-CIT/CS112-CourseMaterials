@@ -10,37 +10,11 @@ author: Brian Bird
 
 <h2>Part 1</h2>
 
-**CS123, Intro to AI**
-
-| Topics                            |                                 |
-| --------------------------------- | ------------------------------- |
-| <mark>Overview of AI</mark>       | Generative AI                   |
-| History and application of AI     | Prompt engineering              |
-| Machine Learning                  | Custom chatbot creation         |
-| Neural networks and deep learning | Social and ethical issues of AI |
+**CS112, Intro to AI**
 
 <h2>Table of Contents</h2>
 
 [TOC]
-
-# What is AI?
-
-AI, or *Artificial Intelligence*, is a field of computer science that aims to create computer systems capable of doing things that would normally require human intelligence. These things include: thinking, reasoning, learning, using natural language, problem solving, and decision making[^1].
-
-We need to know the definitions of words so that we can understand each other. Here is the dictionary definition of Intelligence:
-
-## What is intelligence?
-
-> 1) The ability to learn or understand or to deal with new or trying situations.
->    Also : the skilled use of reason.
-> 2) The ability to apply knowledge to manipulate one's environment or to think abstractly as measured by objective criteria (such as tests)  
->    &mdash;[Merriam-Webster Dictionary](https://www.merriam-webster.com/dictionary/intelligence)
-
-### Your Turn: How would you define intelligence?
-
-Is your definition different from the dictionary definition?
-
-Later we will discus whether or not current AI systems are really intelligent.
 
 # Types of AI
 
@@ -99,39 +73,17 @@ AI can also be categorized into two categories: *narrow AI* and *general AI*.
   - Response Generation: This process is repeated until a complete response is generated.
   - Output: The generated response is returned to the user.
 
-### Narrow AI
 
-These are systems designed to perform a specific task and can only operate under a limited set of constraints. 
-
-#### Examples of Narrow AI
-
-- **Digital Voice Assistants**: Siri, Alexa, and Google Assistant are examples of Narrow AI. They understand and respond to voice commands and can perform specific tasks like setting alarms, making phone calls, and answering questions.
-
-- **Recommendation Systems**: The recommendation algorithms used by platforms like Netflix, Amazon, and Spotify are examples of Narrow AI. They analyze your past behavior and preferences to suggest content you might like.
-
-- **Email Filtering**: Email services use Narrow AI to filter out spam and categorize emails into different folders.
-
-- **Weather Forecasting**: Narrow AI is used in predicting weather conditions based on a vast amount of meteorological data.
-
-- **Image Recognition Systems**: These are used in self-driving cars to recognize traffic signs, pedestrians, and other vehicles.
-
-#### Your Turn: Can you think of other examples of narrow AI?
-
-### General AI
-
-Also known as AGI (*Artificial General Intelligence*) are systems that possess the ability to perform any intellectual task that a human being can do. They can understand, learn, adapt, and implement knowledge in different domains. This type of AI is purely theoretical at this point with no practical examples in use today.
-
-#### Is chatGPT a General AI System?
-
-ChatGPT is not an example of General AI. It's actually Narrow AI. While it's quite advanced and can generate human-like text based on prompts, it's still designed for a specific task: text generation. It doesn't have an understanding of the world in the way humans do, and it can't apply knowledge from one domain to another in the way a human would. It operates based on patterns in the data it was trained on and doesn't have understanding[^3] of the text it generates.
 
 # Reference
 
-- *Artificial Intelligence, A Modern Approach*&mdash;2010, 3rd Ed. Pearson
 - [Elements of AI](https://www.elementsofai.com/)&mdash;The University of Helsinki and MinnaLearn, 2024
 - [Understanding the Different Types of Artificial Intelligence](https://www.ibm.com/blog/understanding-the-different-types-of-artificial-intelligence/)&mdash;IBM
 
-[^1]: The definition of *Artificial Intelligence* is not actually agreed upon by computer scientists. The definition given in these notes in my own synthesis of commonly given definitions, such as those listed in Russell and Norvig. An alternate definition, given in "Elements of AI" is a system that is autonomous and adaptive.
+
+
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Lecture Notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Lecture Notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, revised in 2026 are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+
+---

@@ -74,7 +74,7 @@ The "Octopus Test" proposed by Bender and Koller is a thought experiment in thei
 
 This experiment highlights the limitations of  LLMs (Large Language Models) and emphasizes that these models don’t truly understand language or have knowledge about the world. They can only generate responses based on the patterns they’ve learned from their training data.
 
-# Types of AI
+# Narrow AI, Genaral AI and AGI
 
 Artificial intelligence is categorized primarily by its scope of capability, ranging from task-specific algorithms to human-level adaptability. While "General AI" and "AGI" are often used interchangeably in casual discussion, technical frameworks distinguish between broad general capabilities and full parity with human cognitive function.
 
