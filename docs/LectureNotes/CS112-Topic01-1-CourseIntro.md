@@ -9,16 +9,7 @@ author: Brian Bird
 
 <h1>Overview of Artificial Intelligence</h1>
 
-**CS123, Intro to AI**
-
-| Topics                            |                                 |
-| --------------------------------- | ------------------------------- |
-| <mark>Overview of AI</mark>       | Generative AI                   |
-| History and application of AI     | Prompt engineering              |
-| Machine Learning                  | Custom chatbot creation         |
-| Neural networks and deep learning | Social and ethical issues of AI |
-
-
+**CS112, Intro to AI**
 
 <h2>Table of Contents</h2>
 
