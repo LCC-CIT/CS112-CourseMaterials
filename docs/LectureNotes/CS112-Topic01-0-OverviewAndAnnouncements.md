@@ -8,9 +8,9 @@ author: Brian Bird
 
 **CS 123, Intro to AI**
 
-<h1>Week 1 Overview for Fall 2025</h1>
+<h1>Week 1 Overview for Fall 2026</h1>
 
-<h2>Sept. 29 through Oct. 5</h2>
+<h2>Sept. 28 through Oct. 4</h2>
 
 | Topics                                           |                                              |
 | ------------------------------------------------ | -------------------------------------------- |
@@ -25,7 +25,7 @@ author: Brian Bird
 
 ## This Week's Learning Objectives
 
-- Form teams for doing group projects.
+- Form teams for doing group projects (Thursday).
 
 - Explore differing definitions of Artificial Intelligence.
 
@@ -40,16 +40,14 @@ author: Brian Bird
 - **No-show/drop**
   Be aware of LCC's <u>no-show/drop</u> policy. You need to come to class once during the first week, or take the quiz in order to not be automatically dropped!
 - **Last day for a refund** 
-   Monday, Oct. 6, is the last day to get a refund if you drop a class.
+   Monday, Oct. 5, is the last day to get a refund if you drop a class.
 
 ## Things to Do This Week
 
-- Join the Discord server so you can communicate with your team.
-- Introduce yourself survey&mdash;complete it by Friday. 
-- We'll choose teams next Monday.
+- Introduce yourself in the *Week 1 Discussion: Introduction, Q & A + Comments* Discussion forum by Thursday.
+- Personal survey&mdash;complete it by Thursday. 
 - Read Elements of AI Ch. 1 and do the exercises by Sunday
-- Answer "Your turn" questions in the forum by Sunday  
-  This is mainly for online students or anyone who wasn't able to participate in the live classroom discussion.
+- Post a question, answer to a question or comment in the Week 1 forum by Sunday.
 - Take the quiz over the lectures by Sunday
 
 ## Reminders
@@ -58,10 +56,10 @@ author: Brian Bird
 
 #### Office Hours
 
-I have drop-in office hours on [Zoom](https://lanecc.zoom.us/j/8982554800) and in person, building 19, room 152 at these times:
+I have drop-in office hours at these times:
 
-- Monday and Wednesday from 2:00 to 2:50. 
-- Tuesday and Thursday from 4:00 to 4:50. 
+- M, W 2:00–2:50 My office (building 19 room 152) & [Zoom](https://lanecc.zoom.us/j/8982554800) 
+- Tu, Th 1:00–1:50 CIT Lab (building 19, room 135) in person only.
 
 I'm available at other times too, just let me know when you'd like to meet. 
 
@@ -88,4 +86,10 @@ Ask questions in the class [Discussion channel](https://discord.com/channels/129
 
 - You will get the most out of this class if you can come or Zoom to class where you can get help with your lab assignments! You can also get help during office hours or from a tutor in the lab (in person or on Zoom).
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Course Materials by [Brian Bird](https://profbird.dev), written in <time>2025</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+
+
+---
+
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Course Materials by [Brian Bird](https://profbird.dev), written in <time>2025</time>, revised in 2026 are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+
+---

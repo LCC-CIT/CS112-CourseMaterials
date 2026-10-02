@@ -8,16 +8,7 @@ author: Brian Bird
 
 <h1>Overview of AI Part 2</h1>
 
-**CS123, Intro to AI**
-
-| Topics                            |                                 |
-| --------------------------------- | ------------------------------- |
-| <mark>Overview of AI</mark>       | Generative AI                   |
-| History and application of AI     | Prompt engineering              |
-| Machine Learning                  | Custom chatbot creation         |
-| Neural networks and deep learning | Social and ethical issues of AI |
-
-
+**CS112, Intro to AI**
 
 <h2>Table of Contents</h2>
 
@@ -90,4 +81,6 @@ author: Brian Bird
 
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Lecture Notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Lecture Notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, revised in 2026 are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+
+---

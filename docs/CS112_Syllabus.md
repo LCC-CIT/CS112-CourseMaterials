@@ -32,11 +32,11 @@ Upon successful completion of this course, students will be able to:
 5. Use prompt engineering to get more effective results from generative AI.
 6. Create a custom chatbot.
 
-
+## Resources
 
 ### Online Resources
 
-#### Course Materials
+#### Textbook
 
 There is no textbook for this class. In place of a textbook you will read online tutorials and chapters in the free online course, [Elements of AI](https://www.elementsofai.com), a high-quality course provided by the The University of Helsinki.
 
