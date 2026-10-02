@@ -10,26 +10,9 @@ author: Brian Bird
 
 **CS123, Intro to AI**
 
-| Weeks                              |                                                     |
-| ---------------------------------- | --------------------------------------------------- |
-| 1. Overview of AI                  | 6. Neural networks, deep learning and Generative AI |
-| 2. History and applications of AI  | 7. Prompt engineering                               |
-| 3. Bayes Rule and Machine Learning | 8. Custom chatbot creation                          |
-| 4. More Machine Learning           | 9. Social and ethical issues of AI                  |
-| 5. Midterm                         | 11. Final                                           |
-
-
-
 <h2>Table of Contents</h2>
 
 [TOC]
-
-# What's Due This Week
-
-- Answer week 3 lecture questions (for online students): Sunday
-- Exercises based on Elements of AI, Ch. 3: Sunday
-- Quiz over the lectures: Sunday
-- Your report on AI applications in your field of interest: Sunday
 
 # Bayes' Rule
 
@@ -184,6 +167,6 @@ Let's say we want to do inference on two new posts. The posts have these words (
 
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, revised in 2026 are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 MS Copilot GPT-4 was used to draft parts of these notes.

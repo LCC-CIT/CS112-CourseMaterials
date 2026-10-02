@@ -10,13 +10,6 @@ author: Brian Bird
 
 **CS123, Intro to AI**
 
-| Topics                                                |                                              |
-| ----------------------------------------------------- | -------------------------------------------- |
-| Overview of AI                                        | Neural networks and deep learning            |
-| <mark>History of GOFAI</mark><br />AI Problem Solving | Generative AI + Prompt engineering           |
-| Machine Learning                                      | Custom chatbot creation                      |
-| Midterm                                               | Social and ethical issues of AI  <br />Final |
-
 1/10/25: Things to revise
 
 - Add Thomas Bayes?, rule published 1763

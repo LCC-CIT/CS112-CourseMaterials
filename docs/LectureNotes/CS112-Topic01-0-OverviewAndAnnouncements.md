@@ -12,12 +12,15 @@ author: Brian Bird
 
 <h2>Sept. 28 through Oct. 4</h2>
 
-| Topics                                           |                                              |
-| ------------------------------------------------ | -------------------------------------------- |
-| <mark>1. Overview of AI</mark>                   | Neural networks and deep learning            |
-| 2. History of GOFAI<br />     AI Problem Solving | Generative AI + Prompt engineering           |
-| 3. Machine Learning                              | Custom chatbot creation                      |
-| 4. Midterm                                       | Social and ethical issues of AI  <br />Final |
+| Week / Topic                       |                                                     |
+| ---------------------------------- | --------------------------------------------------- |
+| <mark>1. Overview of AI</mark>     | 6. Neural networks, deep learning and Generative AI |
+| 2. History and applications of AI  | 7. Prompt engineering                               |
+| 3. Bayes Rule and Machine Learning | 8. Custom chatbot creation                          |
+| 4. More Machine Learning           | 9. Social and ethical issues of AI                  |
+| 5. Midterm                         | 11. Final                                           |
+
+
 
 <h2>Contents</h2>
 

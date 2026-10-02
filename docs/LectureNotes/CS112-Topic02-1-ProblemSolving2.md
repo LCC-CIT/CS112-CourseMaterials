@@ -10,13 +10,6 @@ author: Brian Bird
 
 **CS123, Intro to AI**
 
-| Topics                            |                                 |
-| --------------------------------- | ------------------------------- |
-| Overview of AI                    | Generative AI                   |
-| AI Problem Solving                | Prompt engineering              |
-| Machine Learning                  | Custom chatbot creation         |
-| Neural networks and deep learning | Social and ethical issues of AI |
-
 
 
 <h2>Table of Contents</h2>

@@ -10,13 +10,6 @@ author: Brian Bird
 
 **CS123, Intro to AI**
 
-| Topics                                                |                                              |
-| ----------------------------------------------------- | -------------------------------------------- |
-| Overview of AI                                        | Neural networks and deep learning            |
-| <mark>History of GOFAI</mark><br />AI Problem Solving | Generative AI + Prompt engineering           |
-| Machine Learning                                      | Custom chatbot creation                      |
-| Midterm                                               | Social and ethical issues of AI  <br />Final |
-
 
 
 <h2>Table of Contents</h2>

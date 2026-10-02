@@ -14,12 +14,13 @@ author: Brian Bird
 
 
 
-| Topics                                                |                                              |
-| ----------------------------------------------------- | -------------------------------------------- |
-| Overview of AI                                        | Neural networks and deep learning            |
-| <mark>History of GOFAI</mark><br />AI Problem Solving | Generative AI + Prompt engineering           |
-| Machine Learning                                      | Custom chatbot creation                      |
-| Midterm                                               | Social and ethical issues of AI  <br />Final |
+| Week / Topic                                   |                                                     |
+| ---------------------------------------------- | --------------------------------------------------- |
+| 1. Overview of AI                              | 6. Neural networks, deep learning and Generative AI |
+| <mark>2. History and applications of AI</mark> | 7. Prompt engineering                               |
+| 3. Bayes Rule and Machine Learning             | 8. Custom chatbot creation                          |
+| 4. More Machine Learning                       | 9. Social and ethical issues of AI                  |
+| 5. Midterm                                     | 11. Final                                           |
 
 
 
