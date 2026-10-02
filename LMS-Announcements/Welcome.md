@@ -1,6 +1,8 @@
 Hello everyone,
 
-Welcome to **CS 112: Introduction to Artificial Intelligence**! I'm Brian Bird, your instructor (you can call me Brian), and I'm looking forward to exploring the exciting world of AI with you this term! Here's what you need to know to get started:
+Welcome to **CS 112: Introduction to Artificial Intelligence**! I'm Brian Bird, your instructor (you can call me Brian), and I'm looking forward to exploring the ever-changing world of AI with you this term--we'll discuss the potential benefits and dangers! 
+
+Here's what you need to know to get started:
 
 ### What this course is about
 
@@ -15,12 +17,7 @@ This course provides a non-technical overview of Artificial Intelligence—no pr
 
 ### Personal Survey
 
-Instead of an introductions discussion board, we have a **Personal Survey** on Canvas for Week 1. Please take a few minutes to complete it so I can get to know you, including:
-
-1. Your name and what you prefer to be called.
-2. What you hope to get out of this course.
-3. Any past experience with or thoughts about AI (none needed or expected!).
-4. A fun fact about yourself.
+Instead of an introductions discussion board, we have a **Personal Survey** on Canvas for Week 1. Please take a few minutes to complete it so I can get to know you.
 
 ### Class Meetings, Recordings & Zoom
 
