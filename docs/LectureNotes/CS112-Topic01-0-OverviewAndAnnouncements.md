@@ -46,6 +46,7 @@ author: Brian Bird
 
 - Introduce yourself in the *Week 1 Discussion: Introduction, Q & A + Comments* Discussion forum by Thursday.
 - Personal survey&mdash;complete it by Thursday. 
+- Join a team (Canvas group).
 - Read Elements of AI Ch. 1 and do the exercises by Sunday
 - Post a question, answer to a question or comment in the Week 1 forum by Sunday.
 - Take the quiz over the lectures by Sunday
