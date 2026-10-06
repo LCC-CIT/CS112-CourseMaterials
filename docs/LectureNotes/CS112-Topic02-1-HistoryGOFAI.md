@@ -34,9 +34,9 @@ This is part 1 of the history of AI. It starts with the first computer programme
 <img src="Images/mw18791_licence/Alan-Turing.jpg" alt="Alan Turing" style="zoom:40%;" />
 *by Elliott & Fry, vintage bromide print on photographer's mount, 29 March 1951, NPG x27079, © National Portrait Gallery, London, used by permission under a cc by-nc-nd/3.0 license*.
 
-1936: Turing published a paper tilted "On Computable Numbers, with an Application to the Entscheidungsproblem[^1]". In this paper he devised a theoretical design for computing machine[^2] which is now call a *Turing machine*[^3]. Almost all modern computers are Turing machines. 
+1936: Turing published a paper titled "On Computable Numbers, with an Application to the Entscheidungsproblem[^1]". In this paper he devised a theoretical design for computing machine[^2] which is now call a *Turing machine*[^3]. Almost all modern computers are Turing machines. 
 
-1939: The British military put the first Bombe machine into operation. This computer and its successors were in part based on the theoretical work done by Turing and were used to break the German Enigma code. Since it was not generally programable, it was not considered *Turing complete*.
+1939: The British military put the first Bombe machine into operation. This computer and its successors were in part based on the theoretical work done by Turing and were used to break the German Enigma code. Since it was not generally programmable, it was not considered *Turing complete*.
 
 <img src="Images/1280px-bombe-1yictsw.jpg" alt="1280px-bombe-1yictsw" style="zoom:30%;" />
 
@@ -50,7 +50,7 @@ This is part 1 of the history of AI. It starts with the first computer programme
 
 ## ENIAC and the First Computers
 
-1946: The ENIAC (Electronic Numerical Integrator and Computer) - was completed at the University of Pensilvania by a team led by John Mauchly and J. Presper Eckert. It is considered by many[^4] to be the first *Turing complete* machine. It used over 17,000 vacuum tubes which required a lot space and power and created a lot of heat.
+1946: The ENIAC (Electronic Numerical Integrator and Computer) - was completed at the University of Pennsylvania by a team led by John Mauchly and J. Presper Eckert. It is considered by many[^4] to be the first *Turing complete* machine. It used over 17,000 vacuum tubes which required a lot space and power and created a lot of heat.
 
 <img src="Images/ENIAC-1946.webp" alt="ENIAC-1946" style="zoom:33%;" />
 
@@ -62,13 +62,13 @@ This is part 1 of the history of AI. It starts with the first computer programme
 
 1962: The IBM 7094 was the first transistorized mainframe computer. It was a large, powerful computer using over 12,000 transistors and was designed for scientific and engineering applications.
 
-1967: The IBM 360 Model 95 was the first mainframe computer built using integrated circuits (ICs). It had over 12,000 ICs, with each contained many transistors. The total number of transistors was over 100,000. It had a clock speed of 1.9 MHz and 256 KB of memory. It was considered to be extremely high performance in its day and was used for a variety of applications, including business processing, scientific simulations, and data processing.
+1967: The IBM 360 Model 95 was the first mainframe computer built using integrated circuits (ICs). It had over 12,000 ICs, each containing many transistors. The total number of transistors was over 100,000. It had a clock speed of 1.9 MHz and 256 KB of memory. It was considered to be extremely high performance in its day and was used for a variety of applications, including business processing, scientific simulations, and data processing.
 
 
 
 ## Claude Shannon and Game Theory
 
-Claude Shannon, and electrical engineer and mathematician, is often referred to as the "father of the modern digital computer".
+Claude Shannon, an electrical engineer and mathematician, is often referred to as the "father of the modern digital computer".
 
 1950: He published "Programming a Computer for Playing Chess". In which he described a computer program for playing chess which used a game tree and the minimax algorithm. It laid the foundation for the development of AI game-playing programs and is still influential in the field of artificial intelligence and game theory.
 
@@ -95,7 +95,7 @@ A mathematics professor at Dartmouth College who coined the term *Artificial Int
 
 GPS used a technique called means-ends analysis. This involved identifying differences between the current state and the goal state, then finding and applying operators that would reduce these differences. In other words, it created a *state-space* and used transitions to move from one state to another.
 
-It’s worth noting that while GPS was groundbreaking, it was limited by the computational power of the time and the complexity of many real-world problems. Nevertheless, GPS laid the foundation for many future developments in AI including the Soar archtecture which was developed by Newell and others and is still used for commercial applications and is avialable as open source software.
+It’s worth noting that while GPS was groundbreaking, it was limited by the computational power of the time and the complexity of many real-world problems. Nevertheless, GPS laid the foundation for many future developments in AI including the Soar architecture which was developed by Newell and others and is still used for commercial applications and is available as open source software.
 
 ## Marvin Minsky, ANNs and the MIT AI Lab
 
@@ -152,7 +152,7 @@ It used 32 processors to perform a set of coordinated, high-speed computations i
 
 [The Games that helped AI Evolve](https://www.ibm.com/history/early-games?mhsrc=ibmsearch_a&mhq=arthur%20samuel%20checkers)&mdash;IBM
 
-[Soar (Cognitive Archigtecture)](https://en.wikipedia.org/wiki/Soar_(cognitive_architecture))&mdash;Wikipedia
+[Soar (Cognitive Architecture)](https://en.wikipedia.org/wiki/Soar_(cognitive_architecture))&mdash;Wikipedia
 
 [How IBM’s Deep Blue Beat World Champion Chess Player Garry Kasparov](https://spectrum.ieee.org/how-ibms-deep-blue-beat-world-champion-chess-player-garry-kasparov)&mdash;Joanna Goodrich
 25 Jan 2021, IEEE Spectrum.
