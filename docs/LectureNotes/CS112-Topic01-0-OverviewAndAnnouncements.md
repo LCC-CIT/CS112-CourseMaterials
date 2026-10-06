@@ -78,10 +78,6 @@ Don't hesitate to reach out if you have questions, would like help debugging cod
 
 There are tutors available in the CIT Lab, building 19, room 135, or [online](https://www.lanecc.edu/get-support/academic-support/academic-and-tutoring-services).
 
-#### Discord
-
-Ask questions in the class [Discussion channel](https://discord.com/channels/1290812758249701396/1324897172981809273). I'll answer questions pretty quickly on weekdays, often on Saturday and sometimes on Sunday. Other students will often help you too!
-
 ### Class Participation
 
 - If you are an on-campus or online student who can join us during class time, then come to the classroom (building 19, room 128) or [join us on Zoom](https://lanecc.zoom.us/j/92444108339).
@@ -94,6 +90,6 @@ Ask questions in the class [Discussion channel](https://discord.com/channels/129
 
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Course Materials by [Brian Bird](https://profbird.dev), written in <time>2025</time>, revised in 2026 are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Course Materials by [Brian Bird](https://profbird.dev), written in 2025, revised in <time>2026</time> are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ---

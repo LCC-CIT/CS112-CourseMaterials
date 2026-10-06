@@ -33,7 +33,16 @@ author: Brian Bird
 - **TBD**
   
 
-## What's Happening this Week
+## Learning Objectives
+
+This week we will learn about the early history of AI and explore some AI problem solving strategies.
+
+This week you will:
+
+- Solve a problem using *states* and *transitions*.
+- Solve a problem using a *game tree*.
+
+## Things to Do this Week
 
 - Exercises for Ch. 2, "Problem Solving" in *Elements of AI*
 - Lecture Q and A forum for online students
