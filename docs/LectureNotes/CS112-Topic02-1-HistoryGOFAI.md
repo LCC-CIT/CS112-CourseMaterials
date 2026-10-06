@@ -16,18 +16,7 @@ author: Brian Bird
 
 [TOC]
 
-# Introduction
-
-## What's Happening this Week
-
-- Exercises for Ch. 2, "Problem Solving" in *Elements of AI*
-- Lecture Q and A forum for online students
-- Lecture quiz for everyone.
-
-Next week the first project will be due.
-
-
-# Key Events in the History of AI
+Key Events in the History of AI
 
 This is part 1 of the history of AI. It starts with the first computer programmer in 1843 and continues on up through the development of symbolic AI (also known as Good Old Fashioned AI) ending in 1997 with a computer beating the world chess champion.
 
