@@ -119,7 +119,7 @@ We will discuss the perceptron and connectionism further in a few weeks.
 
 ## Joseph Weizenbaum and Eliza
 
-1966: Eliza program, a Rogerian therapist chatbot. You can try a modern version of Eliza [on this web site](https://psych.fullerton.edu/mbirnbaum/psych101/eliza.htm).
+1966: Eliza program, a Rogerian therapist chatbot. You can try a modern version of Eliza [on this web site](https://psych.fullerton.edu/mbirnbaum/teaching/psych101/Eliza.htm).
 
 **Why this matters:**  ELIZA was one of the first programs to do Natural Language Processing (NLP) and to simulate conversation between a human and a machine. It used pattern matching and simple rules to respond to user input, creating the illusion of understanding. 
 
