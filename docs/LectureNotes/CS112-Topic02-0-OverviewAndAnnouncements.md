@@ -30,8 +30,9 @@ author: Brian Bird
 
 ## Announcements
 
-- **TBD**
+- #### Student Resources Fair
   
+  The Internal Student Resources Fair is taking place on the 2nd Floor of Center on October 7, 9:30 to 1:30! There will be free snacks, opportunities to win prizes, and several experts from our campus partners who are eager to educate students on all of the great LCC resources available for our students.
 
 ## Learning Objectives
 
