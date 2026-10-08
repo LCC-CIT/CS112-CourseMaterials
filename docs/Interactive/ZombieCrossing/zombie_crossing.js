@@ -64,8 +64,8 @@
     let playTimer = null;
 
     const graph = new Graph({ type: "undirected" });
-    // sigma.js draws with WebGL. If that fails, the search still runs and the
-    // text panels (current iteration, queue, log, solution) still update.
+    // sigma.js draws with WebGL. If the browser can't start WebGL, fall back to
+    // a simpler SVG drawing of the same graph (svg_renderer.js).
     let renderer = null;
     try {
         renderer = new SigmaCtor(graph, $("graph-container"), {
@@ -81,10 +81,14 @@
             edgeLabelColor: { color: "#555" },
         });
     } catch (err) {
-        console.error(err);
-        showError("The graph could not be drawn because this browser could not start WebGL " +
-            `(${err.message}). Try enabling hardware acceleration or using another browser. ` +
-            "The search still works: use the buttons and watch the panels on the right and below.");
+        console.warn("sigma.js could not start WebGL, using the SVG renderer instead:", err);
+        renderer = createSvgRenderer(graph, $("graph-container"), {
+            labelSize: 12,
+            edgeLabelSize: 11,
+            font: "Consolas, Menlo, monospace",
+            edgeLabelColor: "#555",
+        });
+        $("graph-hint").textContent = "WebGL unavailable: simple SVG view (no zoom or pan)";
     }
 
     function resetCamera() {
