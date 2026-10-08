@@ -54,7 +54,7 @@ They are search problems since you search the *state-space*[^3] to find the mini
 - Ch.2 of *Elements of AI* describes the "Chicken, feed, and fox" problem.
 - Look at a solution to  the [Zombies and humans river crossing problem](https://lcc-cit.github.io/CS123-CourseMaterials/LectureNotes/Topic-01-4-ZombieCrossingSolution.html).
   - **Breadth-First Search (BFS)**: This algorithm is one way of solving this problem without trying all the combinations of legal transitions. It explores all possible states level by level. It starts from the initial state and explores all possible moves, then moves to the next level of states. BFS guarantees finding the shortest path (minimum number of river crossings) to the goal state because it explores all nodes at the present depth level before moving on to nodes at the next depth level.
-  - Try the [interactive Zombie River Crossing BFS demo](../Interactive/ZombieCrossing/index.html) to step through the search one iteration at a time and watch the state graph grow.
+  - Try the <a href="../Interactive/ZombieCrossing/index.html" target="_blank" rel="noopener">interactive Zombie River Crossing BFS demo</a> to step through the search one iteration at a time and watch the state graph grow.
 
 
 ### Two-Agent Problems
