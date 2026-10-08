@@ -3,6 +3,19 @@
 "use strict";
 
 (function () {
+    // Show problems on the page instead of failing silently.
+    function showError(message) {
+        const box = document.getElementById("graph-container");
+        box.innerHTML = `<div class="alert alert-danger m-3">${message}</div>`;
+    }
+
+    if (typeof graphology === "undefined" || typeof Sigma === "undefined") {
+        showError("The graph libraries (graphology and sigma.js) did not load, so the demo cannot run. " +
+            "Try reloading the page, or check whether a browser extension or network filter is blocking scripts.");
+        document.querySelectorAll("button").forEach((b) => (b.disabled = true));
+        return;
+    }
+
     const Graph = graphology.Graph;
     const SigmaCtor = window.Sigma.Sigma || window.Sigma.default || window.Sigma;
 
@@ -51,18 +64,32 @@
     let playTimer = null;
 
     const graph = new Graph({ type: "undirected" });
-    const renderer = new SigmaCtor(graph, $("graph-container"), {
-        renderEdgeLabels: true,
-        labelRenderedSizeThreshold: 0,
-        labelDensity: 5,
-        labelGridCellSize: 40,
-        labelSize: 12,
-        edgeLabelSize: 11,
-        labelFont: "Consolas, Menlo, monospace",
-        edgeLabelFont: "Consolas, Menlo, monospace",
-        defaultEdgeColor: COLORS.edge,
-        edgeLabelColor: { color: "#555" },
-    });
+    // sigma.js draws with WebGL. If that fails, the search still runs and the
+    // text panels (current iteration, queue, log, solution) still update.
+    let renderer = null;
+    try {
+        renderer = new SigmaCtor(graph, $("graph-container"), {
+            renderEdgeLabels: true,
+            labelRenderedSizeThreshold: 0,
+            labelDensity: 5,
+            labelGridCellSize: 40,
+            labelSize: 12,
+            edgeLabelSize: 11,
+            labelFont: "Consolas, Menlo, monospace",
+            edgeLabelFont: "Consolas, Menlo, monospace",
+            defaultEdgeColor: COLORS.edge,
+            edgeLabelColor: { color: "#555" },
+        });
+    } catch (err) {
+        console.error(err);
+        showError("The graph could not be drawn because this browser could not start WebGL " +
+            `(${err.message}). Try enabling hardware acceleration or using another browser. ` +
+            "The search still works: use the buttons and watch the panels on the right and below.");
+    }
+
+    function resetCamera() {
+        if (renderer) renderer.getCamera().setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
+    }
 
     // ---------- State helpers ----------
     // A state is the number of humans and zombies on the LEFT bank plus the boat side.
@@ -156,7 +183,7 @@
             search.states.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
         }
         updatePad();
-        renderer.getCamera().setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
+        resetCamera();
     }
 
     function addStateNode(s, depth, color) {
@@ -237,7 +264,7 @@
             ghost: false,
         };
         addStateNode(start, 0, COLORS.start);
-        renderer.getCamera().setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
+        resetCamera();
 
         els.log.innerHTML = "";
         els.solution.className = "small text-muted";
