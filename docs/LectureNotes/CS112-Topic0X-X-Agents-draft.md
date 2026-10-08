@@ -1,4 +1,5 @@
 ---
+sitemap: false
 title: AI Agents
 description: Generative AI Agents
 keywords: AI
@@ -8,7 +9,7 @@ author: Brian Bird
 
 <h1>AI Agents</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                                                  |                                                           |
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------- |

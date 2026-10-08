@@ -1,4 +1,5 @@
 ---
+sitemap: false
 title: AI History
 description: History of AI
 keywords: AI
@@ -8,7 +9,7 @@ author: Brian Bird
 
 <h1>History of AI Part 1</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 1/10/25: Things to revise
 
@@ -165,7 +166,7 @@ The perceptron and connectionism were notably criticized by Marvin Minsky and Se
 
 ## Joseph Weizenbaum and Eliza
 
-1966: Eliza program, a Rogerian therapist chatbot. You can try a modern version of Eliza [on this web site](https://psych.fullerton.edu/mbirnbaum/psych101/eliza.htm).
+1966: Eliza program, a Rogerian therapist chatbot. You can try a modern version of Eliza [on this web site](https://www.masswerk.at/elizabot/eliza_chat.html).
 
 **Why this matters:**  ELIZA was one of the first programs to do Natural Language Processing (NLP) and to simulate conversation between a human and a machine. It used pattern matching and simple rules to respond to user input, creating the illusion of understanding. 
 

@@ -1,10 +1,10 @@
 <h1 id="top">Introduction to Artificial Intelligence</h1>
 
-**CS 123 Syllabus for Summer 2024**
+**CS 112 Syllabus for Summer 2024**
 
 | <u>Class</u>      |                                                              |      | <u>Instructor</u> |                                                              |
 | ----------------- | ------------------------------------------------------------ | ---- | ----------------- | ------------------------------------------------------------ |
-| **Course Number** | CS 123                                                       |      | **Name**          | Brian Bird                                                   |
+| **Course Number** | CS 112                                                       |      | **Name**          | Brian Bird                                                   |
 | **CRN**           | Hybrid (on campus) 10276<br />Online 10277                   |      | **E-mail**        | [birdb@lanecc.edu](mailto:birdb@lanecc.edu)                  |
 | **Day & Time**    | Tu, Th 10:00&dash;11:50                                      |      | **Office Hours**  | Drop in!<br />Tu&mdash;Th 10:00&ndash;11:50                  |
 | **Room**          | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/95050541545) |      | **Room**          | Building 19, Room 152<br />[Zoom meeting](https://lanecc.zoom.us/j/94813245609) |
@@ -40,7 +40,7 @@ There is no textbook for this class. In place of a textbook you will read online
 
 ## Learning Management System
 
-Moodle is the Learning Management System (LMS) used for this course. LCC’s Moodle site is at: [classes.lanecc.edu](https://classes.lanecc.edu). 
+Canvas is the Learning Management System (LMS) used for this course; LCC’s Canvas site is at: [canvas.lanecc.edu](https://canvas.lanecc.edu). 
 
 
 
@@ -50,7 +50,7 @@ All of the software required for this class is free.  You can use any operating 
 
 ## Software Required for Course Work
 
-See the [Getting Started Guide](https://lcc-cit.github.io/CS123-CourseMaterials/CS123_GettingStartedGuide_8wk.html) for a list of the software needed for this class.
+See the [Getting Started Guide](https://lcc-cit.github.io/CS112-CourseMaterials/CS112_GettingStartedGuide_8wk.html) for a list of the software needed for this class.
 
 You will need to download and install any software you don't already have on your computer. The software has already been installed on the computers in the classroom and in the CIT computer lab.
 

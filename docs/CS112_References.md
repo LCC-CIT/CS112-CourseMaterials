@@ -1,6 +1,6 @@
 <h1>Useful Links and Free Resources</h1>
 
-**for CS123, Introduction to Artificial Intelligence**
+**for CS112, Introduction to Artificial Intelligence**
 
 <h2>Contents</h2>
 
@@ -10,10 +10,10 @@
 
 ## Resources for this Course
 
-[Course Syllabus](CS123_Syllabus.html)  
-[Course Materials on GitHub](https://github.com/LCC-CIT/CS123-CourseMaterials)
-[Getting Started Guide](CS123_GettingStartedGuide.html)  
-[How to Use Moodle](https://moodle.lanecc.edu/)  
+[Course Syllabus](CS112_Syllabus.html)  
+[Course Materials on GitHub](https://github.com/LCC-CIT/CS112-CourseMaterials)
+[Getting Started Guide](CS112_GettingStartedGuide.html)  
+[How to Use Canvas](https://support.lanecc.edu/canvas-for-students)  
 
 ## Online Services
 
@@ -48,7 +48,7 @@
 
 [Elements of AI](https://www.elementsofai.com/) – Free online course for beginners, no programming required. Used as the textbook for the Intro to AI course.
 
-[AI competency framework for students](https://classes.lanecc.edu/course/view.php?id=129947) by UNESCO, 2024 – outlines 12 competencies across four dimensions: Human-centred mindset, Ethics of AI, AI techniques and applications, and AI system design. 
+[AI competency framework for students](https://www.unesco.org/en/articles/ai-competency-framework-students) by UNESCO, 2024 – outlines 12 competencies across four dimensions: Human-centred mindset, Ethics of AI, AI techniques and applications, and AI system design. 
 
 [Google AI for Anyone](https://ai.google/education/) – Introductory resources and videos about AI concepts.
 
@@ -66,11 +66,11 @@
 
 [AI Task Force ](https://sites.google.com/lanecc.edu/aitaskforce/)
 
-[AI Fusion Lab ](https://sites.google.com/lanecc.edu/fusionlab/home)
+[AI Fusion Lab ](https://inside.lanecc.edu/atc/fusion-lab)
 
 ### For Online Students
 
-[How to Navigate Moodle](http://bit.ly/LCC-MoodleNav) – A concise orientation to the Moodle LMS.
+[How to Navigate Canvas](https://community.instructure.com/en/kb/canvas-lms-student-guide) – The Canvas LMS Student Guide, with step-by-step instructions for getting around Canvas.
 
 [Online Readiness Survey](http://bit.ly/LCC-Ready) – Assess yourself to find out how you can be more successful in any online course.
 

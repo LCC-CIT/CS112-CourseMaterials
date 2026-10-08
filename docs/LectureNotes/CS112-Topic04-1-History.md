@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>History of AI Part 2</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 <h2>Table of Contents</h2>
 

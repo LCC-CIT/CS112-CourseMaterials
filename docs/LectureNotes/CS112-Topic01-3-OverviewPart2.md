@@ -27,9 +27,9 @@ author: Brian Bird
 - **Environmental Impact**: The energy consumption of AI systems can have significant environmental implications.
 
   - As of September 2025, xAI's Grok AI data center in Memphis was using 460MW of power from natural gas generators. This is how much power 256,000 homes would use. ([Based on 1.8kw per home](https://shrinkthatfootprint.com/average-household-electricity-consumption/))
-    ![xai-colossus-data-center-memphis](D:\Repos\CS123-CourseMaterials\LectureNotes\Images\xai-colossus-data-center-memphis.jpg)
+    ![xai-colossus-data-center-memphis](Images/xai-colossus-data-center-memphis.jpg)
 
-    ![NaturalGasGenerationTrailers-xAI](D:\Repos\CS123-CourseMaterials\LectureNotes\Images\NaturalGasGenerationTrailers-xAI.jpg)
+    ![NaturalGasGenerationTrailers-xAI](Images/NaturalGasGenerationTrailers-xAI.jpg)
 
 
 ### Social Issues
@@ -56,11 +56,11 @@ author: Brian Bird
 
   - [Hanson Robotics](https://www.hansonrobotics.com/) the company that created [Sophia](https://www.hansonrobotics.com/sophia/), envisions "a future, wherein AI and humans live and work together in friendship and symbiosis to make the world a better place".
 
-    ![Sophia+JimmyFallon](D:\Repos\CS123-CourseMaterials\LectureNotes\Images\Sophia+JimmyFallon.jpg)
+    ![Sophia+JimmyFallon](Images/Sophia+JimmyFallon.jpg)
      *Sophia the robot on the Tonight Show with Jimmy Fallon*
 
   - Or, if we think of machines as being persons will people begin to think of each other as machines? Will our concept of personhood be diminished? See "You are not a parrot" by Emily Bender.
-    <img src="D:\Repos\CS123-CourseMaterials\LectureNotes\Images\EmilyBender+Parrot.webp" alt="EmilyBender+Parrot" style="zoom:50%;" />
+    <img src="Images/EmilyBender+Parrot.webp" alt="EmilyBender+Parrot" style="zoom:50%;" />
   
   
 

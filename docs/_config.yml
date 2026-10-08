@@ -5,3 +5,28 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+plugins:
+  - jekyll-sitemap
+# jekyll-sitemap writes /sitemap.xml on every build. Keep non-page content out of it.
+# For an unfinished page, add "sitemap: false" to its front matter.
+defaults:
+  - scope:
+      path: "Assignments"
+    values:
+      sitemap: false
+  - scope:
+      path: "Exercises"
+    values:
+      sitemap: false
+  - scope:
+      path: "Images"
+    values:
+      sitemap: false
+  - scope:
+      path: "LectureNotes/Images"
+    values:
+      sitemap: false
+  - scope:
+      path: "Interactive"
+    values:
+      sitemap: false

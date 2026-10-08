@@ -8,7 +8,7 @@ Each member of each team will do research on the way AI is used in the career ar
 
 ## New Requirements
 
-### Content
+### Content?
 
 - Intro
   - Your field of interest, why you are interested.

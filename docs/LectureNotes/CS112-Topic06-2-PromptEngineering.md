@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Prompt Engineering</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                       |                                                 |
 | ------------------------------------------------------------ | ----------------------------------------------- |
@@ -187,7 +187,7 @@ Which formula correctly represents Bayes' Rule? {
 
 ### LCC Fusion Lab Prompt Library
 
-[Prompt library](https://docs.google.com/spreadsheets/d/1wnHdO_IOPz2FOViICvIti1sxhK4A8vA-rL4oCPVIkuA/edit?gid=964683428#gid=964683428) in the LCC [Fusion Lab](https://sites.google.com/lanecc.edu/fusionlab/home) 
+[Prompt library](https://docs.google.com/spreadsheets/d/1wnHdO_IOPz2FOViICvIti1sxhK4A8vA-rL4oCPVIkuA/edit?gid=964683428#gid=964683428) in the LCC [Fusion Lab](https://inside.lanecc.edu/atc/fusion-lab) 
 
 
 
@@ -196,7 +196,7 @@ Which formula correctly represents Bayes' Rule? {
 
 [Effective Prompts for AI: The Essentials](https://mitsloanedtech.mit.edu/ai/basics/effective-prompts/)—MIT Sloan Teaching, 2023
 
-[Prompt engineering - OpenAI API](https://platform.openai.com/docs/guides/prompt-engineering/prompt-engineering)—OpenAI, 2023
+[Prompt engineering - OpenAI API](https://platform.openai.com/docs/guides/prompt-engineering)—OpenAI, 2023
 
 [Prompt Engineering Best Practices: Tips, Tricks, and Tools](https://www.digitalocean.com/resources/article/prompt-engineering-best-practices)—DigitalOcean, 2023
 

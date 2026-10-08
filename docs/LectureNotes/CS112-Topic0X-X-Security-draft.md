@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 <h1>Generative AI Security Issues</h1>
 
 

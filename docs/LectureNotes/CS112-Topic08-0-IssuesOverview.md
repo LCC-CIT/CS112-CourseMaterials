@@ -1,6 +1,6 @@
 <h1>Overview for Week 10</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                           |                                                  |
 | ------------------------------------------------ | ------------------------------------------------ |
@@ -22,7 +22,7 @@
   - those needing assistance with Financial Aid, Advising, or Student Accounts (Bursar).
   - Relevant Links:
 
-    - [Winter 2026 Class Schedule](**CS135M  Beginning Mobile Application Development**)
+    - Winter 2026 Class Schedule
 
     - [Academic Advising](https://lanecc.edu/advising)
 

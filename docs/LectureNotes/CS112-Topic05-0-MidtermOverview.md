@@ -1,6 +1,6 @@
 <h1>Overview for Week Five</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                     |                                      |
 | ---------------------------------------------------------- | ------------------------------------ |
@@ -16,7 +16,6 @@
 ## Announcements for Fall 2025
 
 - **CIT Lab hiring workers**
-  The CIT Lab is looking for Front/Help Desk workers. [Here is the link to apply](https://lanecc.studentemployment.ngwebsolutions.com/JobXJobDetail.aspx?JobId=12268&s=1). It's a great opportunity and a fun place to work.
 - **Student Emergent Tech & AI Club**
   Fusion Lab Faculty and students are forming a [club on emergent technology and AI](Images/ETAIClubPoster.pdf).
    [Interest Form](https://out.smore.com/e/nd345/V0ERKC?__$u__) | Contact: [Kevin Steeves](https://out.smore.com/e/nd345/X14b6G?__$u__)

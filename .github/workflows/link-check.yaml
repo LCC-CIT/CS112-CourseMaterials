@@ -1,0 +1,44 @@
+name: Check links
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  pull_request:
+  push:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      # Build only /docs, the same way GitHub Pages does (github-pages gem and
+      # theme), so the checker sees the published site and not the repo root.
+      - name: Build
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          # Output goes in a folder named like the repo so the root-relative
+          # links the site generates (/CS112-CourseMaterials/assets/...) resolve.
+          destination: ./_site/CS112-CourseMaterials
+
+      - name: Restore lychee cache
+        uses: actions/cache@v5
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
+
+      - name: Link checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # --root-dir resolves the site's root-relative links against _site/.
+          # --remap checks links to our own published pages (canonical URLs,
+          # sitemap) against this build, not the live site, which lags a push.
+          args: >-
+            --cache --max-cache-age 1d
+            --root-dir ${{ github.workspace }}/_site
+            --remap 'https://lcc-cit\.github\.io/CS112-CourseMaterials/ file://${{ github.workspace }}/_site/CS112-CourseMaterials/'
+            ./_site/CS112-CourseMaterials/
+          fail: true

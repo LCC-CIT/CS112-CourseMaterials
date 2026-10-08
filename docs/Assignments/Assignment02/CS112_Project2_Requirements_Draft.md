@@ -1,8 +1,8 @@
 ## Fall 2025 Instructions
 
-Each member of each team will choose one way to apply [generative AI](https://classes.lanecc.edu/mod/url/view.php?id=4590002) to do a simulated work task in the career area that your team is  focused on. Your application could be related to generating textual  content, images, video, or anything else.
+Each member of each team will choose one way to apply generative AI to do a simulated work task in the career area that your team is  focused on. Your application could be related to generating textual  content, images, video, or anything else.
 
-Discuss your idea with  your team on [Discord](https://classes.lanecc.edu/mod/url/view.php?id=4656317) so that each of you are focusing on a different  task. Each team member can post a draft of their prompt and the results  and get feedback from other team members.
+Discuss your idea with  your team in your team's Canvas discussion forum so that each of you are focusing on a different  task. Each team member can post a draft of their prompt and the results  and get feedback from other team members.
 
 ## New Requirements
 

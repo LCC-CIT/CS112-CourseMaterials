@@ -1,4 +1,4 @@
-/* Perceptron simulator for CS 123
+/* Perceptron simulator for CS 112
    Written by Brian Bird, Fall 2024
 */
 

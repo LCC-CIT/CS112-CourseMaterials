@@ -1,4 +1,5 @@
 ---
+sitemap: false
 title: AI Ethical Issues
 description: Social and Ethical Issues of AI
 keywords: AI
@@ -8,7 +9,7 @@ author: Brian Bird
 
 <h1>Benefits and Dangers of AI</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                       |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
