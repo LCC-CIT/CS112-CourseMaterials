@@ -103,7 +103,7 @@ Activities include quizzes and lab assignments both of which have due dates.
 
 All course communication (via e-mail, Moodle Messages, discussion forums, video, chat, etc.) should be clear, concise, and respectful. Written communication should use complete sentences with standard spelling and grammar, including proper capitalization and punctuation.
 
-[The Core Rules of Netiquette](http://www.albion.com/netiquette/corerules.html) is a guide to the proper protocol for participating in online classes and writing emails.
+[The Core Rules of Netiquette](http://www.albion.com/netiquette/book/index.html) is a guide to the proper protocol for participating in online classes and writing emails.
 
 Questions about the course should be posted to the General channel on Discord. Questions of a more personal nature, such as grades or extensions, should be sent to your instructor via e-mail. E-mails to your instructor or e-mails to another department regarding support issues should include your course number and section.
 

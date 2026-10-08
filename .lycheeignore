@@ -1,0 +1,10 @@
+# Exclude specific URLs from Lychee when they behave poorly
+# https://lychee.cli.rs/recipes/excluding-links/
+
+https://www.publicpower.org/system/files/documents/Americas-Electricity-Generation-Capacity-2025-Update.pdf
+https://claude.ai/
+https://gemini.google.com/
+https://meta.ai/
+https://portal.azure.com/
+
+# vim ft=gitignore

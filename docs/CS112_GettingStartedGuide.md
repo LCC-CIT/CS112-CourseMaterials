@@ -93,7 +93,7 @@ Activities include exercises, quizzes, and project assignments, all of which hav
 
 All course communication (via e-mail, Canvas Inbox, discussion forums, video, chat, etc.) should be clear, concise, and respectful. Written communication should use complete sentences with standard spelling and grammar, including proper capitalization and punctuation.
 
-[The Core Rules of Netiquette](https://www.albion.com/netiquette/corerules.html) is a guide to the proper protocol for participating in online classes and writing emails.
+[The Core Rules of Netiquette](http://www.albion.com/netiquette/book/index.html) is a guide to the proper protocol for participating in online classes and writing emails.
 
 Questions about the course should be posted to the discussion forums on Canvas. Questions of a more personal nature, such as grades or due date extensions, should be sent to your instructor via e-mail or Canvas Inbox. E-mails to your instructor or e-mails to another department regarding support issues should include your course number and section.
 
