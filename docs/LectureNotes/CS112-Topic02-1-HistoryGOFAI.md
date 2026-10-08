@@ -1,16 +1,14 @@
 ---
-title: AI History
+title: AI History: 20th Century
 description: History of AI
 keywords: AI
 generator: Typora
 author: Brian Bird
 ---
 
-<h1>History of AI Part 1</h1>
+<h1>History of AI Part 1: The 20th Century</h1>
 
 **CS123, Intro to AI**
-
-
 
 <h2>Table of Contents</h2>
 
@@ -167,11 +165,11 @@ It used 32 processors to perform a set of coordinated, high-speed computations i
 
 [^1]:The Entscheidungsproblem, which translates to "decision problem" in German, was a mathematical question proposed by David Hilbert in the early 1900s. It asked: "Is there a mechanical procedure (algorithm) that can decide whether any given statement in mathematics is true or false?"
 [^2]: A Turing machine consists of three key parts: 1) An infinitely long tape. This tape is divided into squares, each holding a symbol. The machine can read, write, and move this tape to access information. 2) A read/write head: This head scans the current symbol on the tape and can modify it based on the machine's rules. 3) A state table: This table defines the machine's behavior. It tells the machine what to do (change state, write a symbol, move the tape) based on the current symbol it reads and the machine's internal state.
-[^3]: No one has actually built a Turing machine, since  his theoretical machine had infinite memory. Instead, modern computers that are based on his theoretical design are considered *Turing complete* even if they have finite memory (RAM and disk storage).
+[^3]: No one has actually built a Turing machine, since his theoretical machine had infinite memory. Instead, modern computers that are based on his theoretical design are considered *Turing complete* even if they have finite memory (RAM and disk storage).
 [^4]: The Colossus Mark 1 - operational by early 1944 was a British codebreaking machine which may have been the first Turing complete machine, but its design details were kept secret.
 
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in 2024, revised in <time>2026</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 Note: GPT-4 and GPT-4o were used to draft parts of these notes.
