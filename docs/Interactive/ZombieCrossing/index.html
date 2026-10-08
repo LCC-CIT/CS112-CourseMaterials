@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="zombie_crossing.css" rel="stylesheet">
+    <title>Zombie River Crossing BFS</title>
+</head>
+
+<body class="text-dark">
+    <div class="container-xl py-3">
+        <h1 class="text-primary text-center">Zombie River Crossing: Breadth-First Search</h1>
+
+        <div class="intro p-3 rounded-3 shadow-sm mb-3">
+            <p class="mb-2">Humans and zombies must all cross from the <strong>left</strong> bank to the
+                <strong>right</strong> bank. The boat needs at least one passenger to cross. If there are any
+                humans on a bank, the zombies there must not outnumber them, or the humans get eaten.</p>
+            <p class="mb-0">Each node in the graph is a <em>state</em>, written as
+                <code>left bank ⛵│ right bank</code> (the ⛵ shows which side the boat is on). BFS expands
+                states one level at a time, so the first time it reaches the goal it has found a solution
+                with the fewest crossings.</p>
+        </div>
+
+        <div class="row g-3">
+            <!-- Graph -->
+            <div class="col-lg-8">
+                <div class="panel p-2 rounded-3 shadow-sm">
+                    <div id="graph-container"></div>
+                    <div class="legend small mt-2">
+                        <span><i style="background:var(--c-start)"></i>Start</span>
+                        <span><i style="background:var(--c-current)"></i>Being expanded</span>
+                        <span><i style="background:var(--c-frontier)"></i>In queue (frontier)</span>
+                        <span><i style="background:var(--c-expanded)"></i>Expanded</span>
+                        <span><i style="background:var(--c-unsafe)"></i>Unsafe (rejected)</span>
+                        <span><i style="background:var(--c-goal)"></i>Goal</span>
+                        <span><i style="background:var(--c-path)"></i>Solution path</span>
+                        <span class="text-muted ms-auto">Scroll to zoom, drag to pan</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls and current step -->
+            <div class="col-lg-4">
+                <div class="panel p-3 rounded-3 shadow-sm mb-3">
+                    <h2 class="h5 text-primary">Setup</h2>
+                    <div class="row g-2 mb-2">
+                        <div class="col-4">
+                            <label for="in-humans" class="form-label small mb-0">Humans</label>
+                            <input id="in-humans" type="number" class="form-control form-control-sm" min="1" max="6" value="3">
+                        </div>
+                        <div class="col-4">
+                            <label for="in-zombies" class="form-label small mb-0">Zombies</label>
+                            <input id="in-zombies" type="number" class="form-control form-control-sm" min="1" max="6" value="3">
+                        </div>
+                        <div class="col-4">
+                            <label for="in-capacity" class="form-label small mb-0">Boat seats</label>
+                            <input id="in-capacity" type="number" class="form-control form-control-sm" min="1" max="4" value="2">
+                        </div>
+                    </div>
+                    <label for="in-layout" class="form-label small mb-0">Graph layout</label>
+                    <select id="in-layout" class="form-select form-select-sm mb-2">
+                        <option value="grid" selected>State grid (humans × zombies on right bank)</option>
+                        <option value="levels">BFS levels (depth left → right; best for early steps)</option>
+                    </select>
+                    <button id="btn-reset" class="btn btn-outline-secondary btn-sm w-100 mb-3">Reset search</button>
+
+                    <h2 class="h5 text-primary">Search</h2>
+                    <div class="d-grid gap-2 mb-2">
+                        <button id="btn-step" class="btn btn-primary btn-sm" title="Do one iteration: dequeue a state, or try one boat load">Step (one iteration)</button>
+                        <button id="btn-valid" class="btn btn-primary btn-sm" title="Keep stepping until a legal crossing is found">Step to next valid transition</button>
+                        <div class="d-flex gap-2">
+                            <button id="btn-play" class="btn btn-success btn-sm flex-fill">▶ Play</button>
+                            <button id="btn-finish" class="btn btn-outline-success btn-sm flex-fill">Run to end</button>
+                        </div>
+                    </div>
+                    <label for="in-speed" class="form-label small mb-0">Play speed</label>
+                    <input id="in-speed" type="range" class="form-range" min="50" max="1500" step="50" value="600">
+                    <div class="form-check form-switch small">
+                        <input class="form-check-input" type="checkbox" id="in-edge-labels" checked>
+                        <label class="form-check-label" for="in-edge-labels">Show boat loads on edges</label>
+                    </div>
+                </div>
+
+                <div class="panel p-3 rounded-3 shadow-sm">
+                    <h2 class="h5 text-primary">Current iteration</h2>
+                    <div id="step-text" class="small mb-2">Press <strong>Step</strong> to begin.</div>
+                    <div id="river-view"></div>
+                    <div class="stats small mt-2" id="stats"></div>
+                    <div class="small mt-2"><strong>Queue (front → back):</strong></div>
+                    <div id="queue-view" class="queue"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 mt-0">
+            <div class="col-lg-6">
+                <div class="panel p-3 rounded-3 shadow-sm">
+                    <h2 class="h5 text-primary">Search log</h2>
+                    <ol id="log" class="log small" reversed></ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel p-3 rounded-3 shadow-sm">
+                    <h2 class="h5 text-primary">Solution</h2>
+                    <div id="solution" class="small text-muted">Not found yet.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/graphology@0.25.4/dist/graphology.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sigma@2.4.0/build/sigma.min.js"></script>
+    <script src="zombie_crossing.js"></script>
+</body>
+
+</html>
