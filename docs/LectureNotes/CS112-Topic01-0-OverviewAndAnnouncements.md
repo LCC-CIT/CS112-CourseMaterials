@@ -1,12 +1,12 @@
 ---
 title: Week 1 Overview
-description: What's happening in CS 123 during week 1
+description: What's happening in CS 112 during week 1
 keywords: Announcements, Due Dates, Help
 generator: Typora
 author: Brian Bird
 ---
 
-**CS 123, Intro to AI**
+**CS 112, Intro to AI**
 
 <h1>Week 1 Overview for Fall 2026</h1>
 

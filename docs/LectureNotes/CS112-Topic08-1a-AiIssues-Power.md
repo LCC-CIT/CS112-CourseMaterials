@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Benefits and Dangers of AI Issues&mdash;Power</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                       |                                                     |
 | ------------------------------------------------------------ | --------------------------------------------------- |

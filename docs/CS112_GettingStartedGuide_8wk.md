@@ -1,4 +1,4 @@
-<h1>CS 123: Introduction to Artificial Intelligence</h1>
+<h1>CS 112: Introduction to Artificial Intelligence</h1>
 
 <h2>Getting Started</h2>
 
@@ -24,7 +24,7 @@ Here are the things you should do to get ready for this course:
 
 1. Finish reading this guide.
 
-2. Read the [Syllabus](https://lcc-cit.github.io/CS123-CourseMaterials/CS123_Syllabus_8wk.html).
+2. Read the [Syllabus](https://lcc-cit.github.io/CS112-CourseMaterials/CS112_Syllabus_8wk.html).
 
    - Take note of class time and location (for online, the Zoom link).
    - Sign up for the free online course that will be your "textbook".
@@ -62,7 +62,7 @@ Come see me during office hours&mdash;Drop in! No appointment needed. Come get h
 - A web browser.
 - [Adobe Reader](http://get.adobe.com/reader/) for reading PDF files.
 - [QuickTime](https://support.apple.com/downloads/quicktime),  [VLC Media Player](https://www.videolan.org/vlc/) or some other means of viewing videos.
-- Office software such as [MS Office](http://www.microsoftstore.com/store/msusa/en_US/cat/All-Office/categoryID.69403900?icid=Office_365_subnav_22092015_All_Office&s_kwcid=AL!4249!3!82552207853!e!!g!!microsoft office&WT.mc_id=pointitsem+Google+Adwords+5+-+Office+15+Suites&ef_id=UsDFgAAAAHy-iVuM:20160104142119:s), [OpenOffice.org](http://download.openoffice.org/) or [GoogleDocs](https://www.google.com/accounts/ServiceLogin?service=writely&passive=1209600&continue=http://docs.google.com/&followup=http://docs.google.com/&ltmpl=homepage).
+- Office software such as [MS Office](https://www.microsoft.com/microsoft-365), [OpenOffice.org](https://www.openoffice.org/download/) or [GoogleDocs](https://www.google.com/accounts/ServiceLogin?service=writely&passive=1209600&continue=http://docs.google.com/&followup=http://docs.google.com/&ltmpl=homepage).
 - [Zoom](https://zoom.us/) for participating in class or office hours remotely.
 - [Discord](https://discord.com/) for class communication and collaboration with your team.
   - Sign up for a free account, if you don't already have one. 

@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 <h1>AI Computer Hardware</h1>
 
 [TOC]

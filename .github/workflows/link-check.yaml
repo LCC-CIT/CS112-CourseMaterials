@@ -12,8 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      # Build only /docs, the same way GitHub Pages does (github-pages gem and
+      # theme), so the checker sees the published site and not the repo root.
       - name: Build
-        uses: jerryjvl/jekyll-build-action@v1
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
 
       - name: Restore lychee cache
         uses: actions/cache@v5

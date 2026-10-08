@@ -6,7 +6,7 @@ generator: Typora
 author: Brian Bird
 ---
 
-**CS 123, Intro to AI**
+**CS 112, Intro to AI**
 
 <h1>Week 2 Overview for Fall 2026</h1>
 

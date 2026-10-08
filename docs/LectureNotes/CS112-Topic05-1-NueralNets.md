@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Artificial Neural Netoworks</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                       |                                                 |
 | ------------------------------------------------------------ | ----------------------------------------------- |
@@ -113,7 +113,7 @@ Techniques were developed to overcome some of the main the limitations identifie
   - Could this be done with a perceptron (or two perceptron's[^3])?
 
 - Discuss the happy or sad face classifier  
-  There is an interactive classifier in E of AI and [one made by your instructor](https://lcc-cit.github.io/CS123-CourseMaterials/Exercises/EoAI-Ch5/PerceptronSimulator.html).
+  There is an interactive classifier in E of AI and [one made by your instructor](../Exercises/EoAI-Ch5/PerceptronSimulator.html).
   
   - Does it make a difference whether faces are drawn so they fill the whole grid?
   - What if faces have different proportions?
@@ -213,8 +213,6 @@ In this technique, two networks compete against each other. One of the networks 
 [Perceptron Visualizer](https://perceptrondemo.com/)
 
 [CNN Explainer](https://poloclub.github.io/cnn-explainer/)
-
-[GANPaint - Painting with Generative Models](https://ganpaint-demo.vizhub.ai/)
 
 [Designed to Deceive: Do These People Look Real to You?](https://www.nytimes.com/interactive/2020/11/21/science/artificial-intelligence-fake-people-faces.html)&mdash;Kashmir Hill and Jeremy White, New York Times, Nov. 21, 2020.  
 In this interactive demo, notice that the slider features correspond to the features used when training the GAN.

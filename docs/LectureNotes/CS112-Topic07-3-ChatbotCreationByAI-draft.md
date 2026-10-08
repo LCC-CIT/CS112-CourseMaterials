@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 ## Creating a New Chatbot
 
 Bot said:

@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Benefits and Dangers of AI</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                       |                                                     |
 | ------------------------------------------------------------ | --------------------------------------------------- |
@@ -118,7 +118,7 @@ Establish policies so that employees have guidance on safe and beneficial use of
 
 [Regulation of Artificial Intelligence](https://en.wikipedia.org/wiki/Regulation_of_artificial_intelligence)&mdash;Wikipedia
 
-[Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/)&mdash;White House, 2023.
+[Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence](https://bidenwhitehouse.archives.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/)&mdash;White House, 2023.
 
 ### Web Sites
 

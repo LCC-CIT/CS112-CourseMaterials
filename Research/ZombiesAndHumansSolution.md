@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Solution to the Zombies and Humans Problem</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 <h2>Table of Contents</h2>
 

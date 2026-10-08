@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Retrieval Augmented Generation</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                       |                                              |
 | ------------------------------------------------------------ | -------------------------------------------- |

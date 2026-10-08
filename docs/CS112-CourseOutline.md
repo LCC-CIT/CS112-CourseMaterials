@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Intro to AI Course Outline</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 [TOC]
 

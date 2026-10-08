@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Other Types of Symbolic AI (GOFAI)</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 
 

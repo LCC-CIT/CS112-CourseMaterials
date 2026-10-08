@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Future of AI</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                       |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -142,7 +142,7 @@ While the human brain’s estimated computing power is often cited as 1,000–10
 ## References
 
 [Ray Kurzweil's Most Exciting Predictions About the Future of Humanity](https://futurism.com/ray-kurzweils-most-exciting-predictions-about-the-future-of-humanity)&mdash;Futurism.
-[The Singularity Is Near](https://en.wikipedia.org/wiki/The_Singularity_Is_Near.)&mdash;Wikipedia.
+[The Singularity Is Near](https://en.wikipedia.org/wiki/The_Singularity_Is_Near)&mdash;Wikipedia.
 
 [Transhumanist author predicts artificial super-intelligence](https://www.techspot.com/news/103740-transhumanist-author-predicts-artificial-super-intelligence-immortality-singularity.html)&mdash;Techspot.
 

@@ -8,7 +8,7 @@ author: Brian Bird
 
 <h1>Creating a Custom Chatbot</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 | Topics                                                       |                                              |
 | ------------------------------------------------------------ | -------------------------------------------- |

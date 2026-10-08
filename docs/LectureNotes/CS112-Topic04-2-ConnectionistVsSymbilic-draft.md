@@ -1,4 +1,5 @@
 ---
+sitemap: false
 title: AI Future
 description: History of AI
 keywords: AI
@@ -8,7 +9,7 @@ author: Brian Bird
 
 <h1>Connectionist vs. Symbolic AI</h1>
 
-**CS123, Intro to AI**
+**CS112, Intro to AI**
 
 
 
