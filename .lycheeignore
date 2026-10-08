@@ -6,5 +6,7 @@ https://claude.ai/
 https://gemini.google.com/
 https://meta.ai/
 https://portal.azure.com/
+# Server sends an incomplete certificate chain, so lychee rejects it (browsers accept it)
+https://citstudent.lanecc.edu/
 
 # vim ft=gitignore

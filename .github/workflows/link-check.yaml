@@ -18,7 +18,9 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./docs
-          destination: ./_site
+          # Output goes in a folder named like the repo so the root-relative
+          # links the site generates (/CS112-CourseMaterials/assets/...) resolve.
+          destination: ./_site/CS112-CourseMaterials
 
       - name: Restore lychee cache
         uses: actions/cache@v5
@@ -31,6 +33,12 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          args: |
-            --cache --max-cache-age 1d ./_site/
+          # --root-dir resolves the site's root-relative links against _site/.
+          # --remap checks links to our own published pages (canonical URLs,
+          # sitemap) against this build, not the live site, which lags a push.
+          args: >-
+            --cache --max-cache-age 1d
+            --root-dir ${{ github.workspace }}/_site
+            --remap 'https://lcc-cit\.github\.io/CS112-CourseMaterials/ file://${{ github.workspace }}/_site/CS112-CourseMaterials/'
+            ./_site/CS112-CourseMaterials/
           fail: true

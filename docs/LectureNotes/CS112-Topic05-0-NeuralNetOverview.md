@@ -14,7 +14,6 @@
 ## Announcements for Fall 2025
 
 - **CIT Lab hiring workers**
-  The CIT Lab is looking for Front/Help Desk workers. [Here is the link to apply](https://lanecc.studentemployment.ngwebsolutions.com/JobXJobDetail.aspx?JobId=12268&s=1). It's a great opportunity and a fun place to work.
 - **Student Emergent Tech & AI Club**
   Fusion Lab Faculty and students are forming a [club on emergent technology and AI](Images/ETAIClubPoster.pdf).
    [Interest Form](https://out.smore.com/e/nd345/V0ERKC?__$u__) | Contact: [Kevin Steeves](https://out.smore.com/e/nd345/X14b6G?__$u__)
@@ -30,7 +29,7 @@ Registration for winter term is open. Here are some relevant links:
 - [Degree Requirements](https://lanecc.smartcatalogiq.com/en/2023-2024/lcc-catalog/programs-of-study/computer-information-technology/software-development-aas/) for AAS in Software Dev
 - [Term-By-Term Sample Planner](https://lanecc.smartcatalogiq.com/-/media/institution/lane-community-college/2023-24-term-planners/Software%20Development%20Term%20Plan%2023-24.pdf) for AAS in Software Dev
 
-- [Winter 2026 Class Schedule](**CS135M  Beginning Mobile Application Development**)
+- Winter 2026 Class Schedule
 - [Academic Advising](https://lanecc.edu/advising)
 - [Registration](https://my.lanecc.edu/StudentRegistrationSsb/ssb/registration)
 
