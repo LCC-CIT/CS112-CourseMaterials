@@ -1,4 +1,6 @@
 // Zombie River Crossing solved step by step with Breadth-First Search.
+// The page shows only states and the crossings (transitions) between them;
+// the search bookkeeping (queue, depth) stays internal.
 // graphology holds the state graph; sigma.js renders it.
 "use strict";
 
@@ -22,8 +24,7 @@
     const COLORS = {
         start: "#2e9e4f",
         current: "#f28c18",
-        frontier: "#3b82f6",
-        expanded: "#9aa3ad",
+        state: "#3b82f6",
         unsafe: "#dc3545",
         goal: "#e0b100",
         path: "#7c3aed",
@@ -31,11 +32,9 @@
         edgeRevisit: "#dde3e8",
     };
 
-    const X_SPACING = 3; // "levels" layout: distance between BFS levels
-    const Y_SPACING = 1; // "levels" layout: distance between states in the same level
-    const GRID_X = 3;    // "grid" layout: distance between columns (humans on right bank)
-    const GRID_Y = 2;    // "grid" layout: distance between rows (zombies on right bank)
-    const BOAT_SHIFT = 1;   // "grid" layout: boat-on-right states sit a little below boat-on-left ones
+    const GRID_X = 3;    // distance between columns (humans on right bank)
+    const GRID_Y = 2;    // distance between rows (zombies on right bank)
+    const BOAT_SHIFT = 1;   // boat-on-right states sit a little below boat-on-left ones
 
     const $ = (id) => document.getElementById(id);
     const els = {
@@ -43,7 +42,6 @@
         zombies: $("in-zombies"),
         capacity: $("in-capacity"),
         speed: $("in-speed"),
-        layout: $("in-layout"),
         edgeLabels: $("in-edge-labels"),
         reset: $("btn-reset"),
         step: $("btn-step"),
@@ -53,14 +51,13 @@
         stepText: $("step-text"),
         river: $("river-view"),
         stats: $("stats"),
-        queue: $("queue-view"),
         log: $("log"),
         solution: $("solution"),
     };
 
     let cfg;        // { humans, zombies, capacity }
     let loads;      // every boat load that fits: [{ h, z }]
-    let search;     // BFS bookkeeping
+    let search;     // search bookkeeping
     let playTimer = null;
 
     const graph = new Graph({ type: "undirected" });
@@ -159,43 +156,18 @@
         return { x: r.h * GRID_X, y: -(r.z * GRID_Y + shift) };
     }
 
-    // Levels layout: x is the BFS depth, states in a level are stacked and centered.
-    function layoutLevel(depth) {
-        const level = search.levels[depth];
-        const n = level.length;
-        level.forEach((k, i) => {
-            graph.mergeNodeAttributes(k, { x: depth * X_SPACING, y: ((n - 1) / 2 - i) * Y_SPACING });
-        });
-    }
-
     // sigma fits the camera to the nodes, not their labels. A hidden node past the
-    // right-most column leaves room for its labels (and in grid mode fixes the view size).
+    // right-most column leaves room for its labels and fixes the view size.
     const LABEL_ROOM = 2.5;
     function updatePad() {
-        const pos = els.layout.value === "levels"
-            ? { x: (search.levels.length - 1) * X_SPACING + LABEL_ROOM, y: 0 }
-            : { x: cfg.humans * GRID_X + LABEL_ROOM, y: -(cfg.zombies * GRID_Y + BOAT_SHIFT) };
+        const pos = { x: cfg.humans * GRID_X + LABEL_ROOM, y: -(cfg.zombies * GRID_Y + BOAT_SHIFT) };
         if (graph.hasNode("pad")) graph.mergeNodeAttributes("pad", pos);
         else graph.addNode("pad", { ...pos, size: 0, hidden: true });
     }
 
-    function layoutAll() {
-        clearGhost();
-        if (els.layout.value === "levels") {
-            search.levels.forEach((_, d) => layoutLevel(d));
-        } else {
-            search.states.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
-        }
-        updatePad();
-        resetCamera();
-    }
-
-    function addStateNode(s, depth, color) {
+    function addStateNode(s, color) {
         const k = key(s);
-        if (!search.levels[depth]) search.levels[depth] = [];
-        search.levels[depth].push(k);
         graph.addNode(k, { ...gridPosition(s), size: 9, color, label: label(s) });
-        if (els.layout.value === "levels") layoutLevel(depth);
         updatePad();
     }
 
@@ -210,35 +182,18 @@
         });
     }
 
-    // A rejected (unsafe) state is drawn briefly and removed on the next step.
-    function showGhost(fromKey, s, load) {
-        const depth = search.depth.get(fromKey) + 1;
-        const n = search.levels[depth] ? search.levels[depth].length : 0;
-        const pos = els.layout.value === "levels"
-            ? { x: depth * X_SPACING, y: ((n - 1) / 2 - n) * Y_SPACING - 0.5 }
-            : gridPosition(s);
-        graph.addNode("ghost", {
-            ...pos,
-            size: 8,
-            color: COLORS.unsafe,
-            label: `✗ ${label(s)}`,
-        });
-        graph.addUndirectedEdgeWithKey("ghost-edge", fromKey, "ghost", {
-            label: els.edgeLabels.checked ? loadText(load) : "",
-            loadText: loadText(load),
-            color: COLORS.unsafe,
-            size: 1,
-        });
-        search.ghost = true;
+    // An unsafe state stays on the graph (red) so students can see where the search ran into it.
+    function addUnsafeNode(fromKey, s, load) {
+        const k = key(s);
+        if (!graph.hasNode(k)) {
+            graph.addNode(k, { ...gridPosition(s), size: 8, color: COLORS.unsafe, label: `✗ ${label(s)}` });
+            search.unsafe.add(k);
+        }
+        addTransitionEdge(fromKey, k, load, COLORS.unsafe, 1);
     }
 
-    function clearGhost() {
-        if (search.ghost && graph.hasNode("ghost")) graph.dropNode("ghost");
-        search.ghost = false;
-    }
-
-    // ---------- BFS, one iteration at a time ----------
-    // An iteration is either "dequeue the next state" or "try one boat load from the current state".
+    // ---------- Search, one try at a time ----------
+    // One step either picks the next state to move from, or tries one boat load from it.
 
     function resetSearch() {
         stopPlay();
@@ -258,16 +213,15 @@
             states: new Map([[startKey, start]]),
             parent: new Map(),
             depth: new Map([[startKey, 0]]),
-            levels: [],
+            unsafe: new Set(),
             current: null,
             moveIdx: 0,
             iterations: 0,
-            expanded: 0,
+            tries: 0,
             done: false,
             goalKey: null,
-            ghost: false,
         };
-        addStateNode(start, 0, COLORS.start);
+        addStateNode(start, COLORS.start);
         resetCamera();
 
         els.log.innerHTML = "";
@@ -277,7 +231,7 @@
             search.done = true;
             showStep("exhausted", "The start state is already unsafe (more zombies than humans).", start);
         } else {
-            showStep(null, "Press <strong>Step</strong> to begin. The start state is in the queue.", start);
+            showStep(null, "Press <strong>Step</strong> to begin.", start);
         }
         updateControls();
     }
@@ -292,21 +246,19 @@
 
     function stepOnce() {
         if (search.done) return null;
-        clearGhost();
         search.iterations++;
 
-        // Finished trying every load from the current state: mark it expanded.
+        // Finished trying every load from the current state: it is no longer the current state.
         if (search.current !== null && search.moveIdx >= loads.length) {
             const k = search.current;
-            setNodeColor(k, k === search.startKey ? COLORS.start : COLORS.expanded);
-            search.expanded++;
+            setNodeColor(k, k === search.startKey ? COLORS.start : COLORS.state);
             search.current = null;
         }
 
         if (search.current === null) {
             if (search.queue.length === 0) {
                 search.done = true;
-                return { kind: "exhausted", text: "The queue is empty, so every reachable state has been explored. <strong>No solution exists.</strong>" };
+                return { kind: "exhausted", text: "There are no more states to move from, so every reachable state has been explored. <strong>No solution exists.</strong>" };
             }
             const k = search.queue.shift();
             search.current = k;
@@ -315,7 +267,7 @@
             const s = search.states.get(k);
             return {
                 kind: "dequeue",
-                text: `Dequeue <span class="mono">${label(s)}</span> (depth ${search.depth.get(k)}). Next, try each boat load from it.`,
+                text: `Now moving from <span class="mono">${label(s)}</span>. Try each possible boat load.`,
                 from: s,
             };
         }
@@ -323,6 +275,7 @@
         const fromKey = search.current;
         const from = search.states.get(fromKey);
         const load = loads[search.moveIdx++];
+        search.tries++;
         const goingRight = from.boat === "L";
         const bank = goingRight ? { h: from.h, z: from.z } : rightSide(from);
         const dirText = goingRight ? "left → right" : "right → left";
@@ -342,7 +295,7 @@
         const bad = unsafeBank(to);
 
         if (bad) {
-            showGhost(fromKey, to, load);
+            addUnsafeNode(fromKey, to, load);
             return {
                 kind: "unsafe",
                 text: `${tryText} → <span class="mono">${label(to)}</span>: <strong>unsafe</strong>, zombies outnumber humans on the ${bad} bank.`,
@@ -354,17 +307,17 @@
             addTransitionEdge(fromKey, toKey, load, COLORS.edgeRevisit, 1);
             return {
                 kind: "revisit",
-                text: `${tryText} → <span class="mono">${label(to)}</span>: legal, but already discovered, so it is not queued again.`,
+                text: `${tryText} → <span class="mono">${label(to)}</span>: legal, but this state was already found.`,
                 from, to,
             };
         }
 
-        // A new legal state: record how we got here and add it to the back of the queue.
+        // A new legal state: record how we got here and remember to move from it later.
         const depth = search.depth.get(fromKey) + 1;
         search.states.set(toKey, to);
         search.parent.set(toKey, { from: fromKey, load, dirText });
         search.depth.set(toKey, depth);
-        addStateNode(to, depth, isGoal(to) ? COLORS.goal : COLORS.frontier);
+        addStateNode(to, isGoal(to) ? COLORS.goal : COLORS.state);
         addTransitionEdge(fromKey, toKey, load, COLORS.edge, 2);
 
         if (isGoal(to)) {
@@ -381,7 +334,7 @@
         search.queue.push(toKey);
         return {
             kind: "new",
-            text: `${tryText} → <span class="mono">${label(to)}</span>: legal and new, added to the back of the queue.`,
+            text: `${tryText} → <span class="mono">${label(to)}</span>: legal, and a new state.`,
             from, to,
         };
     }
@@ -415,8 +368,8 @@
         });
         els.solution.className = "small";
         els.solution.innerHTML =
-            `<p class="mb-1">Shortest solution: <strong>${steps.length} crossings</strong>, found after ${search.iterations} iterations ` +
-            `(${search.states.size} states discovered).</p>` +
+            `<p class="mb-1">Shortest solution: <strong>${steps.length} crossings</strong>, found after ${search.tries} tries ` +
+            `(${search.states.size} safe states found).</p>` +
             `<p class="mb-1">Start: <span class="mono">${label(search.states.get(search.startKey))}</span></p>` +
             `<ol class="mb-0">${items.join("")}</ol>`;
     }
@@ -424,11 +377,11 @@
     // ---------- UI ----------
 
     const TAGS = {
-        dequeue: "dequeue",
+        dequeue: "moving from",
         impossible: "can't",
         unsafe: "unsafe",
         revisit: "seen",
-        new: "new",
+        new: "new state",
         goal: "goal",
         exhausted: "done",
     };
@@ -457,13 +410,9 @@
         els.river.innerHTML = html;
 
         els.stats.innerHTML =
-            `Iterations: <strong>${search.iterations}</strong> · ` +
-            `Discovered: <strong>${search.states.size}</strong> · ` +
-            `Expanded: <strong>${search.expanded}</strong> · ` +
-            `Queue: <strong>${search.queue.length}</strong>`;
-        els.queue.innerHTML = search.queue.length
-            ? search.queue.map((k) => `<span class="badge mono">${label(search.states.get(k))}</span>`).join("")
-            : `<span class="text-muted">(empty)</span>`;
+            `Tries: <strong>${search.tries}</strong> · ` +
+            `Safe states found: <strong>${search.states.size}</strong> · ` +
+            `Unsafe states hit: <strong>${search.unsafe.size}</strong>`;
     }
 
     function logResult(res) {
@@ -540,7 +489,6 @@
     els.play.addEventListener("click", togglePlay);
     els.finish.addEventListener("click", doFinish);
     els.reset.addEventListener("click", resetSearch);
-    els.layout.addEventListener("change", layoutAll);
     [els.humans, els.zombies, els.capacity].forEach((input) => input.addEventListener("change", resetSearch));
     els.edgeLabels.addEventListener("change", () => {
         graph.forEachEdge((e, attrs) => {

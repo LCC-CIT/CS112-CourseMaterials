@@ -31,9 +31,8 @@
                     <div id="graph-container"></div>
                     <div class="legend small mt-2">
                         <span><i style="background:var(--c-start)"></i>Start</span>
-                        <span><i style="background:var(--c-current)"></i>Being expanded</span>
-                        <span><i style="background:var(--c-frontier)"></i>In queue (frontier)</span>
-                        <span><i style="background:var(--c-expanded)"></i>Expanded</span>
+                        <span><i style="background:var(--c-current)"></i>Moving from here</span>
+                        <span><i style="background:var(--c-state)"></i>State found</span>
                         <span><i style="background:var(--c-unsafe)"></i>Unsafe (rejected)</span>
                         <span><i style="background:var(--c-goal)"></i>Goal</span>
                         <span><i style="background:var(--c-path)"></i>Solution path</span>
@@ -49,8 +48,6 @@
                     <div id="step-text" class="small mb-2">Press <strong>Step</strong> to begin.</div>
                     <div id="river-view"></div>
                     <div class="stats small mt-2" id="stats"></div>
-                    <div class="small mt-2"><strong>Queue (front → back):</strong></div>
-                    <div id="queue-view" class="queue"></div>
                 </div>
 
                 <div class="panel p-3 rounded-3 shadow-sm">
@@ -69,17 +66,12 @@
                             <input id="in-capacity" type="number" class="form-control form-control-sm" min="1" max="4" value="2">
                         </div>
                     </div>
-                    <label for="in-layout" class="form-label small mb-0">Graph layout</label>
-                    <select id="in-layout" class="form-select form-select-sm mb-2">
-                        <option value="grid" selected>State grid (humans × zombies on right bank)</option>
-                        <option value="levels">BFS levels (depth left → right; best for early steps)</option>
-                    </select>
                     <button id="btn-reset" class="btn btn-outline-secondary btn-sm w-100 mb-3">Reset search</button>
 
                     <h2 class="h5 text-primary">Search</h2>
                     <div class="d-grid gap-2 mb-2">
-                        <button id="btn-step" class="btn btn-primary btn-sm" title="Do one iteration: dequeue a state, or try one boat load">Step (one iteration)</button>
-                        <button id="btn-valid" class="btn btn-primary btn-sm" title="Keep stepping until a legal crossing is found">Step to next valid transition</button>
+                        <button id="btn-step" class="btn btn-primary btn-sm" title="Try one boat load">Step (one try)</button>
+                        <button id="btn-valid" class="btn btn-primary btn-sm" title="Keep stepping until a legal crossing is found">Step to next legal crossing</button>
                         <div class="d-flex gap-2">
                             <button id="btn-play" class="btn btn-success btn-sm flex-fill">▶ Play</button>
                             <button id="btn-finish" class="btn btn-outline-success btn-sm flex-fill">Run to end</button>
@@ -98,7 +90,7 @@
         <div class="row g-3 mt-0">
             <div class="col-lg-6">
                 <div class="panel p-3 rounded-3 shadow-sm">
-                    <h2 class="h5 text-primary">Search log</h2>
+                    <h2 class="h5 text-primary">Crossings tried</h2>
                     <ol id="log" class="log small" reversed></ol>
                 </div>
             </div>

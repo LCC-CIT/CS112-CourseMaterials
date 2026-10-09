@@ -1,8 +1,7 @@
 :root {
     --c-start: #2e9e4f;
     --c-current: #f28c18;
-    --c-frontier: #3b82f6;
-    --c-expanded: #9aa3ad;
+    --c-state: #3b82f6;
     --c-unsafe: #dc3545;
     --c-goal: #e0b100;
     --c-path: #7c3aed;
@@ -88,18 +87,6 @@ body {
     background: #f5c2c7;
 }
 
-.queue {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    min-height: 1.5rem;
-}
-
-.queue .badge {
-    background-color: var(--c-frontier);
-    font-weight: normal;
-}
-
 .log {
     max-height: 320px;
     overflow-y: auto;
@@ -122,11 +109,9 @@ body {
     margin-right: 0.3rem;
 }
 
-.tag-dequeue { background: var(--c-current); }
-.tag-impossible { background: #6c757d; }
 .tag-unsafe { background: var(--c-unsafe); }
-.tag-revisit { background: var(--c-expanded); }
-.tag-new { background: var(--c-frontier); }
+.tag-revisit { background: #9aa3ad; }
+.tag-new { background: var(--c-state); }
 .tag-goal { background: var(--c-path); }
 .tag-exhausted { background: #343a40; }
 
