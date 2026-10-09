@@ -72,31 +72,34 @@ body {
     width: 9rem;
 }
 
-/* The graph scrolls sideways inside its panel when the screen is narrower than the graph needs. */
 /* Drag handles above and below the graph that change its height. */
 .graph-grip {
-    height: 14px;
+    height: 22px;
+    margin: 2px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: ns-resize;
     touch-action: none;
     user-select: none;
+    background: #eef2f6;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    color: #6c757d;
 }
 
 .graph-grip::before {
-    content: "";
-    width: 3rem;
-    height: 4px;
-    border-radius: 2px;
-    background: #b8c2cc;
+    content: "\2195  Drag to change the graph height";
 }
 
-.graph-grip:hover::before,
-.graph-grip:focus-visible::before {
-    background: #6c757d;
+.graph-grip:hover,
+.graph-grip:focus-visible {
+    background: #dde5ee;
+    color: #343a40;
 }
 
+/* The graph scrolls sideways inside its panel when the screen is narrower than the graph needs. */
 #graph-scroll {
     overflow-x: auto;
     overflow-y: hidden; /* sigma's canvases are a pixel or two taller than the bordered container */
