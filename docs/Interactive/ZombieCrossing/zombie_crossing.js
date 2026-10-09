@@ -64,6 +64,47 @@
     let playTimer = null;
 
     const graph = new Graph({ type: "undirected" });
+
+    // x positions (graph coordinates) of the vertical guide lines: one per level column.
+    function guideXs() {
+        if (!search || els.layout.value !== "levels") return [];
+        return search.levels.map((_, d) => d * X_SPACING);
+    }
+
+    // Draws the guide lines on a canvas placed under sigma's own canvases,
+    // and redraws it every time sigma redraws (zoom, pan, new nodes, resize).
+    function addGuideCanvas(container, sigma) {
+        const canvas = document.createElement("canvas");
+        canvas.className = "guide-canvas";
+        container.insertBefore(canvas, container.firstChild);
+        const ctx = canvas.getContext("2d");
+
+        function draw() {
+            const w = container.clientWidth;
+            const h = container.clientHeight;
+            const dpr = window.devicePixelRatio || 1;
+            if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) {
+                canvas.width = Math.round(w * dpr);
+                canvas.height = Math.round(h * dpr);
+            }
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            ctx.clearRect(0, 0, w, h);
+            ctx.strokeStyle = "#c9d3df";
+            ctx.lineWidth = 1;
+            ctx.setLineDash([5, 5]);
+            guideXs().forEach((gx) => {
+                const x = Math.round(sigma.graphToViewport({ x: gx, y: 0 }).x) + 0.5;
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, h);
+                ctx.stroke();
+            });
+        }
+
+        sigma.on("afterRender", draw);
+        draw();
+    }
+
     // sigma.js draws with WebGL. If the browser can't start WebGL, fall back to
     // a simpler SVG drawing of the same graph (svg_renderer.js).
     let renderer = null;
@@ -80,6 +121,7 @@
             defaultEdgeColor: COLORS.edge,
             edgeLabelColor: { color: "#555" },
         });
+        addGuideCanvas($("graph-container"), renderer);
     } catch (err) {
         console.warn("sigma.js could not start WebGL, using the SVG renderer instead:", err);
         renderer = createSvgRenderer(graph, $("graph-container"), {
@@ -87,6 +129,7 @@
             edgeLabelSize: 11,
             font: "Consolas, Menlo, monospace",
             edgeLabelColor: "#555",
+            guides: guideXs,
         });
         $("graph-hint").textContent = "WebGL unavailable: simple SVG view (no zoom or pan)";
         $("lock-wrap").hidden = true;

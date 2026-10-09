@@ -29,22 +29,30 @@ body {
     padding-right: 0.75rem;
 }
 
-/* Setup controls: groups that sit side by side on wide screens and wrap on narrow ones. */
+/* Setup panel: a narrow, centered column with one row per group of controls.
+   Each row has a small title on the left and wraps on narrow screens. */
+.setup-panel {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .controls {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 2.5rem;
+    flex-direction: column;
+    gap: 0.9rem;
 }
 
 .ctl-group {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    gap: 0.5rem;
+    gap: 0.5rem 1rem;
 }
 
 .ctl-title {
-    flex-basis: 100%;
+    flex: 0 0 5rem;
+    align-self: center;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -67,7 +75,17 @@ body {
 /* The graph scrolls sideways inside its panel when the screen is narrower than the graph needs. */
 #graph-scroll {
     overflow-x: auto;
+    overflow-y: hidden; /* sigma's canvases are a pixel or two taller than the bordered container */
     position: relative;
+}
+
+/* Dashed vertical line behind each level column (drawn by zombie_crossing.js). */
+.guide-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 #graph-container {
@@ -201,11 +219,11 @@ body {
     }
 
     .ctl-group {
-        width: 100%;
+        align-items: stretch;
     }
 
-    .ctl-group {
-        align-items: stretch;
+    .ctl-title {
+        flex-basis: 100%;
     }
 
     .ctl-group .btn {

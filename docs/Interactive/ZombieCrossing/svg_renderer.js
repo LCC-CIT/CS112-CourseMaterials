@@ -2,6 +2,7 @@
 // because the browser has no WebGL. It reads the same node and edge attributes
 // sigma uses (x, y, size, color, label, hidden) and redraws when the graph changes.
 // No zoom or pan: the whole graph is always fitted to the container.
+// options.guides (optional): function returning graph x positions for vertical guide lines.
 "use strict";
 
 window.createSvgRenderer = function (graph, container, options) {
@@ -54,10 +55,22 @@ window.createSvgRenderer = function (graph, container, options) {
             y: offY + (maxY - a.y) * scale, // graph y points up, screen y points down
         });
 
+        const guideLayer = el("g", {});
         const edgeLayer = el("g", {});
         const nodeLayer = el("g", {});
         const labelLayer = el("g", { "font-family": opts.font });
-        svg.append(edgeLayer, nodeLayer, labelLayer);
+        svg.append(guideLayer, edgeLayer, nodeLayer, labelLayer);
+
+        // Optional dashed vertical guide lines at the given graph x positions.
+        if (opts.guides) {
+            opts.guides().forEach((gx) => {
+                const x = toScreen({ x: gx, y: minY }).x;
+                guideLayer.appendChild(el("line", {
+                    x1: x, y1: 0, x2: x, y2: height,
+                    stroke: "#c9d3df", "stroke-width": 1, "stroke-dasharray": "5 5",
+                }));
+            });
+        }
 
         graph.forEachEdge((_, a, source, target, sa, ta) => {
             if (a.hidden || sa.hidden || ta.hidden) return;
