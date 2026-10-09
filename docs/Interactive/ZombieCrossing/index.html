@@ -47,18 +47,6 @@
                 </div>
 
                 <div class="ctl-group">
-                    <div class="ctl-title">Search</div>
-                    <button id="btn-step" class="btn btn-primary btn-sm" title="Try one boat load">Step (one try)</button>
-                    <button id="btn-valid" class="btn btn-primary btn-sm" title="Keep stepping until a legal crossing is found">Step to next legal crossing</button>
-                    <button id="btn-play" class="btn btn-success btn-sm">▶ Play</button>
-                    <button id="btn-finish" class="btn btn-outline-success btn-sm">Run to end</button>
-                    <div class="field field-speed">
-                        <label for="in-speed" class="form-label small mb-0">Play speed</label>
-                        <input id="in-speed" type="range" class="form-range" min="50" max="1500" step="50" value="600">
-                    </div>
-                </div>
-
-                <div class="ctl-group">
                     <div class="ctl-title">Graph</div>
                     <div class="field field-layout">
                         <label for="in-layout" class="form-label small mb-0">Layout</label>
@@ -70,6 +58,18 @@
                     <div class="form-check form-switch small mb-1">
                         <input class="form-check-input" type="checkbox" id="in-edge-labels" checked>
                         <label class="form-check-label" for="in-edge-labels">Show boat loads on edges</label>
+                    </div>
+                </div>
+
+                <div class="ctl-group">
+                    <div class="ctl-title">Search</div>
+                    <button id="btn-step" class="btn btn-primary btn-sm" title="Try one boat load">Step (one try)</button>
+                    <button id="btn-valid" class="btn btn-primary btn-sm" title="Keep stepping until a legal crossing is found">Step to next legal crossing</button>
+                    <button id="btn-play" class="btn btn-success btn-sm">▶ Play</button>
+                    <button id="btn-finish" class="btn btn-outline-success btn-sm">Run to end</button>
+                    <div class="field field-speed">
+                        <label for="in-speed" class="form-label small mb-0">Play speed</label>
+                        <input id="in-speed" type="range" class="form-range" min="50" max="1500" step="50" value="600">
                     </div>
                 </div>
             </div>
