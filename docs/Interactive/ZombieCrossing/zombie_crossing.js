@@ -336,55 +336,46 @@
     if (window.ResizeObserver) new ResizeObserver(refitSoon).observe($("graph-container"));
     window.addEventListener("resize", refitSoon);
 
-    // ---------- Drag handles that change the graph height ----------
-    // Dragging the bottom handle moves the bottom edge. Dragging the top handle moves the top edge:
-    // the page scrolls by the same amount so the bottom edge stays where it is on screen.
+    // ---------- Drag handle that changes the graph height ----------
+    // The handle sits above the graph, so dragging it moves the graph's top edge. The page scrolls by
+    // the same amount, which keeps the bottom edge where it is on screen.
     const GRAPH_MIN_HEIGHT = 260;
     const GRAPH_MAX_HEIGHT = 4000;
     const graphBox = $("graph-container");
+    const grip = $("graph-grip");
+    let drag = null;
+    let gripFrame = null;
 
-    function setGraphHeight(px) {
-        graphBox.style.height = Math.min(GRAPH_MAX_HEIGHT, Math.max(GRAPH_MIN_HEIGHT, Math.round(px))) + "px";
+    function resizeGraphBy(delta, startHeight, startScroll) {
+        const wanted = Math.round(startHeight + delta);
+        graphBox.style.height = Math.min(GRAPH_MAX_HEIGHT, Math.max(GRAPH_MIN_HEIGHT, wanted)) + "px";
+        window.scrollTo(0, startScroll + graphBox.getBoundingClientRect().height - startHeight);
+        if (!gripFrame) {
+            gripFrame = requestAnimationFrame(() => { gripFrame = null; refitGraph(); });
+        }
     }
 
-    document.querySelectorAll(".graph-grip").forEach((grip) => {
-        const isTop = grip.classList.contains("graph-grip-top");
-        let drag = null;
-        let frame = null;
+    grip.addEventListener("pointerdown", (e) => {
+        drag = { y: e.clientY, height: graphBox.getBoundingClientRect().height, scroll: window.scrollY };
+        try { grip.setPointerCapture(e.pointerId); } catch (err) { /* not a real pointer */ }
+        e.preventDefault();
+    });
+    grip.addEventListener("pointermove", (e) => {
+        if (drag) resizeGraphBy(drag.y - e.clientY, drag.height, drag.scroll); // dragging up makes it taller
+    });
+    ["pointerup", "pointercancel"].forEach((evt) => grip.addEventListener(evt, () => { drag = null; }));
 
-        function resizeBy(delta, startHeight, startScroll) {
-            setGraphHeight(startHeight + delta);
-            if (isTop) window.scrollTo(0, startScroll + graphBox.getBoundingClientRect().height - startHeight);
-            if (!frame) {
-                frame = requestAnimationFrame(() => { frame = null; refitGraph(); });
-            }
-        }
+    // Double-click goes back to the default height.
+    grip.addEventListener("dblclick", () => {
+        graphBox.style.height = "";
+        refitGraph();
+    });
 
-        grip.addEventListener("pointerdown", (e) => {
-            drag = { y: e.clientY, height: graphBox.getBoundingClientRect().height, scroll: window.scrollY };
-            try { grip.setPointerCapture(e.pointerId); } catch (err) { /* not a real pointer */ }
-            e.preventDefault();
-        });
-        grip.addEventListener("pointermove", (e) => {
-            if (!drag) return;
-            const moved = e.clientY - drag.y;
-            resizeBy(isTop ? -moved : moved, drag.height, drag.scroll);
-        });
-        ["pointerup", "pointercancel"].forEach((evt) => grip.addEventListener(evt, () => { drag = null; }));
-
-        // Double-click goes back to the default height.
-        grip.addEventListener("dblclick", () => {
-            graphBox.style.height = "";
-            refitGraph();
-        });
-
-        // Keyboard: arrow keys grow or shrink the graph (up grows from the top handle, down from the bottom one).
-        grip.addEventListener("keydown", (e) => {
-            if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
-            e.preventDefault();
-            const step = e.key === "ArrowDown" ? 40 : -40;
-            resizeBy(isTop ? -step : step, graphBox.getBoundingClientRect().height, window.scrollY);
-        });
+    // Keyboard: the up arrow makes the graph taller, the down arrow shorter.
+    grip.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+        e.preventDefault();
+        resizeGraphBy(e.key === "ArrowUp" ? 40 : -40, graphBox.getBoundingClientRect().height, window.scrollY);
     });
 
     function layoutAll() {

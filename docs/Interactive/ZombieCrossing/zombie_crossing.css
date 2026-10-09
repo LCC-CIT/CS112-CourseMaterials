@@ -102,8 +102,11 @@ body {
 /* The graph scrolls sideways inside its panel when the screen is narrower than the graph needs. */
 #graph-scroll {
     overflow-x: auto;
-    overflow-y: hidden; /* sigma's canvases are a pixel or two taller than the bordered container */
+    overflow-y: hidden; /* sigma rounds its canvas sizes up to whole pixels */
     position: relative;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    background: #fbfdff;
 }
 
 /* Dashed vertical line behind each level column (drawn by zombie_crossing.js). */
@@ -118,10 +121,7 @@ body {
 #graph-container {
     position: relative; /* sigma's canvases are absolutely positioned inside it */
     width: 100%;
-    height: max(440px, 85vh);
-    border: 1px solid #dee2e6;
-    border-radius: 0.375rem;
-    background: #fbfdff;
+    height: max(440px, 85vh); /* no border here: sigma sizes its canvases to the container's full box */
 }
 
 .legend {
