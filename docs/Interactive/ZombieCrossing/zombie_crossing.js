@@ -35,7 +35,9 @@
     const X_SPACING = 4; // "levels" layout: distance between levels (columns)
     const Y_MIN = 1.5;   // "levels" layout: least and most distance between states in the same
     const Y_MAX = 30;   // level (the actual spacing stretches the graph to fill its container)
-    const GRID_X = 3;    // "grid" layout: distance between columns (humans on right bank)
+    const GRID_X = 3;    // "grid" layout: least distance between columns (humans on right bank)
+    const GRID_X_MAX = 40; // "grid" layout: most distance (columns spread out to fill a wide graph)
+    const ROW_HEADING_PX = 90; // "grid" layout: room left of the grid for the row headings
     const GRID_Y = 2;    // "grid" layout: distance between rows (zombies on right bank)
     const STAGE_PADDING = 14; // pixels of empty margin sigma leaves around the graph (its default is 30)
     const HEADING_GAP_PX = 36; // "levels" layout: pixels between the highest state and the column headings
@@ -79,7 +81,8 @@
         const b = gridBounds();
         const xs = [];
         const ys = [];
-        for (let h = 0; h <= cfg.humans + 1; h++) xs.push(h * GRID_X + b.left);
+        const { gx } = gridMetrics();
+        for (let h = 0; h <= cfg.humans + 1; h++) xs.push(h * gx + b.left);
         for (let z = 0; z <= cfg.zombies + 1; z++) ys.push(-z * GRID_Y + b.top);
         return { xs, ys, clip: { x0: xs[0], x1: xs[xs.length - 1], y1: ys[0], y0: ys[ys.length - 1] } };
     }
@@ -241,11 +244,30 @@
         return { left: -0.5, top: BOAT_SHIFT - 0.5 };
     }
 
+    // The columns are spaced so the grid has the same shape as its container, less sigma's edge
+    // padding. sigma scales x and y equally, so otherwise a wide container would leave empty margins
+    // at the sides. The height is fixed (rows and headings), so it sets the scale in pixels per unit;
+    // the width is then whatever fills the container, minus room for the row headings on the left.
+    function gridMetrics() {
+        const box = $("graph-container");
+        if (!cfg || !box.clientWidth || !box.clientHeight) return { gx: GRID_X, rowHeadingX: -2.4 };
+        const innerWidth = box.clientWidth - 2 * STAGE_PADDING;
+        const innerHeight = box.clientHeight - 2 * STAGE_PADDING;
+        const height = 0.9 + (cfg.zombies + 1) * GRID_Y; // column headings down to the bottom line
+        const unitsPerPixel = height / innerHeight;
+        const rowHeadingUnits = ROW_HEADING_PX * unitsPerPixel;
+        const gx = (innerWidth * unitsPerPixel - rowHeadingUnits) / (cfg.humans + 1);
+        return {
+            gx: Math.min(GRID_X_MAX, Math.max(GRID_X, gx)),
+            rowHeadingX: gridBounds().left - rowHeadingUnits,
+        };
+    }
+
     // The start (everyone on the left) is top-left, the goal is bottom-right.
     function gridPosition(s) {
         const r = rightSide(s);
         const shift = s.boat === "R" ? BOAT_SHIFT : 0;
-        return { x: r.h * GRID_X, y: -(r.z * GRID_Y + shift) };
+        return { x: r.h * gridMetrics().gx, y: -(r.z * GRID_Y + shift) };
     }
 
     // Levels layout: x is the level (number of crossings from the start). The states
@@ -325,13 +347,14 @@
     // Grid headings: a column heading above each column and a row heading left of each row.
     function updateGridHeadings() {
         const b = gridBounds();
+        const { gx, rowHeadingX } = gridMetrics();
         const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
         const style = { size: 0.1, color: "#6c757d" };
         for (let h = 0; h <= cfg.humans; h++) {
-            graph.addNode(`heading-c${h}`, { ...style, x: h * GRID_X, y: b.top + 0.9, label: plural(h, "human") });
+            graph.addNode(`heading-c${h}`, { ...style, x: h * gx, y: b.top + 0.9, label: plural(h, "human") });
         }
         for (let z = 0; z <= cfg.zombies; z++) {
-            graph.addNode(`heading-r${z}`, { ...style, x: -2.4, y: -z * GRID_Y - BOAT_SHIFT / 2, label: plural(z, "zombie") });
+            graph.addNode(`heading-r${z}`, { ...style, x: rowHeadingX, y: -z * GRID_Y - BOAT_SHIFT / 2, label: plural(z, "zombie") });
         }
     }
 
@@ -341,7 +364,7 @@
     function updatePad() {
         const pos = els.layout.value === "levels"
             ? { x: (search.levels.length - 1) * X_SPACING + 2 * LABEL_ROOM, y: 0 }
-            : { x: (cfg.humans + 1) * GRID_X + gridBounds().left, y: -(cfg.zombies + 1) * GRID_Y + gridBounds().top };
+            : { x: (cfg.humans + 1) * gridMetrics().gx + gridBounds().left, y: -(cfg.zombies + 1) * GRID_Y + gridBounds().top };
         if (graph.hasNode("pad")) graph.mergeNodeAttributes("pad", pos);
         else graph.addNode("pad", { ...pos, size: 0, hidden: true });
     }
@@ -350,7 +373,9 @@
     // whenever it changes size. (sigma only watches the window, so it is told to resize here.)
     function refitGraph() {
         if (renderer && renderer.resize) renderer.resize();
-        if (search && els.layout.value === "levels") layoutAll();
+        if (search) layoutAll();
+        // Resizing clears sigma's canvases and it does not always redraw the nodes by itself.
+        if (renderer && renderer.refresh) renderer.refresh();
     }
 
     let resizeTimer = null;

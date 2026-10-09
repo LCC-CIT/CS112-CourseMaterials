@@ -121,7 +121,8 @@ body {
 #graph-container {
     position: relative; /* sigma's canvases are absolutely positioned inside it */
     width: 100%;
-    height: max(440px, 85vh); /* no border here: sigma sizes its canvases to the container's full box */
+    height: max(500px, 50vh); /* default height; the drag handle above the graph overrides it */
+    /* no border here: sigma sizes its canvases to the container's full box */
 }
 
 .legend {
@@ -266,7 +267,6 @@ body {
     /* Too many columns to fit a phone screen: make the graph wider than the screen and scroll it. */
     #graph-container {
         min-width: 1200px;
-        height: clamp(380px, 65vh, 560px);
     }
 
     .legend-tools {
