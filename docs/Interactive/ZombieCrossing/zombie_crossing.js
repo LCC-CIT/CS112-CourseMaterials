@@ -32,9 +32,11 @@
         edgeRevisit: "#dde3e8",
     };
 
-    const GRID_X = 3;    // distance between columns (humans on right bank)
-    const GRID_Y = 2;    // distance between rows (zombies on right bank)
-    const BOAT_SHIFT = 1;   // boat-on-right states sit a little below boat-on-left ones
+    const X_SPACING = 3; // "levels" layout: distance between levels (columns)
+    const Y_SPACING = 1; // "levels" layout: distance between states in the same level
+    const GRID_X = 3;    // "grid" layout: distance between columns (humans on right bank)
+    const GRID_Y = 2;    // "grid" layout: distance between rows (zombies on right bank)
+    const BOAT_SHIFT = 1;   // "grid" layout: boat-on-right states sit a little below boat-on-left ones
 
     const $ = (id) => document.getElementById(id);
     const els = {
@@ -42,6 +44,7 @@
         zombies: $("in-zombies"),
         capacity: $("in-capacity"),
         speed: $("in-speed"),
+        layout: $("in-layout"),
         edgeLabels: $("in-edge-labels"),
         reset: $("btn-reset"),
         step: $("btn-step"),
@@ -110,6 +113,10 @@
         return s.boat === "L" ? `${left} ⛵│ ${right}` : `${left} │⛵ ${right}`;
     }
 
+    function crossingsText(n) {
+        return `${n} crossing${n === 1 ? "" : "s"}`;
+    }
+
     function loadText(load) {
         const parts = [];
         if (load.h) parts.push(`${load.h}H`);
@@ -156,18 +163,70 @@
         return { x: r.h * GRID_X, y: -(r.z * GRID_Y + shift) };
     }
 
+    // Levels layout: x is the level (number of crossings from the start). The states
+    // in a level (safe and unsafe) are stacked and centered, with a heading above each column.
+    function layoutLevel(depth) {
+        const level = search.levels[depth];
+        const n = level.length;
+        level.forEach((k, i) => {
+            graph.mergeNodeAttributes(k, { x: depth * X_SPACING, y: ((n - 1) / 2 - i) * Y_SPACING });
+        });
+    }
+
+    function levelHeading(d) {
+        return d === 0 ? "Start" : `${d} crossing${d === 1 ? "" : "s"}`;
+    }
+
+    function updateHeadings() {
+        const headingIds = [];
+        graph.forEachNode((id) => { if (id.startsWith("heading-")) headingIds.push(id); });
+        headingIds.forEach((id) => graph.dropNode(id));
+        if (els.layout.value !== "levels") return;
+        const tallest = Math.max(...search.levels.map((l) => l.length));
+        search.levels.forEach((_, d) => {
+            graph.addNode(`heading-${d}`, {
+                x: d * X_SPACING,
+                y: (tallest - 1) / 2 * Y_SPACING + 1.2,
+                size: 0.1,
+                color: "#6c757d",
+                label: levelHeading(d),
+            });
+        });
+    }
+
     // sigma fits the camera to the nodes, not their labels. A hidden node past the
-    // right-most column leaves room for its labels and fixes the view size.
+    // right-most column leaves room for its labels and fixes the view size in grid mode.
     const LABEL_ROOM = 2.5;
     function updatePad() {
-        const pos = { x: cfg.humans * GRID_X + LABEL_ROOM, y: -(cfg.zombies * GRID_Y + BOAT_SHIFT) };
+        const pos = els.layout.value === "levels"
+            ? { x: (search.levels.length - 1) * X_SPACING + LABEL_ROOM, y: 0 }
+            : { x: cfg.humans * GRID_X + LABEL_ROOM, y: -(cfg.zombies * GRID_Y + BOAT_SHIFT) };
         if (graph.hasNode("pad")) graph.mergeNodeAttributes("pad", pos);
         else graph.addNode("pad", { ...pos, size: 0, hidden: true });
     }
 
-    function addStateNode(s, color) {
+    function layoutAll() {
+        if (els.layout.value === "levels") {
+            search.levels.forEach((_, d) => layoutLevel(d));
+        } else {
+            search.states.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
+            search.unsafeStates.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
+        }
+        updateHeadings();
+        updatePad();
+        resetCamera();
+    }
+
+    // Adds a state (safe or unsafe) to the graph in the column for its level.
+    function addStateNode(s, depth, color, nodeLabel, size) {
         const k = key(s);
-        graph.addNode(k, { ...gridPosition(s), size: 9, color, label: label(s) });
+        if (!search.levels[depth]) search.levels[depth] = [];
+        search.levels[depth].push(k);
+        graph.addNode(k, { ...gridPosition(s), size, color, label: nodeLabel });
+        if (els.layout.value === "levels") {
+            layoutLevel(depth);
+            updateHeadings();
+        }
         updatePad();
     }
 
@@ -186,8 +245,9 @@
     function addUnsafeNode(fromKey, s, load) {
         const k = key(s);
         if (!graph.hasNode(k)) {
-            graph.addNode(k, { ...gridPosition(s), size: 8, color: COLORS.unsafe, label: `✗ ${label(s)}` });
+            addStateNode(s, search.depth.get(fromKey) + 1, COLORS.unsafe, `✗ ${label(s)}`, 8);
             search.unsafe.add(k);
+            search.unsafeStates.set(k, s);
         }
         addTransitionEdge(fromKey, k, load, COLORS.unsafe, 1);
     }
@@ -213,7 +273,9 @@
             states: new Map([[startKey, start]]),
             parent: new Map(),
             depth: new Map([[startKey, 0]]),
+            levels: [],
             unsafe: new Set(),
+            unsafeStates: new Map(),
             current: null,
             moveIdx: 0,
             iterations: 0,
@@ -221,7 +283,7 @@
             done: false,
             goalKey: null,
         };
-        addStateNode(start, COLORS.start);
+        addStateNode(start, 0, COLORS.start, label(start), 9);
         resetCamera();
 
         els.log.innerHTML = "";
@@ -267,7 +329,7 @@
             const s = search.states.get(k);
             return {
                 kind: "dequeue",
-                text: `Now moving from <span class="mono">${label(s)}</span>. Try each possible boat load.`,
+                text: `Now moving from <span class="mono">${label(s)}</span>, a state that is ${crossingsText(search.depth.get(k))} from the start. Try each possible boat load.`,
                 from: s,
             };
         }
@@ -317,7 +379,7 @@
         search.states.set(toKey, to);
         search.parent.set(toKey, { from: fromKey, load, dirText });
         search.depth.set(toKey, depth);
-        addStateNode(to, isGoal(to) ? COLORS.goal : COLORS.state);
+        addStateNode(to, depth, isGoal(to) ? COLORS.goal : COLORS.state, label(to), 9);
         addTransitionEdge(fromKey, toKey, load, COLORS.edge, 2);
 
         if (isGoal(to)) {
@@ -334,7 +396,7 @@
         search.queue.push(toKey);
         return {
             kind: "new",
-            text: `${tryText} → <span class="mono">${label(to)}</span>: legal, and a new state.`,
+            text: `${tryText} → <span class="mono">${label(to)}</span>: legal, and a new state (${crossingsText(depth)} from the start).`,
             from, to,
         };
     }
@@ -410,6 +472,9 @@
         els.river.innerHTML = html;
 
         els.stats.innerHTML =
+            (search.current !== null
+                ? `Moving from level: <strong>${crossingsText(search.depth.get(search.current))}</strong> · `
+                : "") +
             `Tries: <strong>${search.tries}</strong> · ` +
             `Safe states found: <strong>${search.states.size}</strong> · ` +
             `Unsafe states hit: <strong>${search.unsafe.size}</strong>`;
@@ -489,6 +554,7 @@
     els.play.addEventListener("click", togglePlay);
     els.finish.addEventListener("click", doFinish);
     els.reset.addEventListener("click", resetSearch);
+    els.layout.addEventListener("change", layoutAll);
     [els.humans, els.zombies, els.capacity].forEach((input) => input.addEventListener("change", resetSearch));
     els.edgeLabels.addEventListener("change", () => {
         graph.forEachEdge((e, attrs) => {

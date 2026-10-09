@@ -19,9 +19,10 @@
                 <strong>right</strong> bank. The boat needs at least one passenger to cross. If there are any
                 humans on a bank, the zombies there must not outnumber them, or the humans get eaten.</p>
             <p class="mb-0">Each node in the graph is a <em>state</em>, written as
-                <code>left bank ⛵│ right bank</code> (the ⛵ shows which side the boat is on). BFS expands
-                states one level at a time, so the first time it reaches the goal it has found a solution
-                with the fewest crossings.</p>
+                <code>left bank ⛵│ right bank</code> (the ⛵ shows which side the boat is on). A state's
+                <em>level</em> is the number of crossings it takes to reach it from the start. Breadth-first
+                search finishes every state at one level before moving on to the next, so the first time it
+                reaches the goal it has found a solution with the fewest crossings.</p>
         </div>
 
         <div class="row g-3">
@@ -66,6 +67,11 @@
                             <input id="in-capacity" type="number" class="form-control form-control-sm" min="1" max="4" value="2">
                         </div>
                     </div>
+                    <label for="in-layout" class="form-label small mb-0">Graph layout</label>
+                    <select id="in-layout" class="form-select form-select-sm mb-2">
+                        <option value="levels" selected>By crossings: one column per level</option>
+                        <option value="grid">State grid (humans &times; zombies on right bank)</option>
+                    </select>
                     <button id="btn-reset" class="btn btn-outline-secondary btn-sm w-100 mb-3">Reset search</button>
 
                     <h2 class="h5 text-primary">Search</h2>
