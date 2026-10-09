@@ -20,9 +20,60 @@ body {
     background-color: #ffffff;
 }
 
-#graph-container {
+/* Full-width page, capped so very wide screens stay readable. */
+.page {
     width: 100%;
-    height: 760px;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* Setup controls: groups that sit side by side on wide screens and wrap on narrow ones. */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2.5rem;
+}
+
+.ctl-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.ctl-title {
+    flex-basis: 100%;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6c757d;
+}
+
+.field input[type="number"] {
+    width: 5rem;
+}
+
+.field-layout {
+    min-width: 16rem;
+}
+
+.field-speed {
+    width: 9rem;
+}
+
+/* The graph scrolls sideways inside its panel when the screen is narrower than the graph needs. */
+#graph-scroll {
+    overflow-x: auto;
+    position: relative;
+}
+
+#graph-container {
+    position: relative; /* sigma's canvases are absolutely positioned inside it */
+    width: 100%;
+    height: clamp(440px, 75vh, 820px);
     border: 1px solid #dee2e6;
     border-radius: 0.375rem;
     background: #fbfdff;
@@ -32,6 +83,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
+}
+
+.legend-tools {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 1rem;
 }
 
 .legend i {
@@ -54,10 +113,6 @@ body {
     min-height: 3.2rem;
 }
 
-.river + .river {
-    margin-top: 0.3rem;
-}
-
 .river .bank {
     background: #d9ead3;
     padding: 0.25rem;
@@ -77,10 +132,22 @@ body {
     justify-content: flex-end;
 }
 
+/* "From" and "To" pictures sit side by side when there is room. */
+#river-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.river-block {
+    flex: 1 1 14rem;
+    max-width: 26rem;
+}
+
 .river-caption {
     font-size: 0.75rem;
     color: #6c757d;
-    margin-top: 0.4rem;
+    margin-bottom: 0.15rem;
 }
 
 .river.unsafe .bank.bad {
@@ -109,6 +176,8 @@ body {
     margin-right: 0.3rem;
 }
 
+.tag-dequeue { background: var(--c-current); }
+.tag-impossible { background: #6c757d; }
 .tag-unsafe { background: var(--c-unsafe); }
 .tag-revisit { background: #9aa3ad; }
 .tag-new { background: var(--c-state); }
@@ -117,4 +186,50 @@ body {
 
 .mono {
     font-family: SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Phones and small tablets */
+@media (max-width: 767.98px) {
+    .page {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .controls,
+    .ctl-group {
+        gap: 0.75rem;
+    }
+
+    .ctl-group {
+        width: 100%;
+    }
+
+    .ctl-group {
+        align-items: stretch;
+    }
+
+    .ctl-group .btn {
+        flex: 1 1 9rem;
+    }
+
+    .field-layout,
+    .field-speed {
+        flex: 1 1 100%;
+        width: auto;
+    }
+
+    /* Too many columns to fit a phone screen: make the graph wider than the screen and scroll it. */
+    #graph-container {
+        min-width: 1200px;
+        height: clamp(380px, 65vh, 560px);
+    }
+
+    .legend-tools {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .log {
+        max-height: 240px;
+    }
 }

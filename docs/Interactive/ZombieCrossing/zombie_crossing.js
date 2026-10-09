@@ -32,7 +32,7 @@
         edgeRevisit: "#dde3e8",
     };
 
-    const X_SPACING = 3; // "levels" layout: distance between levels (columns)
+    const X_SPACING = 4; // "levels" layout: distance between levels (columns)
     const Y_SPACING = 3.5; // "levels" layout: distance between states in the same level
     const GRID_X = 3;    // "grid" layout: distance between columns (humans on right bank)
     const GRID_Y = 2;    // "grid" layout: distance between rows (zombies on right bank)
@@ -303,6 +303,7 @@
         };
         addStateNode(start, 0, COLORS.start, label(start), 9);
         resetCamera();
+        $("graph-scroll").scrollLeft = 0;
 
         els.log.innerHTML = "";
         els.solution.className = "small text-muted";
@@ -482,11 +483,29 @@
         );
     }
 
+    // On narrow screens the graph is wider than its panel and scrolls sideways.
+    // Keep the state being worked on in view as the search moves right.
+    function scrollGraphToActive() {
+        const wrap = $("graph-scroll");
+        const k = search.current !== null ? search.current : search.goalKey;
+        if (!renderer || !renderer.graphToViewport || !k || !graph.hasNode(k)) return;
+        if (wrap.scrollWidth <= wrap.clientWidth) return;
+        // sigma updates its display data on the next frame, so wait for it.
+        setTimeout(() => {
+            if (!graph.hasNode(k)) return;
+            const x = renderer.graphToViewport(graph.getNodeAttributes(k)).x;
+            const margin = 60;
+            if (x < wrap.scrollLeft + margin || x > wrap.scrollLeft + wrap.clientWidth - margin * 2) {
+                wrap.scrollTo({ left: Math.max(0, x - wrap.clientWidth / 3), behavior: "smooth" });
+            }
+        }, 60);
+    }
+
     function showStep(kind, text, from, to, bad) {
         els.stepText.innerHTML = (kind ? `<span class="tag tag-${kind}">${TAGS[kind]}</span>` : "") + text;
         let html = "";
-        if (from) html += `<div class="river-caption">${to ? "From" : "State"}</div>` + riverHtml(from);
-        if (to) html += `<div class="river-caption">To</div>` + riverHtml(to, bad);
+        if (from) html += `<div class="river-block"><div class="river-caption">${to ? "From" : "State"}</div>${riverHtml(from)}</div>`;
+        if (to) html += `<div class="river-block"><div class="river-caption">To</div>${riverHtml(to, bad)}</div>`;
         els.river.innerHTML = html;
 
         els.stats.innerHTML =
@@ -496,6 +515,7 @@
             `Tries: <strong>${search.tries}</strong> · ` +
             `Safe states found: <strong>${search.states.size}</strong> · ` +
             `Unsafe states hit: <strong>${search.unsafe.size}</strong>`;
+        scrollGraphToActive();
     }
 
     function logResult(res) {
