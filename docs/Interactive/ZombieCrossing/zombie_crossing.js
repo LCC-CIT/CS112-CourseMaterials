@@ -296,12 +296,6 @@
         }
     }
 
-    const NOTES = {
-        levels: "In the \"By crossings\" layout, the number above each column is how many crossings it takes to reach the states in it.",
-        grid: "In the state grid, each column is the number of humans on the right bank and each row is the number of " +
-            "zombies on the right bank. The start is at the top left and the goal is at the bottom right.",
-    };
-
     // sigma fits the camera to the nodes, not their labels. A hidden node past the
     // right-most column leaves room for its labels and fixes the view size in grid mode.
     const LABEL_ROOM = 2.5;
@@ -320,7 +314,6 @@
             search.states.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
             search.unsafeStates.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
         }
-        $("level-note").textContent = NOTES[els.layout.value];
         updateHeadings();
         updatePad();
         resetCamera();
@@ -393,8 +386,6 @@
         addStateNode(start, 0, COLORS.start, label(start), 9);
         resetCamera();
         $("graph-scroll").scrollLeft = 0;
-        $("level-note").textContent = NOTES[els.layout.value];
-
         els.log.innerHTML = "";
         els.solution.className = "small text-muted";
         els.solution.textContent = "Not found yet.";
