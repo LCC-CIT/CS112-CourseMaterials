@@ -37,6 +37,8 @@
     const Y_MAX = 30;   // level (the actual spacing stretches the graph to fill its container)
     const GRID_X = 3;    // "grid" layout: distance between columns (humans on right bank)
     const GRID_Y = 2;    // "grid" layout: distance between rows (zombies on right bank)
+    const STAGE_PADDING = 14; // pixels of empty margin sigma leaves around the graph (its default is 30)
+    const HEADING_GAP_PX = 36; // "levels" layout: pixels between the highest state and the column headings
     const BOAT_SHIFT = 1;   // "grid" layout: boat-on-right states sit a little below boat-on-left ones
 
     const $ = (id) => document.getElementById(id);
@@ -130,6 +132,7 @@
     try {
         renderer = new SigmaCtor(graph, $("graph-container"), {
             renderEdgeLabels: true,
+            stagePadding: STAGE_PADDING,
             labelRenderedSizeThreshold: 0,
             labelDensity: 5,
             labelGridCellSize: 40,
@@ -249,23 +252,46 @@
     // in a level (safe and unsafe) are stacked and centered, with a heading above each column.
     // Odd columns sit half a row lower than even ones, so a state's label (which extends to
     // the right) doesn't run into the states in the next column.
+    // How far a column's states are shifted (in rows) to stagger it against its neighbors.
+    function levelStagger(depth, n) {
+        return ((depth % 2) * 0.5 - (((n - 1) / 2) % 1) + 1) % 1;
+    }
+
+    // Highest and lowest positions, in rows, of the states in all columns (the headings go above `top`).
+    function levelRowExtent() {
+        let top = -Infinity;
+        let bottom = Infinity;
+        search.levels.forEach((level, depth) => {
+            const centered = (level.length - 1) / 2;
+            const stagger = levelStagger(depth, level.length);
+            top = Math.max(top, centered + stagger);
+            bottom = Math.min(bottom, -centered + stagger);
+        });
+        return { top, bottom };
+    }
+
     // The row spacing is chosen so the whole graph (headings included) has the same shape as its
-    // container. sigma scales x and y equally, so this is what makes the graph fill the height.
-    function levelRowSpacing() {
+    // container, less sigma's edge padding. sigma scales x and y equally, so this is what makes the
+    // graph fill the height. The graph is as wide as its columns (see updatePad), so the scale is
+    // (container width - padding) / that width, which also turns the heading gap from pixels into units.
+    function levelMetrics() {
         const box = $("graph-container");
-        if (!box.clientWidth || !box.clientHeight) return 3.5;
-        const tallest = Math.max(1, ...search.levels.map((l) => l.length));
-        const width = (search.levels.length - 1) * X_SPACING + 2 * LABEL_ROOM; // see updatePad
-        const rows = tallest + 0.5; // tallest column plus the heading row above it
-        return Math.min(Y_MAX, Math.max(Y_MIN, (width * box.clientHeight) / box.clientWidth / rows));
+        if (!box.clientWidth || !box.clientHeight) return { rowSpacing: 3.5, headingY: 6 };
+        const { top, bottom } = levelRowExtent();
+        const innerWidth = box.clientWidth - 2 * STAGE_PADDING;
+        const innerHeight = box.clientHeight - 2 * STAGE_PADDING;
+        const width = (search.levels.length - 1) * X_SPACING + 2 * LABEL_ROOM;
+        const totalHeight = (width * innerHeight) / innerWidth;
+        const gap = (HEADING_GAP_PX * width) / innerWidth;
+        const rowSpacing = Math.min(Y_MAX, Math.max(Y_MIN, (totalHeight - gap) / Math.max(top - bottom, 1)));
+        return { rowSpacing, headingY: top * rowSpacing + gap };
     }
 
     function layoutLevel(depth) {
         const level = search.levels[depth];
-        const rowSpacing = levelRowSpacing();
-        const n = level.length;
-        const centered = (n - 1) / 2;
-        const stagger = ((depth % 2) * 0.5 - (centered % 1) + 1) % 1;
+        const { rowSpacing } = levelMetrics();
+        const centered = (level.length - 1) / 2;
+        const stagger = levelStagger(depth, level.length);
         level.forEach((k, i) => {
             graph.mergeNodeAttributes(k, { x: depth * X_SPACING, y: (centered - i + stagger) * rowSpacing });
         });
@@ -284,12 +310,11 @@
             updateGridHeadings();
             return;
         }
-        const tallest = Math.max(...search.levels.map((l) => l.length));
-        const rowSpacing = levelRowSpacing();
+        const { headingY } = levelMetrics();
         search.levels.forEach((_, d) => {
             graph.addNode(`heading-${d}`, {
                 x: d * X_SPACING,
-                y: ((tallest - 1) / 2 + 1.5) * rowSpacing,
+                y: headingY,
                 size: 0.1,
                 color: "#6c757d",
                 label: levelHeading(d),
