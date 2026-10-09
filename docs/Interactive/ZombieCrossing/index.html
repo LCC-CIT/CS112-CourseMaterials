@@ -45,6 +45,15 @@
             <!-- Controls and current step -->
             <div class="col-lg-4">
                 <div class="panel p-3 rounded-3 shadow-sm mb-3">
+                    <h2 class="h5 text-primary">Current iteration</h2>
+                    <div id="step-text" class="small mb-2">Press <strong>Step</strong> to begin.</div>
+                    <div id="river-view"></div>
+                    <div class="stats small mt-2" id="stats"></div>
+                    <div class="small mt-2"><strong>Queue (front → back):</strong></div>
+                    <div id="queue-view" class="queue"></div>
+                </div>
+
+                <div class="panel p-3 rounded-3 shadow-sm">
                     <h2 class="h5 text-primary">Setup</h2>
                     <div class="row g-2 mb-2">
                         <div class="col-4">
@@ -82,15 +91,6 @@
                         <input class="form-check-input" type="checkbox" id="in-edge-labels" checked>
                         <label class="form-check-label" for="in-edge-labels">Show boat loads on edges</label>
                     </div>
-                </div>
-
-                <div class="panel p-3 rounded-3 shadow-sm">
-                    <h2 class="h5 text-primary">Current iteration</h2>
-                    <div id="step-text" class="small mb-2">Press <strong>Step</strong> to begin.</div>
-                    <div id="river-view"></div>
-                    <div class="stats small mt-2" id="stats"></div>
-                    <div class="small mt-2"><strong>Queue (front → back):</strong></div>
-                    <div id="queue-view" class="queue"></div>
                 </div>
             </div>
         </div>
