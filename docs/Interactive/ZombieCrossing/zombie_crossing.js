@@ -33,7 +33,7 @@
     };
 
     const X_SPACING = 3; // "levels" layout: distance between levels (columns)
-    const Y_SPACING = 1; // "levels" layout: distance between states in the same level
+    const Y_SPACING = 3.5; // "levels" layout: distance between states in the same level
     const GRID_X = 3;    // "grid" layout: distance between columns (humans on right bank)
     const GRID_Y = 2;    // "grid" layout: distance between rows (zombies on right bank)
     const BOAT_SHIFT = 1;   // "grid" layout: boat-on-right states sit a little below boat-on-left ones
@@ -89,7 +89,19 @@
             edgeLabelColor: "#555",
         });
         $("graph-hint").textContent = "WebGL unavailable: simple SVG view (no zoom or pan)";
+        $("lock-wrap").hidden = true;
     }
+
+    // Locking stops the graph from zooming or panning (so the page scrolls normally
+    // over it). sigma 2.4 has no setting for this, but its mouse and touch handlers
+    // ignore input while their `enabled` flag is false.
+    function setLocked(locked) {
+        if (!renderer || !renderer.getMouseCaptor) return;
+        renderer.getMouseCaptor().enabled = !locked;
+        renderer.getTouchCaptor().enabled = !locked;
+    }
+    $("in-lock").addEventListener("change", (e) => setLocked(e.target.checked));
+    setLocked($("in-lock").checked);
 
     function resetCamera() {
         if (renderer) renderer.getCamera().setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
@@ -165,16 +177,21 @@
 
     // Levels layout: x is the level (number of crossings from the start). The states
     // in a level (safe and unsafe) are stacked and centered, with a heading above each column.
+    // Odd columns sit half a row lower than even ones, so a state's label (which extends to
+    // the right) doesn't run into the states in the next column.
     function layoutLevel(depth) {
         const level = search.levels[depth];
         const n = level.length;
+        const centered = (n - 1) / 2;
+        const stagger = ((depth % 2) * 0.5 - (centered % 1) + 1) % 1;
         level.forEach((k, i) => {
-            graph.mergeNodeAttributes(k, { x: depth * X_SPACING, y: ((n - 1) / 2 - i) * Y_SPACING });
+            graph.mergeNodeAttributes(k, { x: depth * X_SPACING, y: (centered - i + stagger) * Y_SPACING });
         });
     }
 
+    // Short headings (the page explains that they count crossings) so neighbors don't overlap.
     function levelHeading(d) {
-        return d === 0 ? "Start" : `${d} crossing${d === 1 ? "" : "s"}`;
+        return d === 0 ? "Start" : String(d);
     }
 
     function updateHeadings() {
@@ -186,7 +203,7 @@
         search.levels.forEach((_, d) => {
             graph.addNode(`heading-${d}`, {
                 x: d * X_SPACING,
-                y: (tallest - 1) / 2 * Y_SPACING + 1.2,
+                y: ((tallest - 1) / 2 + 1.5) * Y_SPACING,
                 size: 0.1,
                 color: "#6c757d",
                 label: levelHeading(d),
@@ -199,7 +216,7 @@
     const LABEL_ROOM = 2.5;
     function updatePad() {
         const pos = els.layout.value === "levels"
-            ? { x: (search.levels.length - 1) * X_SPACING + LABEL_ROOM, y: 0 }
+            ? { x: (search.levels.length - 1) * X_SPACING + 2 * LABEL_ROOM, y: 0 }
             : { x: cfg.humans * GRID_X + LABEL_ROOM, y: -(cfg.zombies * GRID_Y + BOAT_SHIFT) };
         if (graph.hasNode("pad")) graph.mergeNodeAttributes("pad", pos);
         else graph.addNode("pad", { ...pos, size: 0, hidden: true });
@@ -212,6 +229,7 @@
             search.states.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
             search.unsafeStates.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
         }
+        $("level-note").hidden = els.layout.value !== "levels";
         updateHeadings();
         updatePad();
         resetCamera();

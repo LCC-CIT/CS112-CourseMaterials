@@ -29,6 +29,7 @@
             <!-- Graph -->
             <div class="col-lg-8">
                 <div class="panel p-2 rounded-3 shadow-sm">
+                    <div id="level-note" class="small text-muted mb-1">In the "By crossings" layout, the number above each column is how many crossings it takes to reach the states in it.</div>
                     <div id="graph-container"></div>
                     <div class="legend small mt-2">
                         <span><i style="background:var(--c-start)"></i>Start</span>
@@ -37,7 +38,13 @@
                         <span><i style="background:var(--c-unsafe)"></i>Unsafe (rejected)</span>
                         <span><i style="background:var(--c-goal)"></i>Goal</span>
                         <span><i style="background:var(--c-path)"></i>Solution path</span>
-                        <span id="graph-hint" class="text-muted ms-auto">Scroll to zoom, drag to pan</span>
+                        <span class="ms-auto d-flex align-items-center gap-3">
+                            <span id="graph-hint" class="text-muted">Scroll to zoom, drag to pan</span>
+                            <span id="lock-wrap" class="form-check mb-0">
+                                <input class="form-check-input" type="checkbox" id="in-lock" checked>
+                                <label class="form-check-label" for="in-lock">Lock zoom and pan</label>
+                            </span>
+                        </span>
                     </div>
                 </div>
             </div>
