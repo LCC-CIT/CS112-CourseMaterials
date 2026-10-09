@@ -33,7 +33,8 @@
     };
 
     const X_SPACING = 4; // "levels" layout: distance between levels (columns)
-    const Y_SPACING = 3.5; // "levels" layout: distance between states in the same level
+    const Y_MIN = 1.5;   // "levels" layout: least and most distance between states in the same
+    const Y_MAX = 30;   // level (the actual spacing stretches the graph to fill its container)
     const GRID_X = 3;    // "grid" layout: distance between columns (humans on right bank)
     const GRID_Y = 2;    // "grid" layout: distance between rows (zombies on right bank)
     const BOAT_SHIFT = 1;   // "grid" layout: boat-on-right states sit a little below boat-on-left ones
@@ -248,13 +249,25 @@
     // in a level (safe and unsafe) are stacked and centered, with a heading above each column.
     // Odd columns sit half a row lower than even ones, so a state's label (which extends to
     // the right) doesn't run into the states in the next column.
+    // The row spacing is chosen so the whole graph (headings included) has the same shape as its
+    // container. sigma scales x and y equally, so this is what makes the graph fill the height.
+    function levelRowSpacing() {
+        const box = $("graph-container");
+        if (!box.clientWidth || !box.clientHeight) return 3.5;
+        const tallest = Math.max(1, ...search.levels.map((l) => l.length));
+        const width = (search.levels.length - 1) * X_SPACING + 2 * LABEL_ROOM; // see updatePad
+        const rows = tallest + 0.5; // tallest column plus the heading row above it
+        return Math.min(Y_MAX, Math.max(Y_MIN, (width * box.clientHeight) / box.clientWidth / rows));
+    }
+
     function layoutLevel(depth) {
         const level = search.levels[depth];
+        const rowSpacing = levelRowSpacing();
         const n = level.length;
         const centered = (n - 1) / 2;
         const stagger = ((depth % 2) * 0.5 - (centered % 1) + 1) % 1;
         level.forEach((k, i) => {
-            graph.mergeNodeAttributes(k, { x: depth * X_SPACING, y: (centered - i + stagger) * Y_SPACING });
+            graph.mergeNodeAttributes(k, { x: depth * X_SPACING, y: (centered - i + stagger) * rowSpacing });
         });
     }
 
@@ -272,10 +285,11 @@
             return;
         }
         const tallest = Math.max(...search.levels.map((l) => l.length));
+        const rowSpacing = levelRowSpacing();
         search.levels.forEach((_, d) => {
             graph.addNode(`heading-${d}`, {
                 x: d * X_SPACING,
-                y: ((tallest - 1) / 2 + 1.5) * Y_SPACING,
+                y: ((tallest - 1) / 2 + 1.5) * rowSpacing,
                 size: 0.1,
                 color: "#6c757d",
                 label: levelHeading(d),
@@ -307,6 +321,15 @@
         else graph.addNode("pad", { ...pos, size: 0, hidden: true });
     }
 
+    // The container's shape follows the window, so lay the graph out again whenever it changes size.
+    let resizeTimer = null;
+    function relayoutAfterResize() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => { if (search && els.layout.value === "levels") layoutAll(); }, 150);
+    }
+    if (window.ResizeObserver) new ResizeObserver(relayoutAfterResize).observe($("graph-container"));
+    window.addEventListener("resize", relayoutAfterResize);
+
     function layoutAll() {
         if (els.layout.value === "levels") {
             search.levels.forEach((_, d) => layoutLevel(d));
@@ -325,7 +348,8 @@
         if (!search.levels[depth]) search.levels[depth] = [];
         search.levels[depth].push(k);
         graph.addNode(k, { ...gridPosition(s), size, color, label: nodeLabel });
-        if (els.layout.value === "levels") layoutLevel(depth);
+        // A new state can change the row spacing, so every column is laid out again.
+        if (els.layout.value === "levels") search.levels.forEach((_, d) => layoutLevel(d));
         updateHeadings();
         updatePad();
     }
