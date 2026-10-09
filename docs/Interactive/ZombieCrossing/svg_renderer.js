@@ -123,5 +123,5 @@ window.createSvgRenderer = function (graph, container, options) {
     schedule();
 
     // Same shape as the bit of the sigma API the page uses.
-    return { getCamera: () => ({ setState() {} }) };
+    return { getCamera: () => ({ setState() {} }), resize: schedule };
 };

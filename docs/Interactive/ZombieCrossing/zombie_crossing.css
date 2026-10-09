@@ -73,6 +73,30 @@ body {
 }
 
 /* The graph scrolls sideways inside its panel when the screen is narrower than the graph needs. */
+/* Drag handles above and below the graph that change its height. */
+.graph-grip {
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: ns-resize;
+    touch-action: none;
+    user-select: none;
+}
+
+.graph-grip::before {
+    content: "";
+    width: 3rem;
+    height: 4px;
+    border-radius: 2px;
+    background: #b8c2cc;
+}
+
+.graph-grip:hover::before,
+.graph-grip:focus-visible::before {
+    background: #6c757d;
+}
+
 #graph-scroll {
     overflow-x: auto;
     overflow-y: hidden; /* sigma's canvases are a pixel or two taller than the bordered container */

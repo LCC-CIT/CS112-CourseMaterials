@@ -321,14 +321,71 @@
         else graph.addNode("pad", { ...pos, size: 0, hidden: true });
     }
 
-    // The container's shape follows the window, so lay the graph out again whenever it changes size.
-    let resizeTimer = null;
-    function relayoutAfterResize() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => { if (search && els.layout.value === "levels") layoutAll(); }, 150);
+    // The container's shape follows the window and the drag handles, so fit the graph to it again
+    // whenever it changes size. (sigma only watches the window, so it is told to resize here.)
+    function refitGraph() {
+        if (renderer && renderer.resize) renderer.resize();
+        if (search && els.layout.value === "levels") layoutAll();
     }
-    if (window.ResizeObserver) new ResizeObserver(relayoutAfterResize).observe($("graph-container"));
-    window.addEventListener("resize", relayoutAfterResize);
+
+    let resizeTimer = null;
+    function refitSoon() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(refitGraph, 150);
+    }
+    if (window.ResizeObserver) new ResizeObserver(refitSoon).observe($("graph-container"));
+    window.addEventListener("resize", refitSoon);
+
+    // ---------- Drag handles that change the graph height ----------
+    // Dragging the bottom handle moves the bottom edge. Dragging the top handle moves the top edge:
+    // the page scrolls by the same amount so the bottom edge stays where it is on screen.
+    const GRAPH_MIN_HEIGHT = 260;
+    const GRAPH_MAX_HEIGHT = 4000;
+    const graphBox = $("graph-container");
+
+    function setGraphHeight(px) {
+        graphBox.style.height = Math.min(GRAPH_MAX_HEIGHT, Math.max(GRAPH_MIN_HEIGHT, Math.round(px))) + "px";
+    }
+
+    document.querySelectorAll(".graph-grip").forEach((grip) => {
+        const isTop = grip.classList.contains("graph-grip-top");
+        let drag = null;
+        let frame = null;
+
+        function resizeBy(delta, startHeight, startScroll) {
+            setGraphHeight(startHeight + delta);
+            if (isTop) window.scrollTo(0, startScroll + graphBox.getBoundingClientRect().height - startHeight);
+            if (!frame) {
+                frame = requestAnimationFrame(() => { frame = null; refitGraph(); });
+            }
+        }
+
+        grip.addEventListener("pointerdown", (e) => {
+            drag = { y: e.clientY, height: graphBox.getBoundingClientRect().height, scroll: window.scrollY };
+            try { grip.setPointerCapture(e.pointerId); } catch (err) { /* not a real pointer */ }
+            e.preventDefault();
+        });
+        grip.addEventListener("pointermove", (e) => {
+            if (!drag) return;
+            const moved = e.clientY - drag.y;
+            resizeBy(isTop ? -moved : moved, drag.height, drag.scroll);
+        });
+        ["pointerup", "pointercancel"].forEach((evt) => grip.addEventListener(evt, () => { drag = null; }));
+
+        // Double-click goes back to the default height.
+        grip.addEventListener("dblclick", () => {
+            graphBox.style.height = "";
+            refitGraph();
+        });
+
+        // Keyboard: arrow keys grow or shrink the graph (up grows from the top handle, down from the bottom one).
+        grip.addEventListener("keydown", (e) => {
+            if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+            e.preventDefault();
+            const step = e.key === "ArrowDown" ? 40 : -40;
+            resizeBy(isTop ? -step : step, graphBox.getBoundingClientRect().height, window.scrollY);
+        });
+    });
 
     function layoutAll() {
         if (els.layout.value === "levels") {
