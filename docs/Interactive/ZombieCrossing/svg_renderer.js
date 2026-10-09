@@ -2,7 +2,8 @@
 // because the browser has no WebGL. It reads the same node and edge attributes
 // sigma uses (x, y, size, color, label, hidden) and redraws when the graph changes.
 // No zoom or pan: the whole graph is always fitted to the container.
-// options.guides (optional): function returning graph x positions for vertical guide lines.
+// options.guides (optional): function returning { xs, ys, clip } guide lines in graph
+// coordinates (clip, if set, is { x0, x1, y0, y1 }: where the lines start and stop).
 "use strict";
 
 window.createSvgRenderer = function (graph, container, options) {
@@ -63,13 +64,19 @@ window.createSvgRenderer = function (graph, container, options) {
 
         // Optional dashed vertical guide lines at the given graph x positions.
         if (opts.guides) {
-            opts.guides().forEach((gx) => {
-                const x = toScreen({ x: gx, y: minY }).x;
-                guideLayer.appendChild(el("line", {
-                    x1: x, y1: 0, x2: x, y2: height,
-                    stroke: "#c9d3df", "stroke-width": 1, "stroke-dasharray": "5 5",
-                }));
-            });
+            const g = opts.guides();
+            const px = (gx) => toScreen({ x: gx, y: minY }).x;
+            const py = (gy) => toScreen({ x: minX, y: gy }).y;
+            const left = g.clip ? px(g.clip.x0) : 0;
+            const right = g.clip ? px(g.clip.x1) : width;
+            const top = g.clip ? py(g.clip.y1) : 0;
+            const bottom = g.clip ? py(g.clip.y0) : height;
+            const line = (x1, y1, x2, y2) => guideLayer.appendChild(el("line", {
+                x1, y1, x2, y2,
+                stroke: "#c9d3df", "stroke-width": 1, "stroke-dasharray": "5 5",
+            }));
+            g.xs.forEach((gx) => line(px(gx), top, px(gx), bottom));
+            g.ys.forEach((gy) => line(left, py(gy), right, py(gy)));
         }
 
         graph.forEachEdge((_, a, source, target, sa, ta) => {

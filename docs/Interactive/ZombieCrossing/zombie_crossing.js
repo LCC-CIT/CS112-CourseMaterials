@@ -65,10 +65,20 @@
 
     const graph = new Graph({ type: "undirected" });
 
-    // x positions (graph coordinates) of the vertical guide lines: one per level column.
-    function guideXs() {
-        if (!search || els.layout.value !== "levels") return [];
-        return search.levels.map((_, d) => d * X_SPACING);
+    // Guide lines, in graph coordinates: { xs, ys, clip }. Levels layout: one vertical line
+    // per level column, running the full height. Grid layout: lines between the cells of the
+    // state grid, running only across the grid (clip = its outer edges).
+    function guideLines() {
+        if (!search || !cfg) return { xs: [], ys: [], clip: null };
+        if (els.layout.value === "levels") {
+            return { xs: search.levels.map((_, d) => d * X_SPACING), ys: [], clip: null };
+        }
+        const b = gridBounds();
+        const xs = [];
+        const ys = [];
+        for (let h = 0; h <= cfg.humans + 1; h++) xs.push(h * GRID_X + b.left);
+        for (let z = 0; z <= cfg.zombies + 1; z++) ys.push(-z * GRID_Y + b.top);
+        return { xs, ys, clip: { x0: xs[0], x1: xs[xs.length - 1], y1: ys[0], y0: ys[ys.length - 1] } };
     }
 
     // Draws the guide lines on a canvas placed under sigma's own canvases,
@@ -92,13 +102,21 @@
             ctx.strokeStyle = "#c9d3df";
             ctx.lineWidth = 1;
             ctx.setLineDash([5, 5]);
-            guideXs().forEach((gx) => {
-                const x = Math.round(sigma.graphToViewport({ x: gx, y: 0 }).x) + 0.5;
+            const g = guideLines();
+            const px = (gx) => Math.round(sigma.graphToViewport({ x: gx, y: 0 }).x) + 0.5;
+            const py = (gy) => Math.round(sigma.graphToViewport({ x: 0, y: gy }).y) + 0.5;
+            const left = g.clip ? px(g.clip.x0) : 0;
+            const right = g.clip ? px(g.clip.x1) : w;
+            const top = g.clip ? py(g.clip.y1) : 0;
+            const bottom = g.clip ? py(g.clip.y0) : h;
+            const line = (x1, y1, x2, y2) => {
                 ctx.beginPath();
-                ctx.moveTo(x, 0);
-                ctx.lineTo(x, h);
+                ctx.moveTo(x1, y1);
+                ctx.lineTo(x2, y2);
                 ctx.stroke();
-            });
+            };
+            g.xs.forEach((gx) => line(px(gx), top, px(gx), bottom));
+            g.ys.forEach((gy) => line(left, py(gy), right, py(gy)));
         }
 
         sigma.on("afterRender", draw);
@@ -129,7 +147,7 @@
             edgeLabelSize: 11,
             font: "Consolas, Menlo, monospace",
             edgeLabelColor: "#555",
-            guides: guideXs,
+            guides: guideLines,
         });
         $("graph-hint").textContent = "WebGL unavailable: simple SVG view (no zoom or pan)";
         $("lock-wrap").hidden = true;
@@ -211,7 +229,15 @@
         if (graph.hasNode(k)) graph.setNodeAttribute(k, "color", color);
     }
 
-    // Grid layout: the start (everyone on the left) is top-left, the goal is bottom-right.
+    // Grid layout: column = humans on the right bank, row = zombies on the right bank,
+    // and states with the boat on the right sit a little below those with the boat on the left.
+    // Offsets of a cell's left and top edges from its column x and row y (the lines sit
+    // just left of a column's nodes, leaving room on the right for their labels).
+    function gridBounds() {
+        return { left: -0.5, top: BOAT_SHIFT - 0.5 };
+    }
+
+    // The start (everyone on the left) is top-left, the goal is bottom-right.
     function gridPosition(s) {
         const r = rightSide(s);
         const shift = s.boat === "R" ? BOAT_SHIFT : 0;
@@ -241,7 +267,10 @@
         const headingIds = [];
         graph.forEachNode((id) => { if (id.startsWith("heading-")) headingIds.push(id); });
         headingIds.forEach((id) => graph.dropNode(id));
-        if (els.layout.value !== "levels") return;
+        if (els.layout.value !== "levels") {
+            updateGridHeadings();
+            return;
+        }
         const tallest = Math.max(...search.levels.map((l) => l.length));
         search.levels.forEach((_, d) => {
             graph.addNode(`heading-${d}`, {
@@ -254,13 +283,32 @@
         });
     }
 
+    // Grid headings: a column heading above each column and a row heading left of each row.
+    function updateGridHeadings() {
+        const b = gridBounds();
+        const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
+        const style = { size: 0.1, color: "#6c757d" };
+        for (let h = 0; h <= cfg.humans; h++) {
+            graph.addNode(`heading-c${h}`, { ...style, x: h * GRID_X, y: b.top + 0.9, label: plural(h, "human") });
+        }
+        for (let z = 0; z <= cfg.zombies; z++) {
+            graph.addNode(`heading-r${z}`, { ...style, x: -2.4, y: -z * GRID_Y - BOAT_SHIFT / 2, label: plural(z, "zombie") });
+        }
+    }
+
+    const NOTES = {
+        levels: "In the \"By crossings\" layout, the number above each column is how many crossings it takes to reach the states in it.",
+        grid: "In the state grid, each column is the number of humans on the right bank and each row is the number of " +
+            "zombies on the right bank. The start is at the top left and the goal is at the bottom right.",
+    };
+
     // sigma fits the camera to the nodes, not their labels. A hidden node past the
     // right-most column leaves room for its labels and fixes the view size in grid mode.
     const LABEL_ROOM = 2.5;
     function updatePad() {
         const pos = els.layout.value === "levels"
             ? { x: (search.levels.length - 1) * X_SPACING + 2 * LABEL_ROOM, y: 0 }
-            : { x: cfg.humans * GRID_X + LABEL_ROOM, y: -(cfg.zombies * GRID_Y + BOAT_SHIFT) };
+            : { x: (cfg.humans + 1) * GRID_X + gridBounds().left, y: -(cfg.zombies + 1) * GRID_Y + gridBounds().top };
         if (graph.hasNode("pad")) graph.mergeNodeAttributes("pad", pos);
         else graph.addNode("pad", { ...pos, size: 0, hidden: true });
     }
@@ -272,7 +320,7 @@
             search.states.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
             search.unsafeStates.forEach((s, k) => graph.mergeNodeAttributes(k, gridPosition(s)));
         }
-        $("level-note").hidden = els.layout.value !== "levels";
+        $("level-note").textContent = NOTES[els.layout.value];
         updateHeadings();
         updatePad();
         resetCamera();
@@ -284,10 +332,8 @@
         if (!search.levels[depth]) search.levels[depth] = [];
         search.levels[depth].push(k);
         graph.addNode(k, { ...gridPosition(s), size, color, label: nodeLabel });
-        if (els.layout.value === "levels") {
-            layoutLevel(depth);
-            updateHeadings();
-        }
+        if (els.layout.value === "levels") layoutLevel(depth);
+        updateHeadings();
         updatePad();
     }
 
@@ -347,6 +393,7 @@
         addStateNode(start, 0, COLORS.start, label(start), 9);
         resetCamera();
         $("graph-scroll").scrollLeft = 0;
+        $("level-note").textContent = NOTES[els.layout.value];
 
         els.log.innerHTML = "";
         els.solution.className = "small text-muted";
