@@ -41,7 +41,7 @@ This is another way of representing the same thing, but we write the <u>ratio</u
 To turn odds of A:B into a probability, divide the first number by the sum of both numbers: 
 A / (A + B). 
 
-> **Examples;**
+> **Examples:**
 >
 > - For the die, odds of 1:5 become 1 / (1 + 5) = 1/6. 
 > - For the rain example below, odds of 146:219 become 146 / (146 + 219) = 146/365, or 0.40 (40%). 
