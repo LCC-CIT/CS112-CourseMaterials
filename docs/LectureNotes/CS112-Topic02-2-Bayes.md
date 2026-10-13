@@ -18,27 +18,34 @@ author: Brian Bird
 
 *Bayes’ Rule* is a theorem in probability and statistics that describes a way to update the probabilities of predictions when given new evidence. It’s named after Thomas Bayes, who provided the first mathematical formulation of the rule in the eighteenth century (1763).
 
-At its core, Bayes’ Rule is about learning from experience. It provides a mathematical framework for integrating new evidence (a new *likelihood*) into our prior beliefs and predictions (*prior odds*). It is used in a wide range of disciplines, including medicine, psychology, and artificial intelligence.
+At its core, Bayes’ Rule is about learning from experience. It provides a mathematical framework for applying new evidence (a new *likelihood*) to our prior beliefs and predictions (*prior odds*). It is used in a wide range of disciplines, including medicine, psychology, and artificial intelligence.
 
 ## Odds vs. Probabilities
 
-These are different ways of representing the concpet&mdash;the chances of something happening.
+These are different ways of representing the  chance of something happening.
 
 ### Probability
 
-This is written as a fraction or a percent representing the the number of times a thing happens divided by the total number of occurance. For thowing a die, the probability of rolling a 6 (or any specific number) is 1/6 or about 16.7%.
+This is written as a <u>fraction</u> or a <u>percent</u> representing the the number of times a thing happens divided by the total number of occurrence. 
+
+> **Example: throwing a die**
+> The probability of rolling a 6 (or any specific number) is **1/6** or **about 16.7%**.
 
 ### Odds
 
-This is another way of representing the same thing, but we write the ratio the number of times a thing happens to the number of times it doesn't happen. For the example above, we would write the odds as: 1:5 (one to five).
+This is another way of representing the same thing, but we write the <u>ratio</u> of the number of times a thing happens to the number of times it doesn't happen. 
+
+> **Example: throwing a die**
+> For the example above, we would write the odds as: **1:5 (one to five)**.
 
 ## Prior odds
 
 **Definition**
 Assessment of odds before adding new information. In other words, records of past events were used to calculate the odds.
 
-**Example**  
-The odds of rain on any given day in Eugene[^1] are 146:219. This is based on past rainfall records.
+> **Example: predicting rain**  
+> The <u>odds</u> of rain on any given day in Eugene[^1] are **146:219**. 
+> This is based on <u>past rainfall records</u>.
 
 ## Likelihood ratio
 
