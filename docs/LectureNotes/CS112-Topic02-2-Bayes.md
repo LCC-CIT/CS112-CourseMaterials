@@ -80,8 +80,8 @@ The likelihood ratio is where the new information comes in. It is a second set o
 >
 > (This is not real data and is different from the example in *Elements of AI*.)
 >
-> - On rainy days, there were clouds in the morning 7 out of 9 times. P<sub>observation when event</sub> = 7/9.
-> - On dry days, there were clouds in the morning 1 out of 9 times. P<sub>observation when no event</sub> = 1/9.
+> - On <u>rainy</u> days, there were clouds in the morning 7 out of 9 times. P<sub>observation when event</sub> = 7/9.
+> - On <u>dry</u> days, there were clouds in the morning 1 out of 9 times. P<sub>observation when no event</sub> = 1/9.
 >
 > **Likelihood ratio** for morning clouds:  **7/9 &divide; 1/9 = 7**
 > (Numbers with the same denominators were chosen so the math would be easy, but the denominators don't have to be the same.)
