@@ -8,8 +8,6 @@ author: Brian Bird
 
 <h1>Bayes' Rule</h1>
 
-**CS112, Intro to AI**
-
 <h2>Table of Contents</h2>
 
 [TOC]
@@ -51,6 +49,7 @@ Assessment of odds before adding new information. In other words, records of pas
 
 **Definition**
 The probability of the *observation* in the case of the *event* of interest divided by the probability of the observation in the case of no event.
+
 $$
 likelihoodRatio = \frac{P_{\text{observation when event}}}{P_{\text{observation when no event}}}
 $$
@@ -81,6 +80,7 @@ The likelihood ratio is where the new information comes in. It is a second set o
 This is the end result. The new odds that are calculated after the new information (likelihood) has been added.
 
 **Bayes' Formula:**
+
 $$
 posteriorOdds = priorOdds \times likelihoodRatio
 $$
@@ -127,9 +127,11 @@ To calculate the likelihood value, we need two probabilities for each word:
 - The probability of the word appearing in a positive post: posFreq / posTotal
 
 We calculate likelihood values for each of the words using this formula:
+
 $$
 likelihood = \frac{negFreq / negTotal} {posFreq / posTotal}
 $$
+
 Here are the results:  
 (Reminder, we are calculating the likelihood that a particular word indicates a post with negative sentiment.)
 
@@ -150,9 +152,11 @@ We also need a rule for deciding when a post counts as negative. The simplest ru
 *Inference* is the term we use to describe the process of making decisions based on the training. In this case, we want to make decisions based on the *posterior odds* of a post having negative sentiment, which are calculated using the formula below.
 
 The prior odds come from the training data: 50 negative posts to 100 positive posts, which is 50:100 = 1:2, or 0.5. (As a probability, that's 1/3.)
+
 $$
 posteriorOdds = priorOdds \times likelihood_1 \times likelihood_2 \times...\times likelihood_n
 $$
+
 This is called *naive* Bayes because it treats each word as independent evidence, ignoring how words relate to each other. That simplification is what lets us just multiply the likelihoods together.
 Let's say we want to do inference on two new posts. The posts have these words (as well as others) in them:
 
