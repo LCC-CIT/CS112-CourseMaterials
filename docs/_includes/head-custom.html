@@ -88,3 +88,16 @@ document.addEventListener("DOMContentLoaded", function () {
   tocTarget.replaceWith(nav);
 });
 </script>
+
+<script>
+// Load MathJax only on pages with math. kramdown turns $$...$$ into \[...\] (block) or \(...\) (inline).
+document.addEventListener("DOMContentLoaded", function () {
+  const text = document.body.textContent;
+  if (!/\\\[|\\\(|\$\$/.test(text)) return;
+
+  const script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js";
+  script.async = true;
+  document.head.appendChild(script);
+});
+</script>
