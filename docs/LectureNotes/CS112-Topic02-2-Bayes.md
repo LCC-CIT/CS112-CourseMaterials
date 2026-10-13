@@ -112,7 +112,7 @@ One application of a *naïve Bayes classifier* might be to analyze the sentiment
 
 ### Training
 
-Before using the AI software system to do sentiment analysis, the system has to be trained.
+Before using an AI system to do sentiment analysis, the system has to be trained.
 
 #### Labeling
 
