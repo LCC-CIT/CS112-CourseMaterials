@@ -186,3 +186,5 @@ Let's say we want to do inference on two new posts. The posts have these words (
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, revised in 2026 are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 *MS Copilot GPT-4 was used to draft parts of these notes, Claude Opus 5.5 was used for checking and revisions.*
+
+---
