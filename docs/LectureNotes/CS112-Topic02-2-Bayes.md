@@ -70,7 +70,7 @@ where:
 
 - *Event* is the thing we are trying to predict.  
   In our example: rain.
-- *Observation* is the evidence we can see that helps us predict the event.  
+- *Observation* is the evidence that helps us predict the event.  
   In our example: clouds in the morning.
 
 The likelihood ratio is where the new information comes in. It is a second set of probabilities that gives us new information that will improve the accuracy of predictions.
