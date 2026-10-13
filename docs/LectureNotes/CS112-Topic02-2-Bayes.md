@@ -32,6 +32,18 @@ This is written as a fraction or a percent representing the the number of times 
 
 This is another way of representing the same thing, but we write the ratio the number of times a thing happens to the number of times it doesn't happen. For the example above, we would write the odds as: 1:5 (one to five).
 
+### Converting odds to probabilities
+
+To turn odds of A:B into a probability, divide the first number by the sum of both numbers: 
+A / (A + B). 
+
+> **Examples;**
+>
+> - For the die, odds of 1:5 become 1 / (1 + 5) = 1/6. 
+> - For the rain example below, odds of 146:219 become 146 / (146 + 219) = 146/365, or 0.40 (40%). 
+
+To go the other way, compare the chance that the thing happens to the chance that it doesn't: a probability of 0.40 gives odds of 0.40:0.60, which is the same as 2:3.
+
 ## Prior odds
 
 **Definition**
@@ -120,11 +132,11 @@ Here are the results:
 
 | Word       | Likelihood                    |
 | ---------- | ----------------------------- |
-| fine       | 10/500 &div; 50/1000 = 0.40   |
-| disappoint | 70/500  &div; 12/1000 = 11.67 |
-| fun        | 15/500  &div; 60/1000 = 0.50  |
-| smart      | 5/500  &div; 40/1000 = 0.25   |
-| frustrate  | 85/500  &div; 5/1000 = 34.00  |
+| fine       | 10/500 &divide; 50/1000 = 0.40   |
+| disappoint | 70/500  &divide; 12/1000 = 11.67 |
+| fun        | 15/500  &divide; 60/1000 = 0.50  |
+| smart      | 5/500  &divide; 40/1000 = 0.25   |
+| frustrate  | 85/500  &divide; 5/1000 = 34.00  |
 
 ### Setting a Decision Threshold
 
