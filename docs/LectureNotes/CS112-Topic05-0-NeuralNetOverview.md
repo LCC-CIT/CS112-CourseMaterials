@@ -30,7 +30,7 @@ Registration for winter term is open. Here are some relevant links:
 - [Term-By-Term Sample Planner](https://lanecc.smartcatalogiq.com/-/media/institution/lane-community-college/2023-24-term-planners/Software%20Development%20Term%20Plan%2023-24.pdf) for AAS in Software Dev
 
 - Winter 2026 Class Schedule
-- [Academic Advising](https://lanecc.edu/advising)
+- [Academic Advising](https://www.lanecc.edu/advising)
 - [Registration](https://my.lanecc.edu/StudentRegistrationSsb/ssb/registration)
 
 ## Q and A
@@ -52,7 +52,7 @@ Due this Sunday (the usual):
 
 
 
-<a href="https://lanecc.edu/advising"><img src="Images/F2025Week06_RegAndAdvisingGraphic.png" alt="F2025Week06_RegAndAdvisingGraphic" style="zoom:20%;" /></a>
+<a href="https://www.lanecc.edu/advising"><img src="Images/F2025Week06_RegAndAdvisingGraphic.png" alt="F2025Week06_RegAndAdvisingGraphic" style="zoom:20%;" /></a>
 
 
 

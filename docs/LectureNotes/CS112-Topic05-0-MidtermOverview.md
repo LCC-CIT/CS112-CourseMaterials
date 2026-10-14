@@ -68,7 +68,7 @@ The CIT Main lab (Building 19, room 135) is equipped with computers and software
 
 See the [LCC Tutoring Services](https://www.lanecc.edu/tutor) web page for information.
 
-[![](Images/Week 5 F2025.jpg)](https://lanecc.edu/resources)
+[![](Images/Week 5 F2025.jpg)](https://www.lanecc.edu/resources)
 
 ------
 
