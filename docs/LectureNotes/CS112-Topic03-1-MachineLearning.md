@@ -18,7 +18,7 @@ author: Brian Bird
 
 ## Introduction
 
-Machine learning is a subfield of AI that uses models trained on data sets. These models are capable of <u>predicting</u> outcomes and <u>classifying</u> information. A special type of Machine Learning is Generative AI which can <u>generate</u> text, images and more.
+Machine learning is a subfield of AI that uses models trained on data sets. These models are capable of <u>predicting</u> outcomes and <u>classifying</u> information. A special type of Machine Learning is Generative AI which can <u>generate</u> text, images and more&mdash;we'll cover that later this term.
 
 ## Models
 
@@ -27,57 +27,89 @@ When talking about Machine Learning (ML), people often use the term *model*. Thi
 -  A machine learning algorithm and the methodology for training it.
 -  A machine learning algorithm that has been trained using data.
 
-**Example of a model:** The *naive Bayes classifier* for detecting spam assigns weights (probabilities) to words in a set of words. This set of weights along with the algorithm for using them to classify an email message constitute a trained *model*.
+**Example of a model:** The *naive Bayes classifier* for detecting spam (which we'll learn more about this week) assigns weights (probabilities) to words in a set of words. This set of weights along with the algorithm for using them to classify an email message constitute a trained *model*.
+
+### ML Terminology
+
+- **Feature**: One piece of information about each item in the data, such as a person’s age or the temperature that day, that the model uses to make its prediction.
+- **Label**: The output or target value the model is trying to predict (e.g., "spam" or "not spam").
+- **Training Data**: The dataset used to teach the model patterns and relationships.
+- **Test Data**: A separate dataset used to evaluate how well the model performs on unseen data.
 
 ## Types of ML
 
 ### Supervised learning 
 
-An AI system is trained using labeled data; which means the data has been categorized in some way to indicate what it represents. 
+An AI system is trained using *labeled data*; which means the data has been categorized in some way to indicate what it represents. 
 
-**Example**: email spam detection.
-
-A model is trained on emails that have already been classified as spam or not spam. After training, the model can be used to classify new emails as either spam or not spam.
+> **Example**: email spam detection.
+>
+> A model is trained on emails that have already been classified as spam or not spam. After training, the model can be used to classify new emails as either spam or not spam.
 
 ### Unsupervised learning
 
 The system is trained on *unlabeled data* and tries to find similarities, differences, patterns, and structure in data by itself. The system will then classify the samples in other data sets according to the categories inferred from the training data.
 
-**Example:** customer segmentation in marketing. 
-
-A business might use data about their customers, such as age, location, and purchasing behavior to determine which customers are similar to each other. Unsupervised learning algorithms, such as *k-means clustering*, can be used to automatically find patterns in this data and group similar customers together.
+> **Example:** customer categorization in marketing. 
+>
+> A business might use data about their customers, such as age, location, and purchasing behavior to determine which customers are similar to each other. Unsupervised learning algorithms, such as *k-means clustering*, can be used to automatically find patterns in this data and group similar customers together.
 
 ### Reinforcement learning
 
 The AI system isn't given any training data, instead it acts as an autonomous agent that accumulates data from trial-and-error attempts to solve a problem or make a decision. It uses algorithms that learn from outcomes to decide which action to take next. 
 
-**Example:** autonomous robots in industrial automation. 
-
-Industrial robots can be programmed to perform tasks such as picking up objects or assembling parts. The robots start with little to no knowledge about how to perform these tasks. As a robot attempts to perform a task, it is given positive rewards for successful actions (like correctly assembling a part) and negative rewards for unsuccessful actions (like dropping an object). Over time, the robots learn to perform their tasks more efficiently by maximizing their successes and minimizing their mistakes. This is all done without explicit programming for each specific task.
+> **Example:** autonomous robots in industrial automation. 
+>
+> Industrial robots can be programmed to perform tasks such as picking up objects or assembling parts. The robots start with little to no knowledge about how to perform these tasks. As a robot attempts to perform a task, it is given positive rewards for successful actions (like correctly assembling a part) and negative rewards for unsuccessful actions (like dropping an object). Over time, the robots learn to perform their tasks more efficiently by maximizing their successes and minimizing their mistakes. This is all done without explicit programming for each specific task.
 
 ## Supervised Learning Models
 
-We've already mentioned Bayes' rule, which is a statistical methodology (aka model). Here are some others. These can be used for *prediction* and/or *classification*.
+We've already mentioned *Bayes' rule*. Here is a description of it as well as some other types of s*upervised learning models*. These can be used for *prediction* and/or *classification*.
+
+### Statistical Models
+
+These models use mathematical statistics for prediction and/or classification.
+
+#### Bayesian Models
+
+This type of model is based on Bayes' theorem (from the 19th century) which provides a mathematical basis for predicting the probability that something will happen or that it belongs in some category.
+
+##### Naïve Bayes
+
+A simple and fast classifier that uses Bayes' theorem and assumes all *features* are independent. 
+We will do a deeper dive into the naïve Bayes classifier soon.
+
+##### Bayesian Networks (aka Belief Networks)
+
+A more flexible model that represents variables (any unknowns) using a *directed graph* (a network of pointers that connect the variables). Unlike Naïve Bayes, it doesn’t assume the *features* are independent and instead accounts for relationships and dependencies between features.
 
 ### Nearest Neighbors (K-NN)
 
 K-NN, where K represents the number of "Nearest Neighbors" to consider is a methodology in which things (or people) are classified based on a number of predetermined features and grouped (classified) based on the similarity of those features.
 
-**Example:** Real estate comparative market analysis.
+Here is a prediction example:
 
-Training: A realtor compares the recent selling price of homes similar to the one they are selling and sets a selling price based on those similar homes. In order to train an ML model to do this, the pertinent characteristics of a home (location, number of beds and baths, etc.) need to be identified and represented numerically so that they can be compared mathematically.
+> **Example:** Real estate comparative market analysis.
+>
+> **Training**: A realtor compares the recent selling price of homes similar to the one they are selling and sets a selling price based on those similar homes. In order to train an ML model to do this, the pertinent characteristics of a home (location, number of beds and baths, etc.) need to be identified and represented numerically so that they can be compared mathematically.
+>
+> **Inference** (prediction in this case): A home that hasn't sold yet can have its market value estimated by comparing it to several (k) other homes with similar characteristics (Nearest Neighbors).
 
-Inference (classification in this case): A home that hasn't sold yet can have its market value estimated by comparing it to several (k) other homes with similar characteristics (Nearest Neighbors).
+Here is a classification example:
 
-**Example:** Character recognition.
+> **Example:** Character recognition.
+>
+> **Training**: Many handwritten examples of each digit and letter are collected for the training set. Each one has it's features identified and put in a *feature vector* which is labeled with the number that it represents. 
+>
+> **Inference** (classification): A new handwritten character with no label has the same features identified and compared to the k most similar entries in the training set (its Nearest Neighbors). If most of those neighbors are labeled “7,” the model classifies the new character as a 7.
 
 <details>
-  <summary>What do you think the steps would be to train a model for Handwritten Character Recognition (HCR) using the <a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST data set</a>?<br>(Click to expand)</summary>
+  <summary><strong>Thinking Exercise</strong><br>What do you think the steps would be to train a model for Handwritten Character Recognition (HCR) using a set of labeled images of handwritten characters like the <a href="https://en.wikipedia.org/wiki/MNIST_database" target="_blank">MNIST data set</a>?<br>(Click to expand)</summary>
 <h4>Training the Model</h4>
 <ul>
   <li><b>Data Collection:</b> Gather a large dataset of handwritten characters, each labeled with their correct character (such as the MNIST).</li>
   <li><b>Feature Extraction:</b> Convert each handwritten character into a <i>feature vector</i>. The features could include pixel locations, corner coordinates, location and nmuber of open spaces enclosed by loops, etc.</li>
-  <li><b>Model Training:</b> The K-NN algorithm doesn’t require an explicit training step. Instead, it stores all the feature vectors and their corresponding labels.</li>
+  <li><b>Model Training:</b> The K-NN algorithm doesn’t require an explicit training step. Instead, it just stores all the feature vectors and their corresponding labels.</li>
 </ul>
 <h4>Classification Using the Trained Model</h4>
 <ul>
@@ -89,14 +121,6 @@ Inference (classification in this case): A home that hasn't sold yet can have it
 </details>
 
 
-### Statistical Models
-
-These models use mathematical statistics for prediction and/or classification.
-
-#### Bayesian Models
-
-We have already discussed an application of naïve Bayes classification (email spam detection). 
-
 #### Regression
 
 ##### Linear Regression  
@@ -105,8 +129,7 @@ Linear regression is a statistical tool used to predict a relationship between t
 
 **The Equation of a Line**
 
-The core of linear regression uses the simple algebraic equation for a straight line:
-
+The core of linear regression uses the simple algebraic equation for a straight line:  
 *y = mx + b*
 
 - y&mdash;The *predicted value* (the outcome we want to know).
@@ -114,37 +137,37 @@ The core of linear regression uses the simple algebraic equation for a straight 
 - m&mdash;The *slope*. It shows how much *y* changes for every one-unit change in *x*.
 - b&mdash;The *y-intercept*. It's the predicted value of *y* when *x* is zero.
 
-**Example: Predicting Sales** 
-
-Imagine a company wants to predict the number of sales (y) based on the money spent on advertising (x) in a given week.
-
-Suppose the regression calculation yields the line:
-
-**Sales = 2 * Advertising Spend + 50**  
- *m* = 2 (slope) and *b* = 50 (y-intercept).
-
-This means for every extra dollar spent on advertising, the company predicts an increase of 2 sales. If the company spends $100 on advertising, the predicted sales are:
-
-$$
-Sales = 2(100) + 50 = 250
-$$
-<img src="Images\LinearRegression-AdvertisingVsSales.png" alt="50%" style="zoom:50%;" />
-
-- Data Points: Scattered dots on the chart represent the actual historical sales data (e.g., a dot at (50, 150) means $50 of ad spend resulted in 150 sales).
-
-- Regression Line: A straight line is drawn through the middle of these dots. This line represents the equation *y = mx + b* (our prediction model) and is used to estimate sales for any amount of advertising spend.
+> **Example: Predicting Sales** 
+>
+> Imagine a company wants to predict the number of sales (y) based on the money spent on advertising (x) in a given week.
+>
+> Suppose the regression calculation yields the line:
+> $$
+> Sales = 2 * Advertising Spend + 50
+> $$
+> In this equation:  *m* = 2 (slope) and *b* = 50 (y-intercept).
+>
+> This means for every extra dollar spent on advertising, the company predicts an increase of 2 sales. If the company spends $100 on advertising, the predicted sales are:
+>
+> Sales = 2(100) + 50 = 250
+>
+> <img src="/Volumes/DataCard/Repos/CS212-Repos/CS212-CourseMaterials/docs/LectureNotes/Images/LinearRegression-AdvertisingVsSales.png" alt="Linear regression graph" style="zoom:75%;" />
+>
+> - Data Points: Scattered dots on the chart represent the actual historical sales data (e.g., a dot at (50, 150) means $50 of ad spend resulted in 150 sales).
+>
+> - Regression Line: A straight line is drawn through the middle of these dots. This line represents the equation *y = mx + b* (our prediction model) and is used to estimate sales for any amount of advertising spend.
 
 ##### Logistic Regression
 
 Logistic regression (logarithmic odds regression) is a methodology used mainly for binary classification. It predicts the probability that an instance belongs to a given class. For example, it can be used to identify whether an email is spam or not, or to diagnose diseases by assessing the presence or absence of specific conditions based on patient test results. 
 
-In binary logistic regression, a curve is produced by a mathematical function called a *sigmoid function* which squeezes output values into a range between 0 and 1 in a smooth and gradual manner. It’s like a soft switch: instead of abruptly turning ON or OFF, it gradually transitions between the two states.
+In binary logistic regression, a curve is produced by a mathematical function called a *sigmoid function* which scales output values into a range between 0 and 1 in a smooth and gradual manner. It’s like a soft switch: instead of abruptly turning ON or OFF, it gradually transitions between the two states.
 
-In the example below, the input, on the x-axis, is the number of hours students studied for an exam. The output, on the y-axis, is probability of passing the exam.
+In the example below, the input, on the x-axis, is the number of hours students studied for an exam. The output, on the y-axis, is probability of passing the exam. The dots represent the training data.
 
-<img src="Images\EoAI-Ch4-Ex19.png" alt="logistic regression graph" style="zoom:30%;" />
+<img src="/Volumes/DataCard/Repos/CS212-Repos/CS212-CourseMaterials/docs/LectureNotes/Images/EoAI-Ch4-Ex19.png" alt="logistic regression graph" style="zoom:30%;" />
 
-[logistic regression graph on Desmos](https://www.desmos.com/calculator/zxs34s4tbd)
+<a href="https://www.desmos.com/calculator/zxs34s4tbd" target="_blank">logistic regression graph on Desmos</a>
 
 **Other types of logistic regression**
 
