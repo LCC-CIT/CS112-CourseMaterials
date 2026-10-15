@@ -24,7 +24,7 @@
 
     - Winter 2026 Class Schedule
 
-    - [Academic Advising](https://lanecc.edu/advising)
+    - [Academic Advising](https://www.lanecc.edu/advising)
 
     - [Registration](https://my.lanecc.edu/StudentRegistrationSsb/ssb/registration)
 - **Last Day for Submissions**: Any late assignment submissions are due by the end of the day on 12/8, Monday of next week (finals week).
