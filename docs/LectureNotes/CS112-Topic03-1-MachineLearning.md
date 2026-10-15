@@ -62,6 +62,10 @@ The AI system isn't given any training data, instead it acts as an autonomous ag
 >
 > Industrial robots can be programmed to perform tasks such as picking up objects or assembling parts. The robots start with little to no knowledge about how to perform these tasks. As a robot attempts to perform a task, it is given positive rewards for successful actions (like correctly assembling a part) and negative rewards for unsuccessful actions (like dropping an object). Over time, the robots learn to perform their tasks more efficiently by maximizing their successes and minimizing their mistakes. This is all done without explicit programming for each specific task.
 
+[RL Demo Web Site](https://developmentalsystems.org/Interactive_DeepRL_Demo/)
+
+
+
 ## Supervised Learning Models
 
 We've already mentioned *Bayes' rule*. Here is a description of it as well as some other types of s*upervised learning models*. These can be used for *prediction* and/or *classification*.
@@ -235,7 +239,7 @@ An Artificial Neural Network (ANN) is a computational model inspired by the stru
 
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in 2024, revised in <time>2025</time> are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in 2024, revised in <time>2026</time> are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
-MS Copilot GPT-4 and Gemini Flash 2.5 were used to draft parts of these notes.
+*MS Copilot GPT-4, Gemini Flash 2.5 and and Claude Haiku 5.5 were used to draft parts of these notes.*
 
