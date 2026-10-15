@@ -101,3 +101,21 @@ document.addEventListener("DOMContentLoaded", function () {
   document.head.appendChild(script);
 });
 </script>
+
+<script type="module">
+// Render Mermaid diagrams. kramdown turns ```mermaid blocks into ordinary code blocks
+// (<div class="language-mermaid">...<code>), so swap each one for a <pre class="mermaid">.
+const blocks = document.querySelectorAll("div.language-mermaid, pre > code.language-mermaid");
+if (blocks.length > 0) {
+  const { default: mermaid } = await import("https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs");
+  blocks.forEach(function (block) {
+    const pre = document.createElement("pre");
+    pre.className = "mermaid";
+    pre.textContent = block.textContent;
+    const target = block.tagName === "CODE" ? block.parentElement : block;
+    target.replaceWith(pre);
+  });
+  mermaid.initialize({ startOnLoad: false });
+  await mermaid.run();
+}
+</script>
