@@ -155,7 +155,7 @@ The core of linear regression uses the simple algebraic equation for a straight 
 >
 > Sales = 2(100) + 50 = 250
 >
-> <img src="/Volumes/DataCard/Repos/CS212-Repos/CS212-CourseMaterials/docs/LectureNotes/Images/LinearRegression-AdvertisingVsSales.png" alt="Linear regression graph" style="zoom:75%;" />
+> <img src="Images/LinearRegression-AdvertisingVsSales.png" alt="Linear regression graph" style="zoom:75%;" />
 >
 > - Data Points: Scattered dots on the chart represent the actual historical sales data (e.g., a dot at (50, 150) means $50 of ad spend resulted in 150 sales).
 >
@@ -169,7 +169,7 @@ In binary logistic regression, a curve is produced by a mathematical function ca
 
 In the example below, the input, on the x-axis, is the number of hours students studied for an exam. The output, on the y-axis, is probability of passing the exam. The dots represent the training data.
 
-<img src="/Volumes/DataCard/Repos/CS212-Repos/CS212-CourseMaterials/docs/LectureNotes/Images/EoAI-Ch4-Ex19.png" alt="logistic regression graph" style="zoom:30%;" />
+<img src="Images/EoAI-Ch4-Ex19.png" alt="logistic regression graph" style="zoom:30%;" />
 
 <a href="https://www.desmos.com/calculator/zxs34s4tbd" target="_blank">logistic regression graph on Desmos</a>
 
