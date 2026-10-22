@@ -1,77 +1,90 @@
-<h1>Overview for Week Five</h1>
+---
+title: Week 5 Overview
+description: What's happening in CS 112 during week 5
+keywords: Announcements, Due Dates, Midterm, Help
+generator: Typora
+author: Brian Bird
+---
 
-**CS112, Intro to AI**
+**CS 112, Intro to AI**
 
-| Topics                                                     |                                      |
-| ---------------------------------------------------------- | ------------------------------------ |
-| 1. Intro to class and AI                                   | 6. Neural networks and deep learning |
-| 2. AI Problem Solving                                      | 7. Generative AI                     |
-| 3. Machine Learning&mdash;Part 1<br />Applications of AI   | 8. Prompt engineering                |
-| 4. Machine Learning&mdash;Part 2                           | 9. Custom chatbot creation           |
-| 5. <mark>More History of AI &</mark>  <mark>Midterm</mark> | 10. Social and ethical issues of AI  |
-|                                                            | 11. Final                            |
+<h1>Week 5 Overview for Fall 2026</h1>
+
+<h2>Oct. 26 through Nov. 1</h2>
+
+
+
+| Week / Topic                       |                                                     |
+| ---------------------------------- | --------------------------------------------------- |
+| 1. Overview of AI                  | 6. Neural networks, deep learning and Generative AI |
+| 2. History and applications of AI  | 7. Prompt engineering                               |
+| 3. Bayes Rule and Machine Learning | 8. Custom chatbot creation                          |
+| 4. More Machine Learning           | 9. Social and ethical issues of AI                  |
+| <mark>5. Midterm</mark>            | 11. Final                                           |
+
+
+
+<h2>Contents</h2>
 
 [TOC]
 
-## Announcements for Fall 2025
+## Learning Objectives
 
-- **CIT Lab hiring workers**
-- **Student Emergent Tech & AI Club**
-  Fusion Lab Faculty and students are forming a [club on emergent technology and AI](Images/ETAIClubPoster.pdf).
-   [Interest Form](https://out.smore.com/e/nd345/V0ERKC?__$u__) | Contact: [Kevin Steeves](https://out.smore.com/e/nd345/X14b6G?__$u__)
+This week we will learn more about the history of AI, focusing on connectionist AI (artificial neural networks), and you will take the midterm quiz.
 
-## Due Dates
+## Things to Do this Week
 
-- Week 5 Q and A Forum&mdash;Post by Sunday if you are an online student or didn't participate in the classroom or Zoom discussion this week.
-- No exercises or quiz this week.
+- Lecture Q and A forum&mdash;Post by Sunday if you are an online student or didn't participate in the classroom or Zoom discussion this week.
+- Midterm quiz.
+- No exercises or weekly quiz this week.
 
 ## Midterm Quiz
 
 The midterm will cover the reading and lectures from the first four weeks of the term.
 
-- Review lecture notes.
-- Take the practice midterm.
-- Take the actual midterm:
-  - In the classroom at 2:00 on Thursday.  
-    OR
-  - In [Instructional Testing Services](https://www.lanecc.edu/get-support/academic-support/instructional-testing-services), located in the Center Building, Room 311.
-    - Dates and times:
-      - Wednesday, 10/29, 9:00am to 7:00pm
-      - Thursday, 10/30, 9:00am to 7:00pm
-      - Friday, 10/31, 9:00am to 5:00pm
-      - Saturday, 11/1, 10:00am to 2:00pm
-    - You must arrive at least 45 minutes before closing time.
-    - ID is required.
-  - In both locations: 
-    - You aren't allowed to use: help from others, internet searches, AI (like ChatGPT), or any other outside sources.
-    - You will be allowed to refer to one page of notes.
-    - You will be given 2 hours to complete the quiz.
+### How to Prepare
+
+- Review the lecture notes.
+- Take the practice midterm on Canvas.
+- Prepare one 8 1/2 x 11 page of notes to use during the quiz.
+
+### Where and When to Take It
+
+- **On-campus (hybrid) students:** In the classroom on Thursday, 10/29, at 2:00.
+  You may take it in Instructional Testing Services instead, but not the remote version.
+- **Online students:** In [Instructional Testing Services](https://www.lanecc.edu/get-support/academic-support/instructional-testing-services) (Center Building, Room 311) Thursday, 10/29, through Saturday, 10/31.
+  If you can't come to campus, you can take the remote version on Canvas.
+  - Check the Instructional Testing Services web page for their hours.
+  - You must arrive at least 45 minutes before closing time.
+  - ID is required.
+
+### Rules
+
+- You aren't allowed to use help from others, internet searches, AI (like ChatGPT), or any other outside sources.
+- You may refer to one page of notes.
+- You will have 2 hours to complete the quiz.
 
 ## Check your Grade
 
-Grades are nearly up to date on Moodle. The only exception is that I haven't graded everyone's group project 1.
+Grades are on Canvas. Check that your grades are up to date and let me know if you see anything that looks wrong.
 
-## Getting Help
+## Reminders
 
-### Instructor's Office Hours
+### Getting Help
 
-- Drop in on [Zoom](https://lanecc.zoom.us/j/8982554800) or in person in building 19, room 152.
-  - Monday and Wednesday 2:00 to 3:50
-  - Tuesday and Thursday 4:00 to 4:50
-- You can email or message me to make an appointment to meet at another time.
+#### Office Hours
 
-### CIT Computer Lab and In-Person Tutoring
+I have drop-in office hours on [Zoom](https://lanecc.zoom.us/j/8982554800) and in person, building 19, room 152, Monday and Wednesday from 2:00 to 2:50. I'll be in the CIT lab, in person only, Tuesday and Thursday from 4:00 to 4:50. I'm available at other times too, just let me know when you'd like to meet.
 
-The CIT Main lab (Building 19, room 135) is equipped with computers and software which are available exclusively for students in the CIT department. There are tutors available in the lab to help you with your lab work.
+- Email me: birdb@lanecc.edu
+- DM me on Discord: [profbird](https://discord.com/users/795803452869443586)
 
-### Online Tutoring
+#### Tutoring
 
-See the [LCC Tutoring Services](https://www.lanecc.edu/tutor) web page for information.
+There are tutors available in the CIT Lab, building 19, room 135, or [online](https://www.lanecc.edu/get-support/academic-support/academic-and-tutoring-services).
 
-[![](Images/Week 5 F2025.jpg)](https://www.lanecc.edu/resources)
 
-------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI course materials by [Brian Bird](https://profbird.dev) <time>2025</time> are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
----
+
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI Course Materials by [Brian Bird](https://profbird.dev), written in 2025, revised in <time>2026</time> are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
