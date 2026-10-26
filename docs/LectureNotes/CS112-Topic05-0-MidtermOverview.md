@@ -71,10 +71,12 @@ Grades are on Canvas. Check that your grades are up to date and let me know if y
 
 #### Office Hours
 
-I have drop-in office hours on [Zoom](https://lanecc.zoom.us/j/8982554800) and in person, building 19, room 152, Monday and Wednesday from 2:00 to 2:50. I'll be in the CIT lab, in person only, Tuesday and Thursday from 1:00 to 1:50. I'm available at other times too, just let me know when you'd like to meet.
+I have drop-in office hours on [Zoom](https://lanecc.zoom.us/j/8982554800) and in person, building 19, room 152, Monday and Wednesday from 2:00 to 2:50. I'll be in the CIT lab, in person only, Tuesday from 1:00 to 1:50. I'm available at other times too, just let me know when you'd like to meet.
 
 - Email me: birdb@lanecc.edu
 - DM me on Discord: [profbird](https://discord.com/users/795803452869443586)
+
+No office hours on Thursday this week since we're having a CIT faculty meeting.
 
 #### Tutoring
 
