@@ -50,19 +50,16 @@ The midterm will cover the reading and lectures from the first four weeks of the
 
 ### Where and When to Take It
 
-- **On-campus (hybrid) students:** In the classroom on Thursday, 10/29, at 2:00.
-  You may take it in Instructional Testing Services instead, but not the remote version.
-- **Online students:** In [Instructional Testing Services](https://www.lanecc.edu/get-support/academic-support/instructional-testing-services) (Center Building, Room 311) Thursday, 10/29, through Saturday, 10/31.
-  If you can't come to campus, you can take the remote version on Canvas.
-  - Check the Instructional Testing Services web page for their hours.
-  - You must arrive at least 45 minutes before closing time.
-  - ID is required.
+- **On-campus (hybrid) students:** In the classroom on Thursday, 10/29, at class time, 2:00.
+- **Online students:** You can take it any time on 10/29 using the Midterm Quiz--Remote link on Canvas. You can take it from home or anywhere. 
+  
+  ***If you will not be able to take it that day, let me know in advance so we can arrange a different day for you.*** 
+  
+  If you would like to take it in the classroom, you can come to building 19, room 126. The quiz will be available there from 2:00 to 4:00. An advantage to taking the quiz in the classroom is that I will be there and can answer questions you might have during the quiz, 
+  
+  The quiz will not be given in the Instructional Testing Services test center. 
 
-### Rules
-
-- You aren't allowed to use help from others, internet searches, AI (like ChatGPT), or any other outside sources.
-- You may refer to one page of notes.
-- You will have 2 hours to complete the quiz.
+- **You are on your honor not to use anything except your own brain and your one sheet of notes while taking the quiz!** 
 
 ## Check your Grade
 
@@ -74,7 +71,7 @@ Grades are on Canvas. Check that your grades are up to date and let me know if y
 
 #### Office Hours
 
-I have drop-in office hours on [Zoom](https://lanecc.zoom.us/j/8982554800) and in person, building 19, room 152, Monday and Wednesday from 2:00 to 2:50. I'll be in the CIT lab, in person only, Tuesday and Thursday from 4:00 to 4:50. I'm available at other times too, just let me know when you'd like to meet.
+I have drop-in office hours on [Zoom](https://lanecc.zoom.us/j/8982554800) and in person, building 19, room 152, Monday and Wednesday from 2:00 to 2:50. I'll be in the CIT lab, in person only, Tuesday and Thursday from 1:00 to 1:50. I'm available at other times too, just let me know when you'd like to meet.
 
 - Email me: birdb@lanecc.edu
 - DM me on Discord: [profbird](https://discord.com/users/795803452869443586)
