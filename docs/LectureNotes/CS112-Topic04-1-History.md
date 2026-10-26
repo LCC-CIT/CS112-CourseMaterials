@@ -124,7 +124,7 @@ Using reinforcement learning, initially, AlphaGo was trained on amateur games of
 
 [The History of AI: A Timeline of Artificial Intelligence](https://www.coursera.org/articles/history-of-ai)&mdash;Coursera
 
-[The Quest for Artificial Intelligence: A History of Ideas and Achievements](http://ai.stanford.edu/%7Enilsson/QAI/qai.pdf)&mdash;Nils J. Nilsson, Cambridge University Press, 2010.
+[The Quest for Artificial Intelligence: A History of Ideas and Achievements](https://web.archive.org/web/20241230153424/http://ai.stanford.edu/~nilsson/QAI/qai.pdf)&mdash;Nils J. Nilsson, Cambridge University Press, 2010.
 
 [Timeline of AI](https://www.theainavigator.com/ai-timeline)&mdash;an interactive timeline of the history of AI
 
