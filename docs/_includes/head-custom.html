@@ -1,4 +1,16 @@
 <style>
+/* Primer makes tables display:block, so the grid shrinks to its content instead of filling the column.
+   Let tables fill the column, but keep Primer's horizontal scrolling on phones. */
+.markdown-body table {
+  display: table;
+  width: 100%;
+}
+@media (max-width: 640px) {
+  .markdown-body table {
+    display: block;
+    overflow-x: auto;
+  }
+}
 .toc-nav {
   background-color: #f6f8fa;
   border: 1px solid #d0d7de;
