@@ -21,7 +21,7 @@ author: Brian Bird
 
 ## This Week's Learning Objectives
 
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1em 1.5em;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1em 1.5em; margin-bottom: 3em;">
   <div style="flex: 1 1 300px;">
     <p style="margin-top: 0;">By the end of this week you will:</p>
     <ul style="margin-bottom: 0;">
@@ -31,9 +31,9 @@ author: Brian Bird
       <li>Understand deep learning neural networks.</li>
     </ul>
   </div>
-  <figure style="flex: 0 0 200px; width: 200px; margin: 0 auto;">
-    <img src="Images/RobotThinkerAlaRodan.jpeg" alt="A robot with a metal and circuit-board body sitting in the pose of Rodin's sculpture The Thinker, chin resting on its hand" width="200">
-    <figcaption style="text-align: center; font-size: small;">Image created by B. Bird using Dall-E 3</figcaption>
+  <figure style="position: relative; flex: 0 0 200px; width: 200px; margin: 0 auto;">
+    <img src="Images/RobotThinkerAlaRodan.jpeg" alt="A robot with a metal and circuit-board body sitting in the pose of Rodin's sculpture The Thinker, chin resting on its hand" width="200" style="display: block;">
+    <figcaption style="position: absolute; top: 100%; left: 0; right: 0; text-align: center; font-size: small;">Image created by B. Bird using Dall-E 3</figcaption>
   </figure>
 </div>
 
