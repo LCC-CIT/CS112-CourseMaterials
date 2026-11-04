@@ -18,7 +18,7 @@ author: Brian Bird
 
 ### Neural Networks in the Brain
 
-<img src="/home/brianbird/Repos/GitHub/CS212-AiProg1-Repos/CS212-CourseMaterials/docs/LectureNotes/Images/BrainNeuralNetworkAndNeuron.jpg" alt="BrainNeuralNetworkAndNeuron" style="zoom:24%;" />
+<img src="Images/BrainNeuralNetworkAndNeuron.jpg" alt="BrainNeuralNetworkAndNeuron" style="zoom:24%;" />
 
 A biological neural network consists of interconnected neurons that communicate through axons, dendrites and synapses to process and transmit information. The dendrites are inputs to the neuron and the axon is the output of the neuron. The connection points are synapses. This intricate web of connections forms the basis for learning, memory, and thought in living organisms.
 
@@ -28,7 +28,7 @@ A biological neural network consists of interconnected neurons that communicate 
 
 A perceptron is modeled on a single neuron. 
 
-<img src="/home/brianbird/Repos/GitHub/CS212-AiProg1-Repos/CS212-CourseMaterials/docs/LectureNotes/Images/general-diagram-of-perceptron-for-supervised-learning_4.webp" alt="general-diagram-of-perceptron-for-supervised-learning_4" style="zoom:75%;" />
+<img src="Images/general-diagram-of-perceptron-for-supervised-learning_4.webp" alt="general-diagram-of-perceptron-for-supervised-learning_4" style="zoom:75%;" />
 
 ( &sum; is a the mathematical symbol for summation&mdash;aka addition.)
 
@@ -58,7 +58,7 @@ Perceptrons seemed to some, like Rosenblatt, the developer of the perceptron (19
 
 ## Artificial Neural Networks
 
-<img src="/home/brianbird/Repos/GitHub/CS212-AiProg1-Repos/CS212-CourseMaterials/docs/LectureNotes/Images/ART_Artificial_intelligence_Neural_network_explain.png" alt="ART_Artificial_intelligence_Neural_network_explain" style="zoom:40%;" />
+<img src="Images/ART_Artificial_intelligence_Neural_network_explain.png" alt="ART_Artificial_intelligence_Neural_network_explain" style="zoom:40%;" />
 
 An artificial neural network (ANN) is a model with multiple interconnected "neurons"&mdash;in contrast to the perceptron that has just one artificial neuron. Each "neuron", or *node*, has multiple inputs, but one output. The nodes are arranged in layers and each one is connected to all the others in the next layer. The input layer gets data to be processed, the middle, or *hidden*, layers do the processing and send data to an output layer (which could have more than one node).
 
