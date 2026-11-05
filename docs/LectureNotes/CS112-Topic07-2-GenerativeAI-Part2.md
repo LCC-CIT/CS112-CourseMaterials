@@ -10,19 +10,9 @@ author: Brian Bird
 
 **CS112, Intro to AI**
 
-| Topics                                                               |                                              |
-| -------------------------------------------------------------------- | -------------------------------------------- |
-| Overview of AI                                                       | Neural networks<br />Deep learning           |
-| History of AI&mdash;Part 1<br>AI Problem Solving                     | <mark>Generative AI</mark>                   |
-| Machine Learning&mdash;Part 1<br />Bayes' Rule                       | Prompt engineering                           |
-| Machine Learning&mdash;Part 2<br />Regression and K-Nearest Neighbor | Custom chatbot creation                      |
-| History of AI&mdash;Part 2<br />Midterm                              | Social and ethical issues of AI  <br />Final |
-
 <h2>Contents</h2>
 
 [TOC]
-
-# 
 
 ## Uses of Generative AI
 
