@@ -18,15 +18,15 @@ author: Brian Bird
 
 When we tried to assign weights to a perceptron that classified happy and sad faces, we discovered that the perceptron (or an ANN) had difficulty with:
 
-- Different sizes of faces
-- Faces that were positioned higher or lower in the input grid
-- Features (mouth size and position) that varied from face to face
+- Different sizes of a particular objects (like someone's face) in an image.
+- Objects that were positioned higher or lower in the overall image frame.
+- Features (mouth size and position) that varied from object to object.
 
 *Convolutional neural networks* (CNNs) are much better at handling these problems. They are built around an operation called *convolution*: slide a small window, called a *filter* (or *kernel*), across the image and score how well each patch of the image matches a simple pattern, such as a curved edge. The result is a map of where in the image that pattern shows up.
 
-The filter's pattern is not chosen by a programmer. Like the weights in the ANNs you've already seen, it is **learned during training**.
+The filter's pattern is not chosen by a programmer. Like the weights in the ANNs you've already seen, it is <u>learned during training</u>.
 
-Here is a simplified description of the process (provided by MS Copilot):
+Here is a simplified description of the process:
 
 > Think of an image as a large field of different colored flowers. Now, suppose you want to identify patterns or features in this field, like areas of certain colors or color combinations.
 >
@@ -52,7 +52,7 @@ A real CNN uses many filters at once, arranged in layers. Early layers find simp
 
 ### A Small CNN in Action
 
-The demo linked at the bottom of these notes runs a small, real CNN that recognizes handwritten digits. It works in four steps:
+The <u>demo linked at the bottom of these notes</u> runs a small, real CNN that recognizes handwritten digits. It works in four steps:
 
 1. **Look for small patterns.** Eight small filters slide over the picture. Each one looks for a different simple stroke, such as an edge or a curve.
 2. **Shrink the results (pooling).** The results are boiled down to "was this pattern found around here?" The exact position is thrown away.
@@ -72,10 +72,10 @@ These ideas also save weights. The demo's CNN has about 28,000 weights, while a 
 
 ### Where CNNs Are Used
 
-- Unlocking a phone with your face
-- Tagging people and objects in photos
-- Finding tumors and other problems in medical images
-- Helping self-driving cars recognize pedestrians, signs, and lane markings
+- Unlocking a phone with your face.
+- Tagging people and objects in photos.
+- Finding tumors and other problems in medical images.
+- Helping self-driving cars recognize pedestrians, signs, and lane markings.
 
 ### History of CNN Development
 
@@ -103,7 +103,7 @@ A good analogy is a forger and an art detective. The forger (generator) starts o
 
 Notice that the generator never sees the real images. It learns only from the discriminator's feedback.
 
-GANs can produce realistic fake faces, artwork, and enhanced photos. They are also used to make *deepfakes*, which raises the ethical questions we'll discuss later. Newer *diffusion models* have largely overtaken GANs for image generation. We'll look at them in Topic 7.
+GANs can produce realistic fake faces, artwork, and enhanced photos. They are also used to make *deepfakes*, which raises the ethical questions we'll discuss later. Newer *diffusion models* have largely overtaken GANs for image generation. We'll look at them when we discuss generative AI and LLMs.
 
 ## Interactive Web Pages
 
@@ -115,10 +115,13 @@ Draw a digit with your mouse or finger and watch a small CNN recognize it as you
 [Designed to Deceive: Do These People Look Real to You?](https://www.nytimes.com/interactive/2020/11/21/science/artificial-intelligence-fake-people-faces.html)&mdash;Kashmir Hill and Jeremy White, New York Times, Nov. 21, 2020.  
 In this interactive demo, the sliders control features the GAN discovered on its own while training, such as age or hair color.
 
+
+
+*Several different AI models including GPT-4o and Claude Sonnet 5.5 were used to draft and revise parts of these notes.*
+
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in <time>2024</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in 2024, revised and expanded in <time>2026</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ---
 
-Note: Microsoft Copilot with GPT-4 was used to draft parts of these notes.

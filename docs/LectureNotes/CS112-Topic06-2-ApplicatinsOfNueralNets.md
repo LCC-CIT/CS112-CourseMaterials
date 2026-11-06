@@ -1,7 +1,7 @@
 ---
-title: Neural Nets
-description: Artificial Neural Networks
-keywords: AI, ML, ANN
+title: Applications of Neural Networks
+description: "How the end of the AI winter led to new applications of artificial neural networks, how those applications changed the way people work, and the ethical and environmental concerns that came with them"
+keywords: AI, ML, ANN, AI winter, ImageNet, AlexNet, deep learning, applications, AI and work, bias, ethics, environmental impact
 generator: Typora
 author: Brian Bird
 ---
@@ -20,7 +20,11 @@ author: Brian Bird
 
 The *AI winter* was a long stretch, from the late 1970s into the early 1990s, when disappointing results led to deep cuts in AI funding and interest (see [History of AI Part 2](CS112-Topic04-1-History.html)).
 
-Neural nets survived in a few research labs, and three things came together around 2010 to bring them back. First, there was **data**: ImageNet, released in 2009, gave researchers millions of labeled photos to train on. Second, there was **computing power**: graphics cards (GPUs), built for video games, turned out to be very good at the math ANNs need, so training that once took months now took days. Third, there were **better training methods**, building on the backpropagation work of Hinton and others. In 2012, a CNN called AlexNet won the ImageNet contest by a wide margin, and researchers and companies took notice. Funding poured back into AI, and the field has been in "summer" ever since. The revival reached factories and warehouses too: robots that once repeated fixed motions began to use cameras and ANNs to see what was in front of them.
+Neural nets survived in a few research labs, and three things came together around 2010 to bring them back. 
+
+- **Training Data**: ImageNet, released in 2009, gave researchers millions of labeled photos to train on. 
+- **Computing power**: graphics cards (GPUs), built for video games, turned out to be very good at the math ANNs need, so training that once took months now took days. 
+- **Better training methods**, building on the backpropagation work of Hinton and others. In 2012, a CNN called AlexNet won the ImageNet contest by a wide margin, and researchers and companies took notice. Funding poured back into AI, and the field has been in "summer" ever since. The revival reached factories and warehouses too: robots that once repeated fixed motions began to use cameras and ANNs to see what was in front of them.
 
 ## What ANNs Made Possible
 
@@ -88,9 +92,7 @@ As ANNs moved into photos, hiring, policing, healthcare, and driving, their prob
 - **Safety**: in 2018 a self-driving test car operated by Uber struck and killed a pedestrian, which raised the question of who is responsible when an ANN makes a fatal mistake. The same question applies to robots that work beside people in factories and warehouses, where a robot that misjudges its surroundings can injure someone.
 - **Black boxes**: an ANN can't explain why it gave an answer, which is a problem when the answer affects someone's medical care, loan, or job.
 - **Labor**: the work changes described above helped some people and displaced others, and the data labelers who made ANNs possible were often paid very little. Factory and warehouse automation raised the same worry: robots can make some jobs safer and less tiring, but they can also reduce the number of workers needed.
-- **Energy and the environment**: training large ANNs takes a lot of electricity. One widely cited 2019 study estimated that building a large language model with extensive tuning could produce as much carbon dioxide as five cars over their lifetimes.
-
-Around 2017, a different kind of concern appeared. ANNs that *generate* realistic images and video made it possible to create convincing fakes, called *deepfakes*. That is early generative AI, and we'll return to it in a later topic.
+- **Deepfakes**: Around 2017, a different kind of concern appeared. ANNs that *generate* realistic images and video made it possible to create convincing fakes, called *deepfakes*. That is early generative AI, and we'll return to it in a later when we discuss LMMs.
 
 
 
@@ -98,9 +100,7 @@ Around 2017, a different kind of concern appeared. ANNs that *generate* realisti
 
 ## Reference
 
-[History of AI Part 2](CS112-Topic04-1-History.html)&mdash;Brian Bird.
-
-
+Bird, Brian. [History of AI Part 2](CS112-Topic04-1-History.html)&mdash;Intro to AI lecture Notes.
 
 Krizhevsky, A., Sutskever, I., & Hinton, G. (2012). [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html). *NeurIPS 25*.&mdash;The AlexNet paper.
 
@@ -138,8 +138,10 @@ Search for a protein and rotate its predicted 3D shape to see what AlphaFold pro
 
 
 
+*Claude Sonnet 5.5 was used to draft these notes.*
+
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in 2024, revised in <time>2026</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in <time>2026</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
-*Note: GPT-4 and GPT-4o were used to draft some parts of these notes.*
+---
