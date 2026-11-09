@@ -1,38 +1,65 @@
-<h1>Overview for Week Seven</h1>
+---
+title: Week 7 Overview
+description: What's happening in CS 112 during week 7
+keywords: Announcements, Due Dates, Help
+generator: Typora
+author: Brian Bird
+---
 
-**CS112, Intro to AI**
+**CS 112, Intro to AI**
 
-| Topics                                           |                                      |
-| ------------------------------------------------ | ------------------------------------ |
-| 1. Intro to class and AI                         | 6. Neural networks and deep learning |
-| 2. AI Problem Solving                            | 7. <mark>Generative AI</mark>        |
-| 3. Machine Learning—Part 1<br>Applications of AI | 8. Prompt engineering                |
-| 4. Machine Learning—Part 2                       | 9. Custom chatbot creation           |
-| 5. More History of AI &  Midterm                 | 10. Social and ethical issues of AI  |
-|                                                  | 11. Final                            |
+<h1>Week 7 Overview for Fall 2026</h1>
 
-[TOC]
+<h2>Nov. 9 through Nov. 15</h2>
 
-## Announcements for Fall 2025
+| Topics                                                       |                                                |
+| ------------------------------------------------------------ | ---------------------------------------------- |
+| Overview of AI                                               | Neural networks and deep learning              |
+| AI Problem Solving Revisited<br />Machine Learning&mdash;Part 1<br />Applications of AI | <mark>Generative AI</mark> + Prompt engineering |
+| Machine Learning&mdash;Part 2                                | Custom chatbot creation                        |
+| History of AI, Robotics and Midterm                          | Social and ethical issues of AI  <br />Final   |
 
-- **CIT Lab hiring workers**
-- **Student Emergent Tech & AI Club**
-  Fusion Lab Faculty and students are forming a [club on emergent technology and AI](Images/ETAIClubPoster.pdf)  
-   [Interest Form](https://out.smore.com/e/nd345/V0ERKC?__$u__) | Contact: [Kevin Steeves](https://out.smore.com/e/nd345/X14b6G?__$u__)
-- **Reg Fest** on Saturday, November 15 from 9am-2pm in building 1  
-  Get help with financial aid, academic advising, registration and billing.
+## This Week's Learning Objectives
 
-## Things to Do
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1em 1.5em; margin-bottom: 3em;">
+  <div style="flex: 1 1 300px;">
+    <p style="margin-top: 0;">By the end of this week you will be able to:</p>
+    <ul style="margin-bottom: 0;">
+      <li>Explain what generative AI is and how it differs from the AI you have studied so far.</li>
+      <li>Discuss what generative AI can and can't do well and risks related to this technology.</li>
+      <li>Use a GPT Chatbot (like Chat GPT) and explore different ways it can be used.</li>
+    </ul>
+  </div>
+  <figure style="flex: 0 0 200px; width: 200px; margin: 0 auto;">
+    <img src="Images/GenerativeAiWordCloud.png" alt="A circular word cloud of terms related to generative AI, including Generative AI, LLM, GPT, Prompt, Neural Network and AI, in blue, purple and black" width="200" style="display: block;">
+  </figure>
+</div>
 
-**Due this Sunday:**
+## Announcements and Discussion
+
+- **Wed., Nov. 11: Veterans Day.** The college is closed.
+- **Drop-in Winter Reg Fest** on Saturday, Nov. 14 from 9am&ndash;2pm in Building 1, Admissions 102.
+  Get help with admissions, financial aid, academic advising and registration.
+  Plan to arrive before 1pm. There is another one on Tuesday, Dec. 1, 9am&ndash;2pm.
+- Anything else?
+
+## Things to Do This Week
+
+Due this Sunday, 11/15 (the usual):
 
 - Forum post with questions, answers and comments for online students
-  (Part of your participation grade)
+  (Part of your participation grade).
+- Exercises on Generative AI, based on the NY Times articles.
+- Quiz over the lectures.
 
-- Exercises on Generative AI, based on the NY Times articles
-
-- Quiz over the lectures/recordings
-
-**Due next Thursday**
+Due next Thursday, 11/19:
 
 - Project 2, using AI for a simulated work activity.
+
+
+
+---
+
+<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License"></a> Intro to AI Course Materials by <a href="https://profbird.dev" target="_blank">Brian Bird</a>, written in 2025, revised in <time>2026</time>, are licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+
+---
