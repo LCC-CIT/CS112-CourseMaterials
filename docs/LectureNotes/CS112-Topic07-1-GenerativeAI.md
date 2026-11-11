@@ -19,12 +19,14 @@ author: Brian Bird
 
 Generative AI is a subset of machine learning (ML) that is used for creating new content. Generative models use neural networks to generate data based on, but different from, the data they were trained on. 
 
-<div style="width: 60%; margin: 0 auto; text-align: center;">
+<div markdown="1" style="width: 60%; margin: 0 auto; text-align: center;">
+
+
 ```mermaid
 graph TD
-    subgraph AI ["Artificial Intelligence (Broadest Field)"]
-        subgraph ML ["Machine Learning (Learning from Data)"]
-            subgraph NN ["Neural Networks / Deep Learning"]
+    subgraph AI ["Artificial Intelligence"]
+        subgraph ML ["Machine Learning"]
+            subgraph NN ["Neural Networks"]
                 GenAI["<b>Generative AI and LLMs</b><br>(Creating New Content)"]
             end
         end
@@ -35,8 +37,10 @@ graph TD
     style NN fill:#dee2e6,stroke:#495057,stroke-width:2px
     style GenAI fill:#d0ebff,stroke:#1971c2,stroke-width:3px,color:#1864ab
 ```
+
 *Figure: Generative AI sits within the broader fields of Neural Networks, Machine Learning, and Artificial Intelligence (Source: Wikimedia Commons, CC BY-SA 4.0).*
 
+</div>
 
 OpenAI released a public demo of ChatGPT on November 30, 2022 that took the world by storm and suddenly generative AI was the new sensation.
 
@@ -86,8 +90,9 @@ The process of generating output is iterative:
 5. This cycle continues until the model predicts a dedicated *End of Sequence (EOS / Stop)* token, or reaches a user-specified token limit.
 
 ```mermaid
+%%{init: {"xyChart": {"width": 900, "height": 450}}}%%
 xychart-beta
-    title "Next Token Probability Distribution ('The best thing about cats is that they [?]')"
+    title "Next Token Probability: The best thing about cats is that they ..."
     x-axis ["are", "purr", "make", "don't", "can", "sleep", "require", "fly"]
     y-axis "Probability (%)" 0 --> 40
     bar [32, 21, 14, 11, 9, 7, 5, 0.001]
