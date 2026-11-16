@@ -196,11 +196,13 @@ Which formula correctly represents Bayes' Rule? {
 
 
 
+*MS Copilot with GPT-4 was used to draft parts of these notes and Claude Sonnet 5.5 was used for revisions.*
+
 ---
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in 2024, revised in <time>2025</time> are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ---
 
-Note: Microsoft Copilot with GPT-4 was used to draft parts of these notes (2024).
+
 
