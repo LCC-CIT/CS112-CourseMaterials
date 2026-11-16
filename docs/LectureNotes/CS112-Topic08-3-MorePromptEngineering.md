@@ -1,6 +1,6 @@
 ---
-title: Prompts
-description: Prompt Engineering
+title: More Prompt Engineering
+description: More prompt engineering strategies
 keywords: AI
 generator: Typora
 author: Brian Bird
@@ -19,30 +19,7 @@ author: Brian Bird
 ## Overview
 
 Prompt engineering is the process of designing and refining inputs (prompts) to generative AI systems to improve the accuracy and quality of the generated output.
-
-## Components of a Good Prompt
-
-A good prompt for AI is most effective if it has:
-
-1. **Clarity**: The prompt should be clear, specific and unambiguous, making it easy for the AI to understand what is being asked.
-   - **Example**: Instead of asking “Tell me about AI,” you can ask “Give me a summary of the latest advances in AI.”
-
-2. **Relevance**: Use relevant keywords or phrases. This helps the AI understand your intent and deliver relevant results.
-   - **Example**: Instead of asking: “Tell me about cloud computing”, you can ask  “I’m researching cloud computing trends in the IT industry. Provide recent reports and articles on the topic.”
-   
-3. **Conciseness**: A prompt should be as brief as possible while still conveying all necessary information.
-
-4. **Context**: Providing relevant context helps the AI understand the background of the thing you're asking for. 
-
-   - **Example**: “Given the recent advancements in AI, what are the potential ethical concerns?”
-
-   - **Result**: The AI considers the context of recent advancements and addresses relevant ethical concerns.
-
-5. **Provide Clear Instructions**: Clear instructions on what is expected from the AI can guide it to produce the desired output.
-
-## Prompting Best Practices
-
-
+These notes continue [Prompt Engineering](CS112-Topic08-2-PromptEngineering.html), which covers the components of a good prompt, best practices, and the zero-shot, one-shot, few-shot, chain-of-thought and role prompting strategies.
 
 ## More Prompting Strategies
 
@@ -59,7 +36,7 @@ Try this one using Gemini and export it to Google Sheets.
 
 Iterative refinement is a crucial technique in prompt engineering that involves continuously improving prompts based on feedback and results. Here are some effective techniques for iterative refinement:
 
-##### 1. Generate Multiple Outputs
+##### 1. Generate Multiple Prompt Variations
 - **Description**: Start by creating several variations of your prompt to explore different angles and perspectives.
 - **Example**: If you're asking for a summary, try different ways of phrasing the request to see which yields the best results.
 
@@ -111,10 +88,6 @@ Iterative refinement is a crucial technique in prompt engineering that involves 
 [Prompt engineering - OpenAI API](https://platform.openai.com/docs/guides/prompt-engineering)—OpenAI, 2023
 
 [Prompt Engineering Best Practices: Tips, Tricks, and Tools](https://www.digitalocean.com/resources/article/prompt-engineering-best-practices)—DigitalOcean, 2023
-
-[What is Chain of Thoughts (CoT)?](https://www.ibm.com/topics/chain-of-thoughts)—IBM, 2023
-
-[Comprehensive Guide to Chain-of-Thought Prompting](https://www.mercity.ai/blog-post/guide-to-chain-of-thought-prompting)—Maithili Badhan, Mercity, 2023
 
 
 

@@ -55,7 +55,7 @@ A good prompt for AI is most effective if it has:
 
 ### Zero-Shot Prompting
 
-**Explanation**: Zero-shot prompting involves giving the AI a task without any prior examples or context. The AI relies on its pre-existing knowledge to generate a response.
+**Explanation**: Zero-shot prompting involves giving the AI a task without any examples of the desired output. The AI relies on its pre-existing knowledge to generate a response.
 
 **Example**:
 
@@ -66,9 +66,9 @@ A good prompt for AI is most effective if it has:
 
 **Explanation**: One-shot prompting provides the AI with a single example to guide its response. This helps the AI understand the task better. For example:
 
-- **Zero-shot prompt**: “Generate a marketing email.”
+- **Zero-shot prompt**: “Generate a marketing email for a new eco-friendly water bottle.”
 
-- **One-shot Prompt**: “Generate a marketing email for a new eco-friendly water bottle, highlighting its features. Example: ‘Introducing our latest eco-friendly water bottle! Made from sustainable materials, this bottle is not only durable but also stylish. Perfect for those who care about the environment and want a sleek design.’”
+- **One-shot Prompt**: “Generate a marketing email for a new eco-friendly water bottle. Example: ‘Introducing our latest eco-friendly water bottle! Made from sustainable materials, this bottle is not only durable but also stylish. Perfect for those who care about the environment and want a sleek design.’”
 
 ### Few-Shot Prompting
 
@@ -86,7 +86,7 @@ A good prompt for AI is most effective if it has:
 
 ### Chain-of-Thought Prompting
 
-**Explanation**: Chain-of-thought prompting improves reasoning by breaking down complex tasks into a sequence of logical steps, enabling the model to solve problems more effectively. Each step will take into account the result of the previous step and build on it. 
+**Explanation**: Chain-of-thought prompting improves reasoning by asking the model to work through a problem in a sequence of logical steps, showing its reasoning before giving a final answer. Each step builds on the result of the previous step. You can write out the steps yourself, as in the examples below, or simply ask the model to "think step by step." 
 
 **Examples**
 
@@ -131,9 +131,9 @@ This technique helps guide the AI to respond in a manner consistent with the ass
 
 ## Examples
 
-### Moodle Quiz Prompt Template
+### Quiz Prompt Template (GIFT Format)
 
-This is a prompt template I use for generating quiz questions for Moodle:
+This is a prompt template I use for generating quiz questions in GIFT format, a plain-text format that Moodle can import. (Canvas does not import GIFT directly.)
 
 ```                
 Write 12 multiple-choice questions about ______. 
