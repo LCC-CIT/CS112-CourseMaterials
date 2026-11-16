@@ -11,15 +11,6 @@ author: Brian Bird
 
 **CS112, Intro to AI**
 
-| Topics                                                       |                                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Overview of AI                                               | Neural networks and deep learning                            |
-| AI Problem Solving Revisited<br />Machine Learning&mdash;Part 1<br />Applications of AI | Generative AI + Prompt engineering                           |
-| Machine Learning&mdash;Part 2                                | Custom chatbot creation                                      |
-| History of AI + Midterm quiz                                 | Social and ethical issues<br /><mark>Review</mark>, Final quiz |
-
-
-
 <h2>Table of Contents</h2>
 
 [TOC]
