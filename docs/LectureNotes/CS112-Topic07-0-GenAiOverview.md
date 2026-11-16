@@ -12,12 +12,14 @@ author: Brian Bird
 
 <h2>Nov. 9 through Nov. 15</h2>
 
-| Topics                                                       |                                                |
-| ------------------------------------------------------------ | ---------------------------------------------- |
-| Overview of AI                                               | Neural networks and deep learning              |
-| AI Problem Solving Revisited<br />Machine Learning&mdash;Part 1<br />Applications of AI | <mark>Generative AI</mark> + Prompt engineering |
-| Machine Learning&mdash;Part 2                                | Custom chatbot creation                        |
-| History of AI, Robotics and Midterm                          | Social and ethical issues of AI  <br />Final   |
+| Week / Topic                       |                                      |
+| ---------------------------------- | ------------------------------------ |
+| 1. Overview of AI                  | 6. Neural networks and deep learning |
+| 2. History and applications of AI  | <mark>7. Generative AI</mark>   |
+| 3. Bayes Rule and Machine Learning | 8. Prompt engineering                |
+| 4. More Machine Learning           | 9. Custom chatbot creation           |
+| 5. Midterm                         | 10. Social and ethical issues of AI  |
+|                                    | 11. Final                            |
 
 ## This Week's Learning Objectives
 

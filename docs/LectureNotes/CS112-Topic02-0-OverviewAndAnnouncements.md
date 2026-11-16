@@ -14,13 +14,14 @@ author: Brian Bird
 
 
 
-| Week / Topic                                   |                                                     |
-| ---------------------------------------------- | --------------------------------------------------- |
-| 1. Overview of AI                              | 6. Neural networks, deep learning and Generative AI |
-| <mark>2. History and applications of AI</mark> | 7. Prompt engineering                               |
-| 3. Bayes Rule and Machine Learning             | 8. Custom chatbot creation                          |
-| 4. More Machine Learning                       | 9. Social and ethical issues of AI                  |
-| 5. Midterm                                     | 11. Final                                           |
+| Week / Topic                                   |                                      |
+| ---------------------------------------------- | ------------------------------------ |
+| 1. Overview of AI                              | 6. Neural networks and deep learning |
+| <mark>2. History and applications of AI</mark> | 7. Generative AI                |
+| 3. Bayes Rule and Machine Learning             | 8. Prompt engineering                |
+| 4. More Machine Learning                       | 9. Custom chatbot creation           |
+| 5. Midterm                                     | 10. Social and ethical issues of AI  |
+|                                                | 11. Final                            |
 
 
 

@@ -1,46 +1,57 @@
-<h1>Overview for Week 9</h1>
+---
+title: Week 9 Overview
+description: What's happening in CS 112 during week 9
+keywords: Announcements, Due Dates, Help
+generator: Typora
+author: Brian Bird
+---
 
-**CS112, Intro to AI**
+**CS 112, Intro to AI**
 
-| Topics                                           |                                         |
-| ------------------------------------------------ | --------------------------------------- |
-| 1. Intro to class and AI                         | 6. Neural networks and deep learning    |
-| 2. AI Problem Solving                            | 7. Generative AI                        |
-| 3. Machine Learning—Part 1<br>Applications of AI | 8. Prompt engineering                   |
-| 4. Machine Learning—Part 2                       | 9. <mark>Custom chatbot creation</mark> |
-| 5. More History of AI &  Midterm                 | 10. Social and ethical issues of AI     |
-|                                                  | 11. Final                               |
+<h1>Week 9 Overview for Fall 2026</h1>
 
-[TOC]
+<h2>Nov. 23 through Nov. 29</h2>
 
-## Announcements for Fall 2025
+| Week / Topic                       |                                         |
+| ---------------------------------- | --------------------------------------- |
+| 1. Overview of AI                  | 6. Neural networks and deep learning    |
+| 2. History and applications of AI  | 7. Generative AI                        |
+| 3. Bayes Rule and Machine Learning | 8. Prompt engineering                   |
+| 4. More Machine Learning           | <mark>9. Custom chatbot creation</mark> |
+| 5. Midterm                         | 10. Social and ethical issues of AI     |
+|                                    | 11. Final                               |
 
-The college will be clsed Thursday through Sunday, 11/27 through 11/30, for the Thanksgiviing holiday.
+## This Week's Learning Objectives
 
-## Things to Do
+By the end of this week you will be able to:
 
-**Due this week:**
+- Explain how a chatbot can be given extra knowledge and instructions (retrieval-augmented generation, or RAG).
+- Describe what makes a custom chatbot different from a general-purpose one.
+- Plan and build a custom chatbot for a specific purpose.
 
-- Project 3, prompt engineering. Thursday, 11/20.
+## Announcements and Discussion
+
+- **Thanksgiving:** The college is closed Thursday through Sunday, Nov. 26 through Nov. 29.
+- **Mental health and wellness:** The [Mental Health and Wellness Center (MHWC)](https://www.lanecc.edu/get-support/health-wellness/mental-health-wellness-center) is there to support LCC students.
+- Anything else?
+
+## Things to Do This Week
+
+Due this Sunday, 11/29 (the usual):
+
+- Project 3 on prompt engineering.
 - Forum post with questions, answers and comments for online students
-  (Part of your participation grade). Sunday, 11/23.
-- Quiz over RAG and Custom Chatbots. Sunday, 11/23.
+  (Part of your participation grade).
+- Quiz over RAG and custom chatbots.
 
-**Due next week**
+Due next week:
 
-- Project 4, a custom chatobt is due next Sunday, 12/7.
-
-
-
-![F2025Week09](Images/F2025Week09.jpg)
-
-[Mental Health and Wellness Center (MHWC)](https://www.lanecc.edu/get-support/health-wellness/mental-health-wellness-center)
+- Project 4, a custom chatbot, due Sunday, 12/6.
 
 
 
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI course materials by [Brian Bird](https://profbird.dev), written in <time>2025</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License"></a> Intro to AI Course Materials by <a href="https://profbird.dev" target="_blank">Brian Bird</a>, written in 2025, revised in <time>2026</time>, are licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
 
 ---
-
