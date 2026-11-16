@@ -10,15 +10,6 @@ author: Brian Bird
 
 **CS112, Intro to AI**
 
-| Topics                                                       |                                                 |
-| ------------------------------------------------------------ | ----------------------------------------------- |
-| Overview of AI                                               | Neural networks and deep learning               |
-| AI Problem Solving Revisited<br />Machine Learning&mdash;Part 1<br />Applications of AI | Generative AI + <mark>Prompt engineering</mark> |
-| Machine Learning&mdash;Part 2                                | Custom chatbot creation                         |
-| History of AI + Midterm                                      | Social and ethical issues of AI  <br />Final    |
-
-
-
 <h2>Contents</h2>
 
 [TOC]
@@ -33,7 +24,7 @@ A good prompt for AI is most effective if it has:
 
 1. **Clarity**: The prompt should be clear, specific and unambiguous, making it easy for the AI to understand what is being asked.
    - **Example**: Instead of asking “Tell me about AI,” you can ask “Give me a summary of the latest advances in AI.”
-2. **Relevance**: use keywords or phrases that are *specific* and *relevant* to your desired response. This helps the AI understand your intent and deliver relevant results.
+2. **Relevance**: Use keywords or phrases that are *specific* and *relevant* to your desired response. This helps the AI understand your intent and deliver relevant results.
 
    - **Example**: Instead of asking: “Tell me about cloud computing”, you can ask  “I’m researching cloud computing trends in the IT industry. Provide recent reports and articles on the topic.”
 3. **Conciseness**: A prompt should be as brief as possible while still conveying all necessary information.
@@ -57,9 +48,8 @@ A good prompt for AI is most effective if it has:
 
    - **Result**: The AI uses the example to generate a coherent and creative story.
 
-1. **Experiment and Iterate**: Continuously test and refine prompts to find the most effective phrasing and structure.
+4. **Experiment and Iterate**: Continuously test and refine prompts to find the most effective phrasing and structure.
 
-   ​              
 
 ## Prompting Strategies
 
@@ -76,7 +66,7 @@ A good prompt for AI is most effective if it has:
 
 **Explanation**: One-shot prompting provides the AI with a single example to guide its response. This helps the AI understand the task better. For example:
 
-- **Zero-shot prompt**: “Generate a marketing email.”,
+- **Zero-shot prompt**: “Generate a marketing email.”
 
 - **One-shot Prompt**: “Generate a marketing email for a new eco-friendly water bottle, highlighting its features. Example: ‘Introducing our latest eco-friendly water bottle! Made from sustainable materials, this bottle is not only durable but also stylish. Perfect for those who care about the environment and want a sleek design.’”
 
@@ -96,7 +86,7 @@ A good prompt for AI is most effective if it has:
 
 ### Chain-of-Thought Prompting
 
-**Explanation**: Chain-of-thought prompting improves reasoning by breaking down complex tasks into a sequence of logical steps, enabling the model to solve problems more effectively.   Each step will take into account the result of the previous step and build on it. 
+**Explanation**: Chain-of-thought prompting improves reasoning by breaking down complex tasks into a sequence of logical steps, enabling the model to solve problems more effectively. Each step will take into account the result of the previous step and build on it. 
 
 **Examples**
 
@@ -110,7 +100,7 @@ A good prompt for AI is most effective if it has:
   Step 2: How many apples are left after John takes his share?  
   Step 3: How many apples are left after Mary takes her share?  
 
-  Result: The AI provides a step-by-step solution with the result that there are 7 apples left in the basket.
+  Result: The AI provides a step-by-step solution with the result that there are 5 apples left in the basket.
 
 - Write a short fictional story (around 200 words) about a character who 
   finds a mysterious antique key.  Follow these 
@@ -154,12 +144,12 @@ Ensure the questions adhere to the following guidelines:
 2. If the questions include HTML, the < and > characters should be written as &lt; and &gt;.
 3. Write the questions in GIFT format for Moodle.
 4. Use html for multi-line code snippets in questions. Do not use markdown.
-6. Each question should have a title.
-7. Provide 5 alternative answers for each question.
-8. Order the answers randomly so the right answer isn't always in the same position.
-9. Do not include answers like "all of the above" or "none of the above".
-10. Do not include questions starting with "how do you.."
-11. Do not number the questions.
+5. Each question should have a title.
+6. Provide 5 alternative answers for each question.
+7. Order the answers randomly so the right answer isn't always in the same position.
+8. Do not include answers like "all of the above" or "none of the above".
+9. Do not include questions starting with "how do you.."
+10. Do not number the questions.
 
 Here are examples of questions in the GIFT format:
 
