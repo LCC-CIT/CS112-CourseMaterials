@@ -38,16 +38,15 @@ author: Brian Bird
   </figure>
 </div>
 
-## Announcements and Discussion
+## Announcements
 
-- **Register for Winter term:** Registration is open for next term. See the [Registration, Schedules, and the Academic Calendar](https://www.lanecc.edu/programs-academics/registration-schedules-and-academic-calendar) web page for more information and registration links.
+- **Register for Winter term:** Registration is open for next term. See the [Registration, Schedules, and Academic Calendar](https://www.lanecc.edu/programs-academics/registration-schedules-and-academic-calendar) web page for more information and registration links.
 - **Drop-in Winter Reg Fest** on Tuesday, Dec. 1 from 9am&ndash;2pm in Building 1, Admissions 102.
   Get help with admissions, financial aid, academic advising and registration.
   Plan to arrive before 1pm.
 - **Week 8 is the last week to drop a class or change grade options.**
   This <u>Friday, Nov. 20</u> is the last day to make fall term schedule changes. This includes adding or dropping a course, withdrawing or changing grading methods.
   **Note**: Students should <u>always</u> consult [an academic advisor](https://www.lanecc.edu/get-support/academic-support/academic-advising) and/or [financial aid](https://www.lanecc.edu/costs-admission/paying-college/financial-aid) representative before making these changes, especially withdrawing. These types of changes can potentially have implications for academic progress and/or financial aid awards.
-- Anything else?
 
 ## Things to Do This Week
 
@@ -58,7 +57,7 @@ Due this Thursday, 11/19:
 Due this Sunday, 11/22 (the usual):
 
 - Forum post with questions, answers and comments for online students
-  (Part of your participation grade).
+  (Part of the participation grade for online students).
 - Quiz over the lectures.
 
 Due next week:

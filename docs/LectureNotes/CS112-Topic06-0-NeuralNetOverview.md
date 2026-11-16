@@ -39,13 +39,12 @@ author: Brian Bird
   </figure>
 </div>
 
-## Announcements and Discussion
+## Announcements
 
 No announcements yet.
 
 - Do you have any questions or comments about the midterm?
   - You can drop in during my office hours if you want to review the questions you missed or were unsure about.
-- Anything else?
 
 ## Things to Do This Week
 

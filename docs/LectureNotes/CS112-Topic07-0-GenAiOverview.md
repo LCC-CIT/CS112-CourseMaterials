@@ -37,13 +37,12 @@ author: Brian Bird
   </figure>
 </div>
 
-## Announcements and Discussion
+## Announcements
 
 - **Wed., Nov. 11: Veterans Day.** The college is closed.
 - **Drop-in Winter Reg Fest** on Saturday, Nov. 14 from 9am&ndash;2pm in Building 1, Admissions 102.
   Get help with admissions, financial aid, academic advising and registration.
   Plan to arrive before 1pm. There is another one on Tuesday, Dec. 1, 9am&ndash;2pm.
-- Anything else?
 
 ## Things to Do This Week
 

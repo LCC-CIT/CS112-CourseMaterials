@@ -29,7 +29,7 @@ By the end of this week you will be able to:
 - Discuss who is responsible when an AI system causes harm.
 - Review the main ideas of the whole course in preparation for the final.
 
-## Announcements and Discussion
+## Announcements
 
 - **RegFest**: Tuesday, Dec. 1, from 9 a.m.&ndash;2 p.m. on the first floor of Building 1 (Admissions 102). This event is designed for students:
 

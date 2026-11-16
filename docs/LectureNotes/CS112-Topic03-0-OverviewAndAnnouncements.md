@@ -36,9 +36,9 @@ author: Brian Bird
   </figure>
 </div>
 
-## Announcements and Discussion
+## Announcements
 
-- Anything else?
+- Nothing yet.
 
 ## Things to Do This Week
 

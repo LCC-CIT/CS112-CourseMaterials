@@ -29,19 +29,18 @@ By the end of this week you will be able to:
 - Describe what makes a custom chatbot different from a general-purpose one.
 - Plan and build a custom chatbot for a specific purpose.
 
-## Announcements and Discussion
+## Announcements
 
 - **Thanksgiving:** The college is closed Thursday through Sunday, Nov. 26 through Nov. 29.
 - **Mental health and wellness:** The [Mental Health and Wellness Center (MHWC)](https://www.lanecc.edu/get-support/health-wellness/mental-health-wellness-center) is there to support LCC students.
-- Anything else?
 
 ## Things to Do This Week
 
 Due this Sunday, 11/29 (the usual):
 
 - Project 3 on prompt engineering.
-- Forum post with questions, answers and comments for online students
-  (Part of your participation grade).
+- Forum post with questions, answers and comments for online students.
+  (Part of the participation grade for online students).
 - Quiz over RAG and custom chatbots.
 
 Due next week:
