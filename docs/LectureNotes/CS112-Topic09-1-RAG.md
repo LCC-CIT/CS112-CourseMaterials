@@ -10,15 +10,6 @@ author: Brian Bird
 
 **CS112, Intro to AI**
 
-| Topics                                                       |                                              |
-| ------------------------------------------------------------ | -------------------------------------------- |
-| Overview of AI                                               | Neural networks and deep learning            |
-| AI Problem Solving Revisited<br />Machine Learning&mdash;Part 1<br />Applications of AI | Generative AI +Prompt engineering            |
-| Machine Learning&mdash;Part 2                                | <mark>RAG</mark> &  Custom chatbot creation  |
-| History of AI + Midterm                                      | Social and ethical issues of AI  <br />Final |
-
-
-
 <h2>Contents</h2>
 
 [TOC]
@@ -140,7 +131,7 @@ Note: Microsoft Copilot with GPT-4 (2024) and Gemini 3 (2025) was used to draft 
 
 ---
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in 2024, updated in <time>2025</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Intro to AI lecture notes by [Brian Bird](https://profbird.dev), written in 2024, updated in <time>2026</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 [^1]: The LLM itself doesn't inherently know how to cite better just because it's RAG. The RAG *system* (the code around the LLM) passes the source metadata along with the text chunk. The system then displays that citation to the user.
 
