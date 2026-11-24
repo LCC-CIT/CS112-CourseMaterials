@@ -45,6 +45,7 @@ Due this Sunday, 11/29:
 - Forum post with questions, answers and comments for online students.
   (Part of the participation grade for online students).
 - Quiz over RAG and custom chatbots.
+- Exercises for RAG and custom chatbots.
 
 Due next week:
 
