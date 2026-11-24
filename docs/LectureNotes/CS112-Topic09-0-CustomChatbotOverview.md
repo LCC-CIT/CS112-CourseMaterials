@@ -51,9 +51,11 @@ Due next week:
 
 - Project 4, a custom chatbot, due Sunday, 12/6.
 
+
+
 ![Week9 - F2026-27](/Volumes/DataCard/Repos/CS112-CourseMaterials/docs/LectureNotes/Images/Week9 - F2026-27.jpg)
 
-The [Mental Health and Wellness Center (MHWC)](https://www.lanecc.edu/get-support/health-wellness/mental-health-wellness-center) is there to support LCC students.
+ [Mental Health and Wellness Center (MHWC)](https://www.lanecc.edu/get-support/health-wellness/mental-health-wellness-center) is there to support LCC students.
 
 
 
