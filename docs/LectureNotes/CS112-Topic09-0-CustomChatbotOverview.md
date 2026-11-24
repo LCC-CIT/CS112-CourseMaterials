@@ -32,11 +32,12 @@ By the end of this week you will be able to:
 ## Announcements
 
 - **Thanksgiving:** The college is closed Thursday through Sunday, Nov. 26 through Nov. 29.
-- **Mental health and wellness:** The [Mental Health and Wellness Center (MHWC)](https://www.lanecc.edu/get-support/health-wellness/mental-health-wellness-center) is there to support LCC students.
+- **Drop-in Winter Reg Fest**: Tuesday, Dec. 1 from 9am&ndash;2pm in Building 1, Admissions 102. 
+- **Register for Winter Term** (if you haven't already): See [Registration, Schedules, and the Academic Calendar](https://www.lanecc.edu/programs-academics/registration-schedules-and-academic-calendar) for more information.
 
 ## Things to Do This Week
 
-Due this Sunday, 11/29 (the usual):
+Due this Sunday, 11/29:
 
 - Project 3 on prompt engineering.
 - Forum post with questions, answers and comments for online students.
@@ -46,6 +47,10 @@ Due this Sunday, 11/29 (the usual):
 Due next week:
 
 - Project 4, a custom chatbot, due Sunday, 12/6.
+
+![Week9 - F2026-27](/Volumes/DataCard/Repos/CS112-CourseMaterials/docs/LectureNotes/Images/Week9 - F2026-27.jpg)
+
+The [Mental Health and Wellness Center (MHWC)](https://www.lanecc.edu/get-support/health-wellness/mental-health-wellness-center) is there to support LCC students.
 
 
 
