@@ -31,6 +31,8 @@ By the end of this week you will be able to:
 
 ## Announcements
 
+- **Free Gemini Pro account for students**.  [Register now](https://gemini.google/students/) if you haven't already.  
+  You'll need this for this week's project.
 - **Thanksgiving:** The college is closed Thursday through Sunday, Nov. 26 through Nov. 29.
 - **Drop-in Winter Reg Fest**: Tuesday, Dec. 1 from 9am&ndash;2pm in Building 1, Admissions 102. 
 - **Register for Winter Term** (if you haven't already): See [Registration, Schedules, and the Academic Calendar](https://www.lanecc.edu/programs-academics/registration-schedules-and-academic-calendar) for more information.
